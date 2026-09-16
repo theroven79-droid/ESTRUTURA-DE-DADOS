@@ -8,16 +8,13 @@ void TABUADA_AO_CUBO();
 
 int main()
 {
-
     setlocale(LC_ALL, "portuguese");
-
     FUNCAO_OPCAO();
-
     return 0;
 }
+
 void FUNCAO_OPCAO()
 {
-
     int op;
     printf("\tSELECIONE A OPÇÃO\n");
     printf("\t1 - tabuada 1 ao 10\n");
