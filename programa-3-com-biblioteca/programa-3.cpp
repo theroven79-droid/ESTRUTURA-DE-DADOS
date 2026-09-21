@@ -24,11 +24,11 @@ produtos comprados, suas respectivas quantidades e o total da compra.
 e “n” valores de produtos.*/
 
 void consulta(int estoque[], char produto[][20], float valor[]);
-void compra(int estoque[], char produto[][20], float valor[], int codigo[]);
-void Cestoque(int estoque[], char produto[][20], int codigo[], float valor[]);
-void Cvalor(float valor[], int estoque[], char produto[][20], int codigo[]);
-void Ccodigo(int codigo[], float valor[], int estoque[], char produto[][20]);
-void Cprodutos(char produto[][20], int codigo[], float valor[], int estoque[]);
+void compra(int estoque[], char produto[][20], float valor[]);
+void Cestoque(int estoque[], int *volta);
+void Cvalor(float valor[], int estoque[], int *volta);
+void Ccodigo(int codigo[], float valor[], int estoque[], int *volta);
+void Cprodutos(char produto[][20], int codigo[], float valor[], int estoque[], int *volta);
 void Menu(int *identificar, char produto[][20], int codigo[], float valor[], int estoque[]);
 void Limparbuffer();
 void encerrar(int *identificar);
@@ -59,109 +59,98 @@ int main()
     return 0;
 }
 
-void Cestoque(int estoque[], char produto[][20], int codigo[], float valor[])
+void Cestoque(int estoque[], int *volta)
 {
-    int resposta_1;
-    Limparbuffer();
-    for (int i = 0; i < 3; i++)
+    if (*volta == 0)
     {
-        if (estoque[i] == 0)
-        {
-            printf("QUANTIDADE: ");
-            scanf("%d", &estoque[i]);
-            break;
-        }
-
-        else
-        {
-            printf("\tQUANTIDADE DO PRODUTO %d JAh CADASTRADO\n", i + 1);
-        }
-    }
-    printf("\nDESEJA CADASTRAR MAIS PRODUTOS?\n");
-    printf("1 - sim, 2 - nao: ");
-    scanf("%d", &resposta_1);
-    if (resposta_1 == 1)
-    {
-        Cprodutos(produto, codigo, valor, estoque);
-    }
-}
-
-void Cvalor(float valor[], int estoque[], char produto[][20], int codigo[])
-{
-    for (int i = 0; i < 3; i++)
-    {
-        if (valor[i] == 0)
-        {
-            printf("VALOR: ");
-            scanf("%f", &valor[i]);
-            Cestoque(estoque, produto, codigo, valor);
-        }
-        else
-        {
-            printf("\tVALOR PARA O PRODUTO %d JAh CADASTRADO\n", i + 1);
-        }
-    }
-}
-
-void Ccodigo(int codigo[], float valor[], int estoque[], char produto[][20])
-{
-
-    for (int i = 0; i < 3; i++)
-    {
-        if (codigo[i] == 0)
-        {
-            printf("CODIGO: ");
-            scanf("%d", &codigo[i]);
-            Cvalor(valor, estoque, produto, codigo);
-        }
-        else
-        {
-            printf("\tCODIGO DO PRODUTO %d JAh CADASTRADO\n", i + 1);
-        }
-    }
-}
-
-void Cprodutos(char produto[][20], int codigo[], float valor[], int estoque[])
-{
-
-    int verificador = 0;
-
-    for (int v = 0; v < 3; v++)
-    {
-        if (produto[v][20] == '\0')
-        {
-            break;
-        }
-        else
-        {
-            verificador = 1;
-        }
-    }
-    if (verificador == 1)
-    {
-        printf("\nTODOS OS PRODUTOS FORAM CADASTRADOS.\n");
-    }
-    else
-    {
-
-        printf("\n--- CADASTRO DE PRODUTOS --\n");
+        *volta = 1;
+        Limparbuffer();
         for (int i = 0; i < 3; i++)
         {
-            if (produto[i][0] == '\0')
+            if (estoque[i] == 0)
             {
-                printf("PRODUTO %d: ", i + 1);
-                fgets(produto[i], sizeof(produto[i]), stdin);
-                produto[i][strcspn(produto[i], "\n")] = '\0';
-                for (int j = 0; produto[i][j] != '\0'; j++)
-                {
-                    produto[i][j] = toupper(produto[i][j]);
-                }
-                void limparBuffer(void);
-                Ccodigo(codigo, valor, estoque, produto);
+                printf("QUANTIDADE[%d]: ", i + 1);
+                scanf("%d", &estoque[i]);
+                break;
+            }
+        }
+    }
+}
+
+void Cvalor(float valor[], int estoque[], int *volta)
+{
+    if (*volta == 0)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (valor[i] == 0)
+            {
+                printf("VALOR[%d]: ", i + 1);
+                scanf("%f", &valor[i]);
+                Cestoque(estoque, volta);
+                break;
+            }
+        }
+    }
+}
+
+void Ccodigo(int codigo[], float valor[], int estoque[], int *volta)
+{
+    if (*volta == 0)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (codigo[i] == 0)
+            {
+                printf("CODIGO[%d]: ", i + 1);
+                scanf("%d", &codigo[i]);
+                Cvalor(valor, estoque, volta);
+                break;
+            }
+        }
+    }
+}
+
+void Cprodutos(char produto[][20], int codigo[], float valor[], int estoque[], int *volta)
+{
+    int verificador = 0;
+    if (*volta == 0)
+    {
+        printf("\n");
+        for (int v = 0; v < 3; v++)
+        {
+            if (produto[v][0] == '\0')
+            {
+                verificador = 0;
+                printf("[PRODUTO %d SEM CADASTRO]\n", v + 1);
             }
             else
             {
-                printf("PRODUTO %d JAH CADASTRADO\n", i + 1);
+                printf("[%s CADASTRADO]\n", produto[v]);
+                verificador = 1;
+            }
+        }
+        if (verificador == 1)
+        {
+            printf("\nTODOS OS PRODUTOS FORAM CADASTRADOS.\n");
+        }
+        else
+        {
+            printf("\n--- CADASTRO DE PRODUTOS --\n");
+            for (int i = 0; i < 3; i++)
+            {
+                if (produto[i][0] == '\0')
+                {
+                    printf("PRODUTO %d: ", i + 1);
+                    fgets(produto[i], sizeof(produto[i]), stdin);
+                    produto[i][strcspn(produto[i], "\n")] = '\0';
+                    for (int j = 0; produto[i][j] != '\0'; j++)
+                    {
+                        produto[i][j] = toupper(produto[i][j]);
+                    }
+                    Ccodigo(codigo, valor, estoque, volta);
+                    break;
+                }
             }
         }
     }
@@ -173,6 +162,7 @@ void Menu(int *identificar, char produto[][20], int codigo[], float valor[], int
     int opcao;
     while (1)
     {
+        int volta = 0;
         printf("\n----MENU INICIAL----\n\n");
         printf("1 - CADASTRAR PRODUTO\n");
         printf("2 - CONSULTAR ESTOQUE\n");
@@ -185,13 +175,13 @@ void Menu(int *identificar, char produto[][20], int codigo[], float valor[], int
         switch (opcao)
         {
         case 1:
-            Cprodutos(produto, codigo, valor, estoque);
+            Cprodutos(produto, codigo, valor, estoque, &volta);
             break;
         case 2:
             consulta(estoque, produto, valor);
             break;
         case 3:
-            compra(estoque, produto, valor, codigo);
+            compra(estoque, produto, valor);
             break;
         case 4:
             encerrar(identificar);
@@ -217,68 +207,78 @@ void Limparbuffer(void)
     }
 }
 
-void compra(int estoque[], char produto[][20], float valor[], int codigo[])
+void compra(int estoque[], char produto[][20], float valor[])
 {
     int consulta;
     int quantidade;
     int verificar = 0;
-
+    printf("\n--- COMPRA DE PRODUTO ---\n");
+    printf("\n[VERIFICANDO]...\n\n");
     for (int i = 0; i < 3; i++)
     {
-        if (estoque[i] == 0)
+        if (produto[i][0] != '\0')
         {
             verificar++;
+            printf("[%s DISPONIVEL PARA COMPRA]\n", produto[i]);
         }
     }
-    if (verificar == 0)
+    if (verificar > 0)
     {
-        printf("\n--- COMPRA DE PRODUTO ---\n");
+
         while (1)
         {
-            printf("DIGITE O CODIGO DO PRODUTO [1 A 3]\n");
-            printf("CODIGO: ");
-            scanf("%d", &consulta);
-            if (codigo[consulta] != 0)
+            printf("\nQUAL PRODUTO QUER COMPRAR?\n");
+            for (int i = 0; i < verificar; i++)
             {
-                printf("\n--- PRODUTO ENCONTRADO ---\n");
-                printf("\t|PRODUTO: %s     |\n", produto[consulta]);
-                printf("\t|VALOR: %2.f     |\n", valor[consulta]);
-                printf("\t|ESTOQUE: %d\tun |\n", estoque[consulta]);
-                printf("\t------------");
-                printf("\nQUANTAS UNIDADES DESEJA COMPRAR?\n");
-
-                while (1)
-                {
-                    printf("QUANTIDADE: ");
-                    scanf("%d", &quantidade);
-                    if (quantidade == 0 && quantidade > estoque[consulta])
-                    {
-                        printf("\nDIGITE UM VALOR VALIDO\n");
-                        continue;
-                    }
-                    else
-                    {
-                        estoque[consulta] = estoque[consulta] - quantidade;
-                        break;
-                    }
-                }
+                printf("%d - %s\n", i + 1, produto[i]);
             }
-            else
+            while (1)
             {
-                int resposta;
-                printf("\nNAO EXISTE QUANTIDADE EM ESTOQUE.\n");
-                printf("DESEJA ENCONTRAR OUTRO PRODUTO?\n");
-                printf("1 - sim, 2 - nao: ");
-                scanf("%d", &resposta);
-                if (resposta == 1)
+                printf("PRODUTO: ");
+                scanf("%d", &consulta);
+                if (consulta <= 0 || consulta > verificar)
                 {
+                    printf("\n[APENAS DE 1 A %d]\n", verificar);
+                    continue;
+                }
+                break;
+            }
+
+            printf("\n--- PRODUTO ENCONTRADO ---\n");
+            printf("\t|PRODUTO: %s|\n", produto[consulta - 1]);
+            printf("\t|VALOR: %.2f\n", valor[consulta - 1]);
+            printf("\t|ESTOQUE: %d\n", estoque[consulta - 1]);
+            printf("\t------------");
+            printf("\nQUANTAS UNIDADES DESEJA COMPRAR?\n");
+            printf("[UNIDADES DISPONIVEIS: %d]\n", estoque[consulta - 1]);
+            while (1)
+            {
+                printf("QUANTIDADE: ");
+                scanf("%d", &quantidade);
+                if (quantidade <= 0 || quantidade > estoque[consulta - 1])
+                {
+                    printf("\nDIGITE UM VALOR VALIDO\n");
                     continue;
                 }
                 else
                 {
+
+                    estoque[consulta - 1] = estoque[consulta - 1] - quantidade;
+                    printf("\nSALDO ATUALIZADO.\n\n");
                     break;
                 }
             }
+
+            int resposta;
+            printf("DESEJA ENCONTRAR OUTRO PRODUTO?\n");
+            printf("1 - sim, 2 - nao: ");
+            scanf("%d", &resposta);
+            if (resposta == 1)
+            {
+                continue;
+            }
+
+            break;
         }
     }
     else
@@ -291,50 +291,73 @@ void consulta(int estoque[], char produto[][20], float valor[])
 {
     int consulta;
     int verificar = 0;
-
+    printf("\n--- CONSULTA DE ESTOQUE ---\n");
+    printf("\n[VERIFICANDO]...\n");
     for (int i = 0; i < 3; i++)
     {
-        if (estoque[i] == 0)
+        if (produto[i][0] != '\0')
         {
             verificar++;
         }
     }
-    if (verificar == 0)
+
+    if (verificar > 0)
     {
-        printf("\n--- CONSULTA DE ESTOQUE ---\n");
-        printf("DIGITE O CODIGO DO ITEM [1 A 3]");
-        while (1)
+
+        printf("\n[%d PRODUTOS CADASTRADO ]\n", verificar);
+
+        if (verificar == 1)
         {
-            printf("CODIGO: ");
-            scanf("%d", &consulta);
-            if (estoque[consulta] != 0)
+            consulta = 1;
+        }
+        else
+        {
+            printf("PRODUTO CADASTRADO [1 A %d]\n", verificar);
+
+            while (1)
             {
-                if (consulta >= 1 && consulta <= 3)
+
+                if (verificar > 1)
                 {
-                    printf("\n--- PRODUTO ENCONTRADO ---\n");
-                    printf("\t|PRODUTO: %s |\n", produto[consulta - 1]);
-                    printf("\t|VALOR: %2.f |\n", valor[consulta - 1]);
-                    printf("\t|ESTOQUE: %d |\n", estoque[consulta - 1]);
-                    printf("\t------------");
-                    break;
+                    while (1)
+                    {
+                        printf("QUAL PRODUTO DESEJA CONSULTAR: ");
+                        scanf("%d", &consulta);
+                        if (consulta <= 0 || consulta > verificar)
+                        {
+                            printf("\n\nDIGITE UM VALOR VALIDO\n\n");
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
                 }
-                else if (consulta <= 0 && consulta > 3)
-                {
-                    printf("\nVALOR INVALIDO.\n");
-                    continue;
-                }
-            }
-            else
-            {
-                printf("\nNAO EXISTE QUANTIDADE EM ESTOQUE.\n");
             }
         }
+
+        if (estoque[consulta - 1] != 0)
+        {
+            {
+                printf("\t--- PRODUTO ---\n");
+                printf("\t|PRODUTO: %s\n", produto[consulta - 1]);
+                printf("\t|VALOR: %.2f\n", valor[consulta - 1]);
+                printf("\t|ESTOQUE: %d\n", estoque[consulta - 1]);
+                printf("\t-------------");
+            }
+        }
+        else
+        {
+            printf("\nNAO EXISTE QUANTIDADE EM ESTOQUE.\n");
+        }
     }
+
     else
     {
         printf("\n\nNENHUM PRODUTO FOI CADASTRADO.\n\n");
     }
 }
+
 void encerrar(int *identificar)
 {
     *identificar = 1;
