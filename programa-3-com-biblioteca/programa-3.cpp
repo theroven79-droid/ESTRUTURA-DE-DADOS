@@ -30,6 +30,8 @@ void Cvalor(float valor[], int estoque[], int *volta);
 void Ccodigo(int codigo[], float valor[], int estoque[], int *volta);
 void Cprodutos(char produto[][20], int codigo[], float valor[], int estoque[], int *volta);
 void Menu(int *identificar, char produto[][20], int codigo[], float valor[], int estoque[]);
+void Pprodutos(char produto[][20], int codigo[], float valor[], int estoque[]);
+
 void Limparbuffer();
 void encerrar(int *identificar);
 
@@ -176,6 +178,7 @@ void Menu(int *identificar, char produto[][20], int codigo[], float valor[], int
         {
         case 1:
             Cprodutos(produto, codigo, valor, estoque, &volta);
+            Pprodutos(produto, codigo, valor, estoque);
             break;
         case 2:
             consulta(estoque, produto, valor);
@@ -209,6 +212,7 @@ void Limparbuffer(void)
 
 void compra(int estoque[], char produto[][20], float valor[])
 {
+    int resposta;
     int consulta;
     int quantidade;
     int verificar = 0;
@@ -224,60 +228,86 @@ void compra(int estoque[], char produto[][20], float valor[])
     }
     if (verificar > 0)
     {
-
         while (1)
         {
-            printf("\nQUAL PRODUTO QUER COMPRAR?\n");
-            for (int i = 0; i < verificar; i++)
+            if (verificar != 1)
             {
-                printf("%d - %s\n", i + 1, produto[i]);
-            }
-            while (1)
-            {
-                printf("PRODUTO: ");
-                scanf("%d", &consulta);
-                if (consulta <= 0 || consulta > verificar)
+                printf("\nQUAL PRODUTO QUER COMPRAR?\n");
+                for (int i = 0; i < verificar; i++)
                 {
-                    printf("\n[APENAS DE 1 A %d]\n", verificar);
-                    continue;
+                    printf("%d - %s\n", i + 1, produto[i]);
                 }
-                break;
-            }
-
-            printf("\n--- PRODUTO ENCONTRADO ---\n");
-            printf("\t|PRODUTO: %s|\n", produto[consulta - 1]);
-            printf("\t|VALOR: %.2f\n", valor[consulta - 1]);
-            printf("\t|ESTOQUE: %d\n", estoque[consulta - 1]);
-            printf("\t------------");
-            printf("\nQUANTAS UNIDADES DESEJA COMPRAR?\n");
-            printf("[UNIDADES DISPONIVEIS: %d]\n", estoque[consulta - 1]);
-            while (1)
-            {
-                printf("QUANTIDADE: ");
-                scanf("%d", &quantidade);
-                if (quantidade <= 0 || quantidade > estoque[consulta - 1])
+                while (1)
                 {
-                    printf("\nDIGITE UM VALOR VALIDO\n");
-                    continue;
-                }
-                else
-                {
-
-                    estoque[consulta - 1] = estoque[consulta - 1] - quantidade;
-                    printf("\nSALDO ATUALIZADO.\n\n");
+                    printf("PRODUTO: ");
+                    scanf("%d", &consulta);
+                    if (consulta <= 0 || consulta > verificar)
+                    {
+                        printf("\n[APENAS DE 1 A %d]\n", verificar);
+                        continue;
+                    }
                     break;
                 }
             }
-
-            int resposta;
-            printf("DESEJA ENCONTRAR OUTRO PRODUTO?\n");
-            printf("1 - sim, 2 - nao: ");
-            scanf("%d", &resposta);
-            if (resposta == 1)
+            else
             {
-                continue;
+                printf("\nAPENAS 1 PRODUTO CADASTRADO NO MOMENTO\n");
             }
+            printf("\n\t-- COMPRA --\n");
+            printf("\t|PRODUTO: %s\n", produto[consulta - 1]);
+            printf("\t|VALOR: %.2f\n", valor[consulta - 1]);
+            printf("\t|ESTOQUE: %d\n", estoque[consulta - 1]);
+            printf("\t------------");
+            while (1)
+            {
+                if (estoque[consulta - 1] != 0)
+                {
+                    printf("\nQUANTAS UNIDADES DESEJA COMPRAR?\n");
+                    printf("[UNIDADES DISPONIVEIS: %d]\n", estoque[consulta - 1]);
+                    while (1)
+                    {
+                        printf("QUANTIDADE: ");
+                        scanf("%d", &quantidade);
+                        if (quantidade <= 0 || quantidade > estoque[consulta - 1])
+                        {
+                            printf("\nDIGITE UM VALOR VALIDO\n");
+                            continue;
+                        }
+                        else
+                        {
 
+                            estoque[consulta - 1] = estoque[consulta - 1] - quantidade;
+                            printf("\nSALDO ATUALIZADO.\n\n");
+                            break;
+                        }
+                    }
+
+                    printf("DESEJA ENCONTRAR OUTRO PRODUTO?\n");
+                    printf("1 - sim, 2 - nao: ");
+                    scanf("%d", &resposta);
+                    if (resposta == 1)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    printf("\n[NÃO EXISTE QUANTIDADE EM ESTOQUE PARA COMPRA]\n");
+                    printf("\nDESEJA ENCONTRAR OUTRO PRODUTO?\n");
+                    printf("1 - sim, 2 - nao: ");
+                    scanf("%d", &resposta);
+                    if (resposta == 1)
+                    {
+                        continue;
+                    }
+                    break;
+                }
+                break;
+            }
             break;
         }
     }
@@ -333,6 +363,7 @@ void consulta(int estoque[], char produto[][20], float valor[])
                         }
                     }
                 }
+                break;
             }
         }
 
@@ -361,4 +392,30 @@ void consulta(int estoque[], char produto[][20], float valor[])
 void encerrar(int *identificar)
 {
     *identificar = 1;
+}
+void Pprodutos(char produto[][20], int codigo[], float valor[], int estoque[])
+{
+    int qtd = 0;
+
+    printf("\n\t----- TABELA DOS PRODUTOS -----\n");
+    for (int i = 0; i < 3; i++)
+    {
+        if (produto[i][0] != '\0')
+        {
+            qtd++;
+        }
+    }
+    printf("+---------------------+----------+------------+------------+\n");
+    printf("| %-19s | %-8s | %-10s | %-10s |\n",
+           "PRODUTO", "CODIGO", "VALOR", "QUANTIDADE");
+    printf("+---------------------+----------+------------+------------+\n");
+
+    for (int j = 0; j < qtd; j++)
+    {
+        printf("| %-19s | %-8d | %-10.2f | %-10d |\n",
+               produto[j], codigo[j], valor[j], estoque[j]);
+    }
+
+    printf("+---------------------+----------+------------+------------+\n");
+    printf("\n");
 }
