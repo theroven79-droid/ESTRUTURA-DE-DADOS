@@ -1,5 +1,5 @@
 #include "bibliotecas.h"
-
+//codigo com biblioteca.
 int main()
 {
     int a, b; 
