@@ -23,36 +23,45 @@ void resultadoCadastro(int *valorPassagem, int *quantidadeTotal,
 void resultadoCadastro(int *valorPassagem, int *quantidadeTotal,
                        int *quantidadeEspecial, int *valorMinimo);
 
-void compraPoltrona(int onibus[][tam], int *quantidadeTotal)
+void compraPoltrona(int onibus[][tam], int *quantidadeTotal, int *valorPassagem)
 {
     int linha;
     int lugarDisponivel;
+    int lugarOcupado;
     int fileira;
     int poltrona;
+    int totalVendido;
+    int valorTotal;
+    float percentagem;
 
     printf("\n\t[COMPRA DE PASSANGEM]\n");
 
     printf("\t| - SELECIONE A POLTRONA\n");
 
     printf("\t| - 0 -> Assento normal\n");
+
     printf("\t| - 1 -> Assento Especial\n");
 
-    printf("\n\t --- [ONIBUS] ---\n");
+    printf("\n\t ------ [ONIBUS] ------\n");
 
     linha = (*quantidadeTotal + 3) / tam;
 
+    printf("\t|0\t p1 p2 - p3 p4|\n");
     for (int i = 0; i < linha; i++)
     {
-        printf("\t");
+        printf("\t|%d\t",i+1);
+        
         for (int j = 0; j < tam; j++)
         {
-            printf("[%d] ", onibus[i][j]);
-            if (tam == 1)
+            
+            printf("[%d]", onibus[i][j]);
+            if (j == 1)
             {
                 printf("\t");
             }
         }
-        printf("\n");
+       
+        printf("|\n");
     }
 
     while (1)
@@ -66,21 +75,81 @@ void compraPoltrona(int onibus[][tam], int *quantidadeTotal)
             continue;
         }
 
-        break;
-    }
-    while (1)
-    {
-        printf("\n\t| - Selecione a Poltrona (1 a 4):  ");
-        scanf("%d", &poltrona);
-
-        if (poltrona <= 0 || poltrona > tam)
+        else
         {
-            printf("\n\t| - não existe poltrona.\n");
-            continue;
-        }
 
+            printf("\n\t| - Selecione a Poltrona (1 a 4):  ");
+            scanf("%d", &poltrona);
+
+            if (poltrona <= 0 || poltrona > tam)
+            {
+                printf("\n\t| - não existe poltrona.\n");
+                continue;
+            }
+
+            onibus[fileira][poltrona] = 8;
+
+            break;
+        }
         break;
     }
+
+    printf("\n\t[COMPRA EFETUADA]\n");
+
+    printf("\n\t --- [ONIBUS] ---\n");
+
+    for (int i = 0; i < linha; i++)
+    {
+        printf("\t|");
+        for (int j = 0; j < tam; j++)
+        {
+            printf("[%d]", onibus[i][j]);
+            if (j == 1)
+            {
+                printf("\t");
+            }
+        }
+        printf("|\n");
+    }
+
+    lugarDisponivel = 0;
+    lugarOcupado = 0;
+    percentagem = 0.0;
+
+    valorTotal = *quantidadeTotal * *valorPassagem;
+    valorTotal = valorTotal;
+
+    for (int i = 0; i < *quantidadeTotal; i++)
+    {
+        for (int j = 0; j < *quantidadeTotal; j++)
+        {
+            if (onibus[i][j] == 0 && onibus[i][j] == 1)
+            {
+                lugarDisponivel++;
+            }
+            else
+            {
+                lugarOcupado++;
+                totalVendido = lugarOcupado * *valorPassagem;
+            }
+        }
+    }
+
+    printf("\n\t[RELATORIO]");
+
+    printf("\n\t| - Numero de lugares ocupados\n\t| - [%d]\n", lugarOcupado);
+    printf("\t|");
+
+    printf("\n\t| - Numero de lugares desocupados\n\t| - [%d]\n", lugarDisponivel);
+    printf("\t|");
+
+    printf("\n\t| - Percentual de ocupacao: \n");
+    printf("\t|");
+
+    printf("\n\t| - Valor total vendido em pssagens\n\t| - [%.2f]\n", totalVendido);
+    
+    
+    printf("\n");
 }
 
 int main()
@@ -139,7 +208,8 @@ void menuPrincipal(int *quantidadeTotal, int *quantidadeEspecial,
             imprimiOnibus(onibus, quantidadeTotal);
             break;
         case 3:
-
+            compraPoltrona(onibus, quantidadeTotal,
+                           valorPassagem);
             break;
         case 4:
             /* code */
@@ -212,16 +282,16 @@ void imprimiOnibus(int onibus[][tam],
 
     for (int i = 0; i < linha; i++)
     {
-        printf("\t");
+        printf("\t|");
         for (int j = 0; j < tam; j++)
         {
-            printf("[%d] ", onibus[i][j]);
-            if (tam == 1)
+            printf("[%d]", onibus[i][j]);
+            if (j == 1)
             {
                 printf("\t");
             }
         }
-        printf("\n");
+        printf("|\n");
     }
 }
 
