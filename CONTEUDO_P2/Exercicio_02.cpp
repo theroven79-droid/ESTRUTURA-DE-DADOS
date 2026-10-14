@@ -21,7 +21,7 @@ void motraAntesOrdena(int num[])
   printf("\n\t|- Desordenado\n\n");
   for (int i = 0; i < tam; i++)
   {
-    printf("\t| - NumPosicao[%d]\n");
+    printf("\t| - NumPosicao[%d]\n",num[i]);
   }
 }
 
@@ -56,7 +56,7 @@ void mostraDespoisOrdena(int num[])
   printf("\n\t|- Ordenado\n\n");
   for (int i = 0; i < tam; i++)
   {
-    printf("\t| - NumPosicao[%d]\n");
+    printf("\t| - NumPosicao[%d]\n",num[i]);
   }
 }
 
