@@ -80,3 +80,36 @@ O código ainda permite selecionar uma poltrona já comprada ou uma posição ma
 ## Configuração do editor
 
 A pasta [.vscode](.vscode/tasks.json) contém uma tarefa de compilação com um caminho específico do Windows/MSYS2. Confira se o compilador está instalado nesse caminho antes de usar a tarefa.
+
+---
+
+## Caminho de aprendizagem sugerido
+
+```mermaid
+flowchart LR
+    A["Funções"] --> B["Laços"]
+    B --> C["Vetores"]
+    C --> D["Cabeçalhos .h"]
+    D --> E["Matrizes"]
+    E --> F["Projeto de poltronas"]
+```
+
+| Etapa | Projeto | Guia específico |
+|---:|---|---|
+| 1 | Cálculos com funções | [Programa 1](programa-1/README.md) |
+| 2 | Tabuadas e laços | [Programa 2](programa-2/README.md) |
+| 3 | Gestão de produtos | [Programa 3](programa-3/README.md) |
+| 4 | Modularização do estoque | [Programa 3 com biblioteca](programa-3-biblioteca/README.md) |
+| 5 | Funções e variáveis em headers | [Programa 4](programa-4-biblioteca/README.md) |
+| 6 | Operações aritméticas modulares | [Programa 5](programa-5-biblioteca/README.md) |
+| 7 | Matriz de assentos | [Programa 6](programa-6-biblioteca/README.md) |
+
+## Dicas de compilação e leitura
+
+- Compile **um `main` de cada vez**. Os arquivos possuem exercícios independentes, não formam uma aplicação única.
+- O nome `.cpp` aparece mesmo onde são usadas funções da linguagem C (`stdio.h`, `printf`, `scanf`).
+- Em versões com headers, consulte os `#include` no arquivo principal antes de estudar funções auxiliares.
+- Os arquivos `.exe` são binários Windows; a leitura do código-fonte é o caminho mais seguro para compreender o funcionamento.
+- A [P2](../CONTEUDO_P2/README.md) avança para strings, ordenação e busca.
+
+> **Situação real dos exercícios:** a documentação registra limitações identificadas no código, inclusive problemas de compilação, divisão por zero e fluxo do menu de ônibus. Não representa uma validação automatizada de cada programa.
