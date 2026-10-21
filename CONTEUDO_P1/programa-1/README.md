@@ -1,76 +1,39 @@
-# Programa 1 · Funções e cálculos encadeados
+# 🧮 Programa 1 — Operações com funções
 
-![C](https://img.shields.io/badge/Linguagem-C-00599C?logo=c&logoColor=white) ![Tipo](https://img.shields.io/badge/Execu%C3%A7%C3%A3o-Terminal-353535)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Ver código-fonte](programa-1.cpp)
+## 📌 Objetivo
 
-## 🎮 Checkpoint 01 · Funções encadeadas
+Exemplo: entradas `1`, `2`, `3` produzem `13`, `48`, `110592`. As funções `soma`, `multiplicacao` e `cubo` têm protótipos no próprio arquivo.
 
-> **Missão:** Use os resultados intermediários para demonstrar que você entende passagem de parâmetros e retorno de funções. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+## ✨ Operações e conceitos
 
-| Etapa | Desafio verificável | Evidência original | XP |
-|---|---|---|--:|
-| 1 · Entrada | Ler três números inteiros | [`main`](programa-1.cpp) | 10 |
-| 2 · Cálculo | Confirmar soma, multiplicação e cubo para 1, 2 e 3 | [`soma`, `multiplicacao`, `cubo`](programa-1.cpp) | 20 |
-| 3 · Explicação | Reconstruir a sequência 13 → 48 → 110592 | [Fluxo](#fluxo-do-algoritmo) | 20 |
+| Etapa / elemento | Funcionamento |
+|---|---|
+| Entrada | Três números inteiros (`n1`, `n2`, `n3`). |
+| Soma | `n1 + n2 + 10`. |
+| Multiplicação | `(n3 + resultado_da_soma) * 3`. |
+| Cubo | Cubo do resultado anterior. |
 
-**Checklist de progresso**
+## 📂 Arquivos relevantes
 
-- [ ] Reproduzi as três saídas do exemplo.
-- [ ] Expliquei a origem do +10 e do ×3.
-- [ ] Identifiquei os protótipos das funções no arquivo.
+| Arquivo | Descrição |
+|---|---|
+| [programa-1.cpp](programa-1.cpp) | Ponto de entrada e implementação principal. |
+| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
 
-<details>
-<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+## ⚙️ Compilação
 
-Desafio bônus (não implementado): comparar o resultado de entradas negativas e investigar possíveis estouros de `int`.
-
-**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
-
-</details>
-
-**Nota de rigor:** A classificação é didática; não há testes automatizados ou sistema de pontos no executável.
-
----
-
-
-## Visão geral
-
-Exercício em C, salvo como `.cpp`, para treinar **entrada de dados, protótipos de funções, retorno de valores e encadeamento de operações**. O programa solicita três inteiros e executa as funções `soma`, `multiplicacao` e `cubo` em sequência.
-
-## Fluxo do algoritmo
-
-```mermaid
-flowchart LR
-    A["Ler n1, n2 e n3"] --> B["soma(n1, n2)"]
-    B --> C["multiplicacao(n3, resultado)"]
-    C --> D["cubo(resultado)"]
-    D --> E["Exibir os três resultados"]
-```
-
-| Etapa | Expressão implementada | Função |
-|---|---|---|
-| 1 | `n1 + n2 + 10` | `soma` |
-| 2 | `(n3 + resultado1) * 3` | `multiplicacao` |
-| 3 | `resultado2 * resultado2 * resultado2` | `cubo` |
-
-**Exemplo:** para `1`, `2` e `3`, os resultados são `13`, `48` e `110592`.
-
-## Executar
-
-No terminal, a partir da raiz do repositório, com `g++` instalado:
+Na raiz do repositório, com `g++` disponível:
 
 ```bash
-g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa1
-./programa1
+g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa-1
 ```
 
-No Windows, execute `programa1.exe` após a compilação. O código utiliza `stdio.h`, `scanf` e `printf`, mesmo tendo extensão `.cpp`.
+Se o compilador concluir sem erro, execute o arquivo resultante (`./programa-1` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
 
-## Arquivos e limites
+## ⚠️ Observações técnicas
 
-| Arquivo | Finalidade |
-|---|---|
-| [programa-1.cpp](programa-1.cpp) | Implementação completa e função `main`. |
+Os cálculos usam `int` sem proteção específica contra entradas inválidas ou estouro aritmético.
 
-Os cálculos utilizam `int` e não incluem validação explícita da entrada nem proteção contra estouro de inteiro. [Explorar os demais exercícios da P1](../README.md).
+**Código para conferência:** [programa-1.cpp](programa-1.cpp).
