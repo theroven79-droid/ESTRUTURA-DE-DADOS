@@ -1,68 +1,40 @@
-# Programa 2 · Tabuadas e potenciação
-
-![C](https://img.shields.io/badge/Linguagem-C-00599C?logo=c&logoColor=white) ![Tema](https://img.shields.io/badge/Tema-La%C3%A7os%20e%20fun%C3%A7%C3%B5es-blue)
+# 🔁 Programa 2 — Tabuadas com repetição
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
-## 🎮 Checkpoint 02 · Laços aninhados
+## 📌 Objetivo
 
-> **Missão:** Investigue a diferença entre o índice apresentado nos títulos e a conta efetivamente executada. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+Funções: `FUNCAO_OPCAO`, `TABUADA_COMPLETA` e `TABUADA_AO_CUBO`. Os laços são aninhados (`for`). O arquivo `programa-02.cpp` está vazio.
 
-| Etapa | Desafio verificável | Evidência original | XP |
-|---|---|---|--:|
-| 1 · Menu | Selecionar opções 1 e 2 | [`FUNCAO_OPCAO`](programa-01.cpp) | 10 |
-| 2 · Repetição | Analisar os dois `for` internos | [Tabuadas](programa-01.cpp) | 20 |
-| 3 · Diagnóstico | Explicar por que o cabeçalho pode mostrar 0 | [Código-fonte](programa-01.cpp) | 20 |
+## ✨ Operações e conceitos
 
-**Checklist de progresso**
+| Etapa / elemento | Funcionamento |
+|---|---|
+| Opção 1 | Imprime as tabuadas de 1 a 10. |
+| Opção 2 | Calcula o cubo de cada produto. |
+| Outra opção | Apresenta mensagem de opção não aceita. |
 
-- [ ] Reconheci o papel de `i` e `j`.
-- [ ] Diferenciei a tabuada comum do cubo dos produtos.
-- [ ] Confirmei que `programa-02.cpp` está vazio.
+## 📂 Arquivos relevantes
 
-<details>
-<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
-
-Missão extra (proposta): corrigir a apresentação do cabeçalho numa cópia local mantendo a multiplicação correta.
-
-**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
-
-</details>
-
-**Nota de rigor:** A opção de menu é escolhida uma vez; não há laço que reapresente o menu automaticamente.
-
----
+| Arquivo | Descrição |
+|---|---|
+| [programa-01.cpp](programa-01.cpp) | Ponto de entrada e implementação principal. |
+| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
+| [programa-02.cpp](programa-02.cpp) | Arquivo vazio, sem implementação. |
 
 
-## Objetivo
+## ⚙️ Compilação
 
-Aplicar **menus, condições, funções e laços `for` aninhados** para produzir tabuadas de 1 a 10. A entrada `1` seleciona a tabuada tradicional; `2` seleciona o cubo de cada produto.
-
-| Opção | Rotina no código | Resultado |
-|---|---|---|
-| `1` | `TABUADA_COMPLETA()` | Multiplicações de 1 a 10. |
-| `2` | `TABUADA_AO_CUBO()` | Cubo de cada produto da tabuada. |
-| Outras | `FUNCAO_OPCAO()` | Mensagem de opção inválida. |
-
-## Como executar
-
-Na raiz do repositório:
+Na raiz do repositório, com `g++` disponível:
 
 ```bash
-g++ CONTEUDO_P1/programa-2/programa-01.cpp -o tabuada
-./tabuada
+g++ CONTEUDO_P1/programa-2/programa-01.cpp -o programa-01
 ```
 
-No Windows, use `tabuada.exe`. O exercício foi escrito com funções e comandos de entrada/saída da linguagem C em arquivo de extensão `.cpp`.
+Se o compilador concluir sem erro, execute o arquivo resultante (`./programa-01` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
 
-## Arquivos
+## ⚠️ Observações técnicas
 
-| Caminho | Situação |
-|---|---|
-| [programa-01.cpp](programa-01.cpp) | Código funcional do menu e das duas rotinas. |
-| [programa-02.cpp](programa-02.cpp) | Arquivo vazio, sem implementação. |
-| [programa-01.exe](programa-01.exe) | Executável Windows existente no repositório. |
+O cabeçalho de cada bloco usa `i` começando em zero, enquanto as multiplicações utilizam `i + 1`. O menu é apresentado uma vez, sem laço para repetir a seleção.
 
-## Observações da implementação
-
-O menu é executado uma única vez; não há repetição automática após uma escolha. Os textos de cabeçalho usam o índice do laço (`i`), que começa em zero, enquanto as multiplicações usam `i + 1`. Confira o código para diferenciar os rótulos dos cálculos exibidos.
+**Código para conferência:** [programa-01.cpp](programa-01.cpp).
