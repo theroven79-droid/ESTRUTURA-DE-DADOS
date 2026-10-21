@@ -4,6 +4,34 @@
 
 [← Conteúdo P1](../README.md) · [Versão sem cabeçalho](../programa-3/README.md) · [↑ Índice geral](../../README.md)
 
+## 🎮 Desafio · Diagnóstico de modularização
+
+> **Objetivo:** A missão aqui é identificar e explicar um problema real de compilação, em vez de assumir que o exercício já funciona. XP são **pontos simbólicos de estudo**, não coletados pelo programa.
+
+| Fase | Experimento | Fonte / evidência | XP |
+|---|---|---|--:|
+| Inspecionar | Encontrar o arquivo principal e o cabeçalho | [`main`](programa-3-com-biblioteca.cpp) | 10 |
+| Investigar | Verificar chamadas a funções antes das declarações | [`funcoes.h`](funcoes.h) | 20 |
+| Planejar | Descrever como protótipos corrigiriam a organização | [Código modular](funcoes.h) | 30 |
+
+**Checkpoints de conclusão**
+
+- [ ] Identifiquei o `#include` que traz o cabeçalho.
+- [ ] Sei por que a compilação falha com g++.
+- [ ] Consigo distinguir protótipo de definição de função.
+
+<details>
+<summary><strong>✨ Desbloquear desafio extra</strong></summary>
+
+Challenge de melhoria (a implementar): declarar os protótipos necessários e recompilar, conferindo os demais erros eventualmente emitidos.
+
+</details>
+
+**Fidelidade ao código:** O código atual apresenta problemas de compilação documentados; este README não atesta execução bem-sucedida.
+
+---
+
+
 ## Proposta
 
 Variação do cadastro de produtos que separa as funções no arquivo de cabeçalho [`funcoes.h`](funcoes.h), enquanto [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) contém a função `main`. O foco é estudar a organização de código e a reutilização de rotinas.
