@@ -1,27 +1,29 @@
-# 📦 Artefato compilado — Poltronas de ônibus
+# 🚌 Executável do sistema de ônibus
 
-[← Guia do programa](../README.md) · [← Conteúdo do período](../../README.md) · [↑ Índice geral](../../../README.md)
+[← Documentação do exercício](../README.md) · [← Índice do conteúdo](../../README.md) · [↑ Página inicial](../../../README.md)
 
-Diretório de **artefatos de compilação**. O executável é uma versão binária armazenada no repositório; o código-fonte pode ser examinado no diretório superior.
+## 📌 Sobre esta pasta
 
-## 📂 Arquivos
+Esta pasta armazena um executável Windows da simulação de cadastro de ônibus e ocupação de poltronas. As funções utilizadas pelo programa estão definidas em `funcoes.h`, na pasta superior.
 
-| Item | Finalidade |
+| Arquivo | Finalidade |
 |---|---|
-| [mainBus.exe](mainBus.exe) | Binário para Windows incluído nesta pasta |
-| [../mainBus.cpp](../mainBus.cpp) | Código-fonte do programa |
-| [Documentação do exercício](../README.md) | Comportamento, instruções e limitações |
+| [`mainBus.exe`](mainBus.exe) | Executável Windows já existente. |
+| [`../mainBus.cpp`](../mainBus.cpp) | Código-fonte usado como referência. |
+| [`../README.md`](../README.md) | Instruções, recursos e limitações do exercício. |
 
-## ⚙️ Recompilação
+## ⚙️ Como recompilar
 
-Prefira gerar um novo executável com um compilador instalado localmente. Na raiz do repositório:
+Com `g++` instalado, execute na **raiz do repositório**:
 
 ```bash
-g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o programa-local
+g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o onibus
 ```
 
-## 🔎 Contexto
+No Linux/macOS, execute `./onibus`. No Windows, utilize o executável `.exe` gerado pelo compilador.
 
-O programa usa uma matriz de assentos e apresenta limitações de validação e de encerramento do menu.
+## ⚠️ Observações
 
-> **Nota:** o binário presente não constitui prova de funcionamento em todo ambiente nem atestado de segurança. O README principal é a referência de estudo.
+O sistema não valida totalmente as seleções de poltronas, e a opção de saída do menu não está implementada.
+
+O binário incluído não substitui o código-fonte e não comprova, por si só, compatibilidade ou segurança. Para estudar o funcionamento, consulte o [guia do programa](../README.md).
