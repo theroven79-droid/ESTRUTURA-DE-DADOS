@@ -72,3 +72,42 @@ g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o /tmp/estrutura-de-dados/ti
 O programa lê a entrada padrão; o redirecionamento `<` fornece o conteúdo de `inserir.txt`. Para digitar os dados, execute o binário sem o redirecionamento.
 
 O cabeçalho de cadastro chama `system("pause")` e `system("cls")`. Esses comandos são próprios do terminal do Windows e podem gerar mensagens de comando não encontrado no Linux.
+
+---
+
+## Diagrama da progressão
+
+```mermaid
+flowchart TD
+    A["Entrada de dados"] --> B["Vetores e strings"]
+    B --> C["Ordenação"]
+    C --> D["Busca binária"]
+    C --> E["Classificação de times"]
+    E --> F["Desempate por gols"]
+```
+
+## Comparação dos exercícios
+
+| Exercício | Estrutura predominante | Saída principal | Código |
+|---|---|---|---|
+| 01 | Vetor de caracteres | Frase transformada e contagens | [Exercicio_01.cpp](Exercicio_01.cpp) |
+| 02 | Vetor de 10 inteiros | Ordenação e índice encontrado | [Exercicio_02.cpp](Exercicio_02.cpp) |
+| Tabela | Vetores de nomes, gols e pontos | Classificação com desempate | [Guia próprio](Exercicio_tabelaPontuacao/README.md) |
+
+### Execução individual
+
+Partindo da raiz do repositório, com `g++`:
+
+```bash
+g++ CONTEUDO_P2/Exercicio_01.cpp -o texto
+g++ CONTEUDO_P2/Exercicio_02.cpp -o busca
+g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o times
+```
+
+Execute apenas o programa que deseja estudar: `./texto`, `./busca` ou `./times` (no Windows, use os arquivos `.exe`).
+
+### Cuidados observados
+
+O exercício de frases faz concatenação sem conferir o espaço disponível; evite entradas longas. A classificação de times possui comandos específicos de Windows (`pause` e `cls`). Em um empate completo de pontos e gols, não existe terceiro critério definido.
+
+**Fonte principal:** códigos `.cpp`, cabeçalhos `.h` e [entrada de exemplo](Exercicio_tabelaPontuacao/inserir.txt).
