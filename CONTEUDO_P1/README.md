@@ -2,6 +2,38 @@
 
 [Voltar ao índice do repositório](../README.md)
 
+## 🎮 Arena P1 · Do básico às matrizes
+
+> **Missão:** Siga a ordem sugerida para desenvolver fluência em funções, vetores e modularização antes do sistema de ônibus. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+
+| Etapa | Desafio verificável | Evidência original | XP |
+|---|---|---|--:|
+| I · Funções | Executar sequência de cálculos | [Programa 1](programa-1/README.md) | 15 |
+| II · Repetição | Investigar as duas tabuadas | [Programa 2](programa-2/README.md) | 15 |
+| III · Vetores | Cadastrar até três produtos | [Programa 3](programa-3/README.md) | 20 |
+| IV · Cabeçalhos | Comparar os arquivos .h | [Programas 4 e 5](programa-5-biblioteca/README.md) | 20 |
+| V · Matrizes | Interpretar estados de poltronas | [Programa 6](programa-6-biblioteca/README.md) | 30 |
+
+**Checklist de progresso**
+
+- [ ] Consigo explicar o papel do arquivo principal de cada exercício.
+- [ ] Consultei os limites e problemas conhecidos da versão com cabeçalho.
+- [ ] Consigo relacionar valores da matriz às poltronas no sistema de ônibus.
+
+<details>
+<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+
+Missão de robustez (proposta, não implementada): validar seleção de assento ocupado no programa 6.
+
+**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
+
+</details>
+
+**Nota de rigor:** A versão modular do estoque contém erros de compilação identificados; concluir a missão significa compreender o problema, não fingir uma execução bem-sucedida.
+
+---
+
+
 Esta pasta reúne exercícios de funções aritméticas, laços de repetição, cadastro de produtos, organização em cabeçalhos e representação de poltronas em uma matriz.
 
 ## Programas disponíveis
