@@ -4,6 +4,34 @@
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Código-fonte](programa-3.cpp)
 
+## 🎮 Desafio · Gerente de estoque
+
+> **Objetivo:** Investigue como vetores paralelos armazenam informações de até três produtos. XP são **pontos simbólicos de estudo**, não coletados pelo programa.
+
+| Fase | Experimento | Fonte / evidência | XP |
+|---|---|---|--:|
+| Cadastrar | Insira nome, código, preço e quantidade | [`Cprodutos`](programa-3.cpp) | 15 |
+| Consultar | Localize um registro pelo código | [`consulta`](programa-3.cpp) | 20 |
+| Simular compra | Observe total e atualização de estoque | [`compra`](programa-3.cpp) | 25 |
+
+**Checkpoints de conclusão**
+
+- [ ] Reconheci o mesmo índice usado nos quatro vetores.
+- [ ] Entendi que os dados são descartados ao encerrar.
+- [ ] Localizei as opções do menu no código.
+
+<details>
+<summary><strong>✨ Desbloquear desafio extra</strong></summary>
+
+Em cópia local, proponha um teste para estoque insuficiente e registre a resposta observada antes de alterar a implementação.
+
+</details>
+
+**Fidelidade ao código:** Capacidade fixa de três produtos; não é um sistema comercial nem possui banco de dados.
+
+---
+
+
 ## O projeto
 
 Aplicação de terminal voltada ao cadastro de até **3 produtos** e à simulação de consulta e compra. É um exercício de **vetores paralelos, funções, validações e passagem de dados por parâmetros**.
