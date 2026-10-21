@@ -4,6 +4,34 @@
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Código-fonte](mainBus.cpp)
 
+## 🎮 Missão · Auditoria de poltronas
+
+> **Objetivo:** Interprete a matriz do ônibus e investigue a consistência de suas regras de ocupação. XP são **marcos simbólicos** de aprendizagem e não são calculados pela aplicação.
+
+| Etapa | O que verificar | Evidência | XP |
+|---|---|---|--:|
+| 01 · Decodificar | Distinguir estados 0, 1, 8 e -1 | [`funcoes.h`](funcoes.h) | 20 |
+| 02 · Explorar | Acompanhar fluxo do menu até compra | [`mainBus.cpp`](mainBus.cpp) | 20 |
+| 03 · Auditar | Identificar o problema na venda de assentos ocupados | [`funcoes.h`](funcoes.h) | 30 |
+
+**Seu checklist**
+
+- [ ] Consigo explicar a matriz com até 100 linhas e 4 colunas.
+- [ ] Reconheci os estados de disponibilidade e ocupação.
+- [ ] Sei que a opção 0 não encerra o laço na versão atual.
+
+<details>
+<summary><strong>🏅 Desafio bônus</strong></summary>
+
+Em uma branch de estudo, planejar validação para rejeitar estados `8` e `-1` antes de finalizar a compra.
+
+</details>
+
+**Nota técnica:** O desafio de correção não está implementado. Use `Ctrl+C` para interromper o menu existente.
+
+---
+
+
 ## Visão geral
 
 Simulação em terminal para cadastrar ônibus, representar assentos em uma **matriz de 100 linhas × 4 colunas**, vender passagens e consultar a ocupação. O arquivo `mainBus.cpp` cria a matriz e chama `menuPrincipal`, implementada em `funcoes.h`.
