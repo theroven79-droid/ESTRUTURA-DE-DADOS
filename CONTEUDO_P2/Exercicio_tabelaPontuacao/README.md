@@ -4,6 +4,35 @@
 
 [← Conteúdo P2](../README.md) · [↑ Índice geral](../../README.md) · [Dados de teste](inserir.txt)
 
+## 🎮 Missão · Liga de algoritmos
+
+> **Objetivo:** Confronte as regras de classificação com registros de teste, sem confundir ordem de entrada e ranking final. XP são **marcos simbólicos** de aprendizagem e não são calculados pela aplicação.
+
+| Etapa | O que verificar | Evidência | XP |
+|---|---|---|--:|
+| 01 · Cadastro | Ler nomes, gols e pontos dos 12 times | [`cadastroTimes.h`](cadastroTimes.h) | 15 |
+| 02 · Ordenação | Classificar por pontuação decrescente | [`ordenacaoPlacar.h`](ordenacaoPlacar.h) | 20 |
+| 03 · Desempate | Conferir a ordem dos gols em empate de pontos | [`desempate.h`](desempate.h) | 25 |
+| 04 · Resultado | Inspecionar a exibição final | [`tabelaPontuacaoFinal.h`](tabelaPontuacaoFinal.h) | 20 |
+
+**Seu checklist**
+
+- [ ] Conferi o formato de entrada em `inserir.txt`.
+- [ ] Consigo explicar como nome, gols e pontos permanecem associados nas trocas.
+- [ ] Sei que não existe terceiro critério de desempate.
+
+<details>
+<summary><strong>🏅 Desafio bônus</strong></summary>
+
+Proposta: criar um conjunto de teste com dois times de pontuação idêntica e gols diferentes; registrar a ordem observada.
+
+</details>
+
+**Nota técnica:** Os comandos `pause` e `cls` são próprios do Windows; não são portáveis de forma direta.
+
+---
+
+
 ## Objetivo
 
 Programa acadêmico que **cadastra 12 times**, registra gols e pontos, exibe os dados de entrada e gera uma classificação em ordem decrescente. A ordenação considera **pontuação primeiro** e **gols como desempate**.
