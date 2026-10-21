@@ -1,40 +1,38 @@
-# 🔁 Programa 2 — Tabuadas com repetição
+# 🔁 Programa 2 — Tabuadas com laços de repetição
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md)
 
-## 📌 Objetivo
+## 📌 Sobre o exercício
 
-Funções: `FUNCAO_OPCAO`, `TABUADA_COMPLETA` e `TABUADA_AO_CUBO`. Os laços são aninhados (`for`). O arquivo `programa-02.cpp` está vazio.
+O programa apresenta um menu com duas opções. Ambas percorrem as tabuadas de 1 a 10 utilizando laços `for` aninhados. A diferença está no valor exibido em cada multiplicação.
 
-## ✨ Operações e conceitos
+| Opção | Função | Comportamento |
+|---|---|---|
+| `1` | `TABUADA_COMPLETA` | Exibe o produto das multiplicações. |
+| `2` | `TABUADA_AO_CUBO` | Exibe o cubo de cada produto. |
+| Outro valor | `FUNCAO_OPCAO` | Informa que a opção não é aceita. |
 
-| Etapa / elemento | Funcionamento |
-|---|---|
-| Opção 1 | Imprime as tabuadas de 1 a 10. |
-| Opção 2 | Calcula o cubo de cada produto. |
-| Outra opção | Apresenta mensagem de opção não aceita. |
+O menu é apresentado **uma única vez**: depois da opção escolhida, o programa termina.
 
-## 📂 Arquivos relevantes
+## 📂 Arquivos
 
 | Arquivo | Descrição |
 |---|---|
-| [programa-01.cpp](programa-01.cpp) | Ponto de entrada e implementação principal. |
-| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
-| [programa-02.cpp](programa-02.cpp) | Arquivo vazio, sem implementação. |
+| [`programa-01.cpp`](programa-01.cpp) | Implementação do menu, das tabuadas e da função `main`. |
+| [`programa-02.cpp`](programa-02.cpp) | Arquivo vazio, sem um segundo programa implementado. |
+| [`programa-01.exe`](programa-01.exe) | Executável Windows existente no repositório. |
 
+## ⚙️ Compilação e execução
 
-## ⚙️ Compilação
-
-Na raiz do repositório, com `g++` disponível:
+Na raiz do repositório, com `g++` instalado:
 
 ```bash
-g++ CONTEUDO_P1/programa-2/programa-01.cpp -o programa-01
+g++ CONTEUDO_P1/programa-2/programa-01.cpp -o tabuada
+./tabuada
 ```
 
-Se o compilador concluir sem erro, execute o arquivo resultante (`./programa-01` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
+Em sistemas Windows, execute o arquivo `.exe` gerado.
 
-## ⚠️ Observações técnicas
+## ⚠️ Observação sobre a saída
 
-O cabeçalho de cada bloco usa `i` começando em zero, enquanto as multiplicações utilizam `i + 1`. O menu é apresentado uma vez, sem laço para repetir a seleção.
-
-**Código para conferência:** [programa-01.cpp](programa-01.cpp).
+O título de cada tabuada utiliza o índice `i`, que começa em zero. Entretanto, as multiplicações utilizam `i + 1`. Por isso, **o número apresentado no cabeçalho pode não corresponder à tabuada calculada**. Essa diferença está no código original e não foi corrigida nesta documentação.
