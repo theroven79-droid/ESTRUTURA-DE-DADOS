@@ -1,0 +1,36 @@
+santos
+12
+1300
+flamengo
+25
+1850
+palmeiras
+32
+2100
+corinthians
+18
+1450
+sao paulo
+27
+1850
+gremio
+21
+1850
+internacional
+29
+1950
+fluminense
+16
+1380
+botafogo
+34
+1850
+cruzeiro
+23
+1780
+atletico mineiro
+31
+1850
+vasco
+14
+1250
