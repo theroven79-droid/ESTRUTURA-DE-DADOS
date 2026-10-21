@@ -12,7 +12,7 @@ Esta pasta reúne exercícios de funções aritméticas, laços de repetição, 
 | `programa-2` | [programa-01.cpp](programa-2/programa-01.cpp) | Menu de tabuadas de 1 a 10 e dos cubos dos produtos |
 | `programa-3` | [programa-3.cpp](programa-3/programa-3.cpp) | Cadastro, consulta, compra e exibição de até três produtos |
 | `programa-3-biblioteca` | [programa-3-com-biblioteca.cpp](programa-3-biblioteca/programa-3-com-biblioteca.cpp) | Versão do cadastro de produtos com as funções em um cabeçalho |
-| `programa-4-biblioteca` | [programa.cpp](programa-4-biblioteca/programa.cpp) | Leitura de código e valor e chamada da função `soma(10, 10)` |
+| `programa-4-biblioteca` | [programa.cpp](programa-4-biblioteca/programa.cpp) | Leitura de um código e de um valor, seguida da chamada da função `soma(10, 10)` |
 | `programa-5-biblioteca` | [main.cpp](programa-5-biblioteca/main.cpp) | Operações aritméticas com funções distribuídas em cabeçalhos |
 | `programa-6-biblioteca` | [mainBus.cpp](programa-6-biblioteca/mainBus.cpp) | Cadastro de ônibus, representação das poltronas, compra de passagem e relatório de ocupação |
 
@@ -73,7 +73,7 @@ O [programa de ônibus](programa-6-biblioteca/mainBus.cpp) usa uma matriz de 100
 | `8` | Poltrona marcada como comprada |
 | `-1` | Posição que não corresponde a uma poltrona cadastrada |
 
-Cadastre o ônibus antes de consultar as poltronas ou efetuar uma compra. O programa calcula quantidade de lugares ocupados e disponíveis, percentual de ocupação e total vendido.
+Cadastre o ônibus antes de consultar as poltronas ou efetuar uma compra. O programa calcula a quantidade de lugares ocupados e disponíveis, o percentual de ocupação e o valor total vendido.
 
 O código ainda permite selecionar uma poltrona já comprada ou uma posição marcada com `-1`. Além disso, a opção `0 - Sair` aparece no menu, mas não tem um caso que encerre o laço; use `Ctrl+C` para interromper a execução.
 

@@ -10,7 +10,7 @@ Coleção de exercícios de programação organizados nas pastas **CONTEUDO_P1**
 | `CONTEUDO_P2` | Manipulação de frases, ordenação de números, busca binária e classificação de times | [Guia do conteúdo P2](CONTEUDO_P2/README.md) |
 | `.vscode` | Configurações de compilação e depuração do VS Code | [Compilação](.vscode/tasks.json) e [depuração](.vscode/launch.json) |
 
-Os arquivos `.cpp` são os programas principais. Nos exemplos divididos em arquivos, os cabeçalhos `.h` contêm funções ou declarações utilizadas pelo programa. Cada exercício deve ser compilado separadamente.
+O código dos programas é mantido em arquivos `.cpp`. Nos exemplos organizados em vários arquivos, os cabeçalhos `.h` contêm funções ou declarações utilizadas pelo programa. Cada exercício deve ser compilado separadamente.
 
 ## Compilar um exercício
 

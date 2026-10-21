@@ -12,7 +12,7 @@ Esta pasta contém exercícios de transformação de frases, ordenação de núm
 | [Exercicio_02.cpp](Exercicio_02.cpp) | Ordenação crescente de dez inteiros e busca binária |
 | [main.cpp da tabela de pontuação](Exercicio_tabelaPontuacao/main.cpp) | Cadastro e classificação de 12 times por pontos e gols |
 
-## Exercício 1 — Manipulação de frase
+## Exercício 1 — Manipulação de uma frase
 
 O [Exercicio_01.cpp](Exercicio_01.cpp) executa as seguintes etapas sobre o mesmo vetor de caracteres:
 
@@ -21,12 +21,12 @@ O [Exercicio_01.cpp](Exercicio_01.cpp) executa as seguintes etapas sobre o mesmo
 3. Conta caracteres, vogais e consoantes.
 4. Executa a rotina `qtdPalavasTotal`.
 5. Acrescenta o texto ` CHUVANAO`.
-6. Substitui A e I por B; E, O e U por 3.
-7. Soma 3 ao código dos cinco primeiros caracteres e 5 ao código dos demais.
+6. Substitui A e I por B e substitui E, O e U por 3.
+7. Soma 3 ao código de cada um dos cinco primeiros caracteres e 5 ao código de cada um dos demais.
 
 A rotina `qtdPalavasTotal` exibe o rótulo “Quantidade de palavras”, mas conta caracteres. As contagens de vogais e consoantes consideram as letras de A a Z, sem tratamento específico para letras acentuadas.
 
-O vetor tem 100 posições. A concatenação com `strcat` não verifica o espaço restante, por isso entradas próximas do limite podem ultrapassar sua capacidade.
+O vetor tem 100 posições. A concatenação com `strcat` não verifica o espaço restante; por isso, entradas próximas do limite podem ultrapassar sua capacidade.
 
 ## Exercício 2 — Ordenação e busca binária
 
@@ -44,7 +44,7 @@ g++ CONTEUDO_P2/Exercicio_02.cpp -o /tmp/estrutura-de-dados/busca
 
 ## Tabela de pontuação
 
-O programa solicita nome, quantidade de gols e pontuação de 12 times. Primeiro, mostra os dados na ordem de cadastro; depois, ordena pela pontuação em ordem decrescente e, em caso de empate, pela quantidade de gols, também em ordem decrescente.
+O programa solicita o nome, a quantidade de gols e a pontuação de 12 times. Primeiro, mostra os dados na ordem de cadastro; depois, ordena os times pela pontuação em ordem decrescente e, em caso de empate, pela quantidade de gols, também em ordem decrescente.
 
 | Arquivo | Responsabilidade |
 |---|---|
