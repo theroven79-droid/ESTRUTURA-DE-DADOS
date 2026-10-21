@@ -4,6 +4,34 @@
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
+## 🎮 Desafio · Calculadora modular
+
+> **Objetivo:** Acompanhe cinco operações distribuídas entre cabeçalhos e identifique um caso-limite importante. XP são **pontos simbólicos de estudo**, não coletados pelo programa.
+
+| Fase | Experimento | Fonte / evidência | XP |
+|---|---|---|--:|
+| Mapear | Relacionar cada operação ao arquivo .h | [`bibliotecas.h`](bibliotecas.h) | 15 |
+| Executar | Inserir dois inteiros e conferir os resultados | [`main.cpp`](main.cpp) | 15 |
+| Auditar | Localizar a ausência de proteção para divisor zero | [`divisao.h`](divisao.h) | 20 |
+
+**Checkpoints de conclusão**
+
+- [ ] Identifiquei os cinco módulos aritméticos.
+- [ ] Compreendi que cubo calcula `(a+b)^3`.
+- [ ] Sei por que devo evitar divisor zero ao estudar a versão atual.
+
+<details>
+<summary><strong>✨ Desbloquear desafio extra</strong></summary>
+
+Proposta de melhoria: tratar `b == 0` explicitamente antes da divisão e documentar a resposta esperada.
+
+</details>
+
+**Fidelidade ao código:** Não execute divisão por zero deliberadamente em código sem proteção para demonstrar resultado.
+
+---
+
+
 ## Apresentação
 
 Exercício de operações aritméticas com **dois inteiros** digitados no terminal. A função `main` chama cinco rotinas distribuídas em arquivos `.h` e exibe os resultados.
