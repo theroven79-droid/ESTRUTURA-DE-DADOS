@@ -2,6 +2,43 @@
 
 ![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
 
+
+## 🧭 Modo carreira · Estrutura de Dados
+
+> **Missão central:** construir domínio progressivo de funções, vetores, matrizes, strings e ordenação. Os XP são uma referência pedagógica **manual e opcional**, não notas nem métricas automáticas.
+
+| Fase | Competência | Missão verificável | Guia | XP |
+|---|---|---|---|--:|
+| I · Iniciação | Funções e laços | Compilar cálculos e tabuadas | [P1 · 1 e 2](CONTEUDO_P1/README.md) | 20 |
+| II · Organização | Vetores e modularização | Executar cadastro de produtos e calculadora | [P1 · 3 a 5](CONTEUDO_P1/README.md) | 25 |
+| III · Estruturas | Matrizes | Inspecionar a matriz de poltronas e suas limitações | [Ônibus](CONTEUDO_P1/programa-6-biblioteca/README.md) | 25 |
+| IV · Algoritmos | Strings, ordenação e busca | Compilar o exercício de busca binária | [P2](CONTEUDO_P2/README.md) | 30 |
+| V · Projeto | Critérios de classificação | Produzir uma tabela de 12 times usando `inserir.txt` | [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | 40 |
+
+**Seu progresso — checklist para uma cópia pessoal do README**
+
+- [ ] Fase I — identificar protótipos, parâmetros e retorno das funções.
+- [ ] Fase II — explicar como vetores paralelos representam produtos.
+- [ ] Fase III — compreender os estados `0`, `1`, `8` e `-1` das poltronas.
+- [ ] Fase IV — diferenciar Bubble Sort de busca binária.
+- [ ] Fase V — provar o desempate por gols usando dados de teste.
+
+<details>
+<summary><strong>🏆 Desafios bônus de engenharia (a implementar, não existentes no projeto)</strong></summary>
+
+| Desafio | Mudança sugerida | Critério de validação |
+|---|---|---|
+| Robustez | Proteger divisão por zero na calculadora | Entrada com divisor `0` não deve produzir divisão inválida |
+| Consistência | Impedir compra de assento ocupado | Assento `8` não pode ser vendido novamente |
+| Portabilidade | Substituir `pause` e `cls` por alternativa independente de Windows | A tabela de times continua exibindo os resultados |
+| Rastreabilidade | Documentar um terceiro desempate, se implementado | O critério novo aparece no código e no README |
+
+</details>
+
+**📚 Base de evidências:** [códigos-fonte da P1](CONTEUDO_P1/README.md) · [códigos-fonte da P2](CONTEUDO_P2/README.md). Cada missão exige consulta ao projeto real, não a uma descrição inventada.
+
+---
+
 Coleção de exercícios de programação organizados nas pastas **CONTEUDO_P1** e **CONTEUDO_P2**. Os programas são executados no terminal e abordam funções, ponteiros, vetores, matrizes, strings, ordenação e busca.
 
 ## Organização do repositório
