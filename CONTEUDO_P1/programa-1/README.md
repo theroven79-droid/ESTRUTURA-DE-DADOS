@@ -1,39 +1,40 @@
-# 🧮 Programa 1 — Operações com funções
+# 🧮 Programa 1 — Cálculos com funções
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md)
 
-## 📌 Objetivo
+## 📌 Sobre o exercício
 
-Exemplo: entradas `1`, `2`, `3` produzem `13`, `48`, `110592`. As funções `soma`, `multiplicacao` e `cubo` têm protótipos no próprio arquivo.
+Este programa recebe **três números inteiros** e realiza cálculos em sequência. Cada função utiliza o resultado da etapa anterior, demonstrando como organizar operações e trabalhar com parâmetros e valores de retorno.
 
-## ✨ Operações e conceitos
+O código está integralmente em [`programa-1.cpp`](programa-1.cpp), incluindo a função `main` e os protótipos das funções auxiliares.
 
-| Etapa / elemento | Funcionamento |
-|---|---|
-| Entrada | Três números inteiros (`n1`, `n2`, `n3`). |
-| Soma | `n1 + n2 + 10`. |
-| Multiplicação | `(n3 + resultado_da_soma) * 3`. |
-| Cubo | Cubo do resultado anterior. |
+## 🔢 Sequência de cálculos
 
-## 📂 Arquivos relevantes
+| Etapa | Função | Operação |
+|---|---|---|
+| 1 | `soma(n1, n2)` | Soma os dois primeiros números e acrescenta 10. |
+| 2 | `multiplicacao(n3, resultado)` | Soma o terceiro número ao resultado anterior e multiplica por 3. |
+| 3 | `cubo(resultado)` | Eleva o resultado da segunda etapa ao cubo. |
 
-| Arquivo | Descrição |
-|---|---|
-| [programa-1.cpp](programa-1.cpp) | Ponto de entrada e implementação principal. |
-| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
+Para as entradas `1`, `2` e `3`, os valores apresentados são:
 
-## ⚙️ Compilação
+```text
+Resultado 1: 13
+Resultado 2: 48
+Resultado 3: 110592
+```
 
-Na raiz do repositório, com `g++` disponível:
+## ⚙️ Compilação e execução
+
+Com o compilador `g++` instalado, execute na raiz do repositório:
 
 ```bash
 g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa-1
+./programa-1
 ```
 
-Se o compilador concluir sem erro, execute o arquivo resultante (`./programa-1` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
+No Windows, o executável gerado pode ter a extensão `.exe`. O programa usa `scanf` e `printf`, embora o arquivo tenha extensão `.cpp`.
 
-## ⚠️ Observações técnicas
+## ⚠️ Limitações
 
-Os cálculos usam `int` sem proteção específica contra entradas inválidas ou estouro aritmético.
-
-**Código para conferência:** [programa-1.cpp](programa-1.cpp).
+A entrada não possui validação específica, e as operações com `int` podem ultrapassar os limites do tipo em valores muito grandes. Os resultados acima são exemplos deduzidos das operações do [código-fonte](programa-1.cpp), não testes automatizados.
