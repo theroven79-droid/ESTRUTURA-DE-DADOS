@@ -1,27 +1,29 @@
-# 📦 Artefato compilado — Cadastro de produtos
+# 📦 Executável do cadastro de produtos
 
-[← Guia do programa](../README.md) · [← Conteúdo do período](../../README.md) · [↑ Índice geral](../../../README.md)
+[← Documentação do exercício](../README.md) · [← Índice do conteúdo](../../README.md) · [↑ Página inicial](../../../README.md)
 
-Diretório de **artefatos de compilação**. O executável é uma versão binária armazenada no repositório; o código-fonte pode ser examinado no diretório superior.
+## 📌 Sobre esta pasta
 
-## 📂 Arquivos
+O arquivo executável desta pasta corresponde ao exercício de cadastro e controle de estoque de até três produtos. A implementação e o menu estão no arquivo-fonte da pasta superior.
 
-| Item | Finalidade |
+| Arquivo | Finalidade |
 |---|---|
-| [programa-3.exe](programa-3.exe) | Binário para Windows incluído nesta pasta |
-| [../programa-3.cpp](../programa-3.cpp) | Código-fonte do programa |
-| [Documentação do exercício](../README.md) | Comportamento, instruções e limitações |
+| [`programa-3.exe`](programa-3.exe) | Executável Windows já existente. |
+| [`../programa-3.cpp`](../programa-3.cpp) | Código-fonte usado como referência. |
+| [`../README.md`](../README.md) | Instruções, recursos e limitações do exercício. |
 
-## ⚙️ Recompilação
+## ⚙️ Como recompilar
 
-Prefira gerar um novo executável com um compilador instalado localmente. Na raiz do repositório:
+Com `g++` instalado, execute na **raiz do repositório**:
 
 ```bash
-g++ CONTEUDO_P1/programa-3/programa-3.cpp -o programa-local
+g++ CONTEUDO_P1/programa-3/programa-3.cpp -o estoque
 ```
 
-## 🔎 Contexto
+No Linux/macOS, execute `./estoque`. No Windows, utilize o executável `.exe` gerado pelo compilador.
 
-O projeto mantém até três produtos em memória e possui cadastro, consulta e simulação de compra.
+## ⚠️ Observações
 
-> **Nota:** o binário presente não constitui prova de funcionamento em todo ambiente nem atestado de segurança. O README principal é a referência de estudo.
+Os produtos são mantidos apenas em memória; o programa permite cadastro, consulta e simulação de compra.
+
+O binário incluído não substitui o código-fonte e não comprova, por si só, compatibilidade ou segurança. Para estudar o funcionamento, consulte o [guia do programa](../README.md).
