@@ -1,5 +1,7 @@
 # Estrutura de Dados
 
+![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
+
 Coleção de exercícios de programação organizados nas pastas **CONTEUDO_P1** e **CONTEUDO_P2**. Os programas são executados no terminal e abordam funções, ponteiros, vetores, matrizes, strings, ordenação e busca.
 
 ## Organização do repositório
@@ -46,3 +48,46 @@ Os arquivos `.exe` já existentes são executáveis compilados. Para trabalhar c
 - As configurações do VS Code usam caminhos locais do Windows, como `c:\tools\msys64\ucrt64\bin`. Confira esses caminhos antes de usar as tarefas de compilação ou depuração.
 
 Os guias internos descrevem os comportamentos e as limitações dos respectivos exercícios.
+
+---
+
+## Mapa de estudos
+
+```mermaid
+flowchart TD
+    A["Estrutura de Dados"] --> B["P1 · Fundamentos"]
+    A --> C["P2 · Algoritmos"]
+    B --> D["Funções e cabeçalhos"]
+    B --> E["Vetores e matrizes"]
+    E --> F["Cadastro de produtos e poltronas"]
+    C --> G["Strings e caracteres"]
+    C --> H["Bubble Sort e busca binária"]
+    C --> I["Tabela de classificação de times"]
+```
+
+## Catálogo de exercícios
+
+| Projeto | Conceito central | README detalhado |
+|---|---|---|
+| Programa 1 | Encadeamento de funções | [Abrir](CONTEUDO_P1/programa-1/README.md) |
+| Programa 2 | Tabuadas e laços | [Abrir](CONTEUDO_P1/programa-2/README.md) |
+| Programa 3 | Estoque com vetores | [Abrir](CONTEUDO_P1/programa-3/README.md) |
+| Programa 3 (biblioteca) | Cabeçalhos e modularização | [Abrir](CONTEUDO_P1/programa-3-biblioteca/README.md) |
+| Programa 4 | Variáveis e funções em headers | [Abrir](CONTEUDO_P1/programa-4-biblioteca/README.md) |
+| Programa 5 | Calculadora modular | [Abrir](CONTEUDO_P1/programa-5-biblioteca/README.md) |
+| Programa 6 | Matriz de poltronas | [Abrir](CONTEUDO_P1/programa-6-biblioteca/README.md) |
+| Exercício 1 (P2) | Tratamento de strings | [Guia P2](CONTEUDO_P2/README.md) |
+| Exercício 2 (P2) | Ordenação e busca binária | [Guia P2](CONTEUDO_P2/README.md) |
+| Tabela de times | Ordenação com desempate | [Abrir](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) |
+
+## Ambiente de desenvolvimento
+
+| Item | Orientação |
+|---|---|
+| Editor | [Visual Studio Code](https://code.visualstudio.com/) ou editor de preferência |
+| Compilador | GCC/`g++` compatível com seus arquivos |
+| Windows | É possível configurar [MSYS2](https://www.msys2.org/) para obter `g++` |
+| Linux | Use uma instalação de GCC/`g++` disponível no sistema |
+| Execução | Cada programa tem seu `main` e deve ser compilado separadamente |
+
+**Não há testes automatizados ou um sistema de build único configurado.** As pastas `output` e arquivos `.exe` são artefatos e não substituem os códigos-fonte. Para distinguir limitações de implementação e comportamentos esperados, consulte os guias por projeto.
