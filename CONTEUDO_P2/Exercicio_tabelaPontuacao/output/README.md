@@ -1,27 +1,29 @@
-# 📦 Artefato compilado — Classificação de times
+# ⚽ Executável da classificação de times
 
-[← Guia do programa](../README.md) · [← Conteúdo do período](../../README.md) · [↑ Índice geral](../../../README.md)
+[← Documentação do exercício](../README.md) · [← Índice do conteúdo](../../README.md) · [↑ Página inicial](../../../README.md)
 
-Diretório de **artefatos de compilação**. O executável é uma versão binária armazenada no repositório; o código-fonte pode ser examinado no diretório superior.
+## 📌 Sobre esta pasta
 
-## 📂 Arquivos
+O binário desta pasta pertence ao exercício de classificação de 12 times, que ordena os registros por pontuação e utiliza a quantidade de gols como critério de desempate.
 
-| Item | Finalidade |
+| Arquivo | Finalidade |
 |---|---|
-| [main.exe](main.exe) | Binário para Windows incluído nesta pasta |
-| [../main.cpp](../main.cpp) | Código-fonte do programa |
-| [Documentação do exercício](../README.md) | Comportamento, instruções e limitações |
+| [`main.exe`](main.exe) | Executável Windows já existente. |
+| [`../main.cpp`](../main.cpp) | Código-fonte usado como referência. |
+| [`../README.md`](../README.md) | Instruções, recursos e limitações do exercício. |
 
-## ⚙️ Recompilação
+## ⚙️ Como recompilar
 
-Prefira gerar um novo executável com um compilador instalado localmente. Na raiz do repositório:
+Com `g++` instalado, execute na **raiz do repositório**:
 
 ```bash
-g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o programa-local
+g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o classificacao
 ```
 
-## 🔎 Contexto
+No Linux/macOS, execute `./classificacao`. No Windows, utilize o executável `.exe` gerado pelo compilador.
 
-O projeto classifica 12 equipes por pontuação e usa gols no desempate; emprega comandos do Windows.
+## ⚠️ Observações
 
-> **Nota:** o binário presente não constitui prova de funcionamento em todo ambiente nem atestado de segurança. O README principal é a referência de estudo.
+O código utiliza `pause` e `cls`, comandos específicos do Windows, e não define um terceiro critério de desempate.
+
+O binário incluído não substitui o código-fonte e não comprova, por si só, compatibilidade ou segurança. Para estudar o funcionamento, consulte o [guia do programa](../README.md).
