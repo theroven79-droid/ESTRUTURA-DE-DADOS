@@ -1,58 +1,53 @@
 # ⚽ Classificação de times — Pontuação e desempate
 
-[← Conteúdo P2](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P2](../README.md) · [↑ Página inicial](../../README.md)
 
-Aplicação de terminal que cadastra **12 times**, recebe nome, gols e pontuação e monta um ranking com dois critérios: **mais pontos** e, em caso de empate, **mais gols**.
+## 📌 Sobre o projeto
 
-## 🧮 Critérios de classificação
+Programa de terminal que cadastra **12 times**, registra seus gols e pontos e exibe uma tabela de classificação. O objetivo é exercitar **vetores paralelos, ordenação e critérios de desempate**.
 
-| Ordem | Critério | Sentido |
+## 🏆 Regras da classificação
+
+| Prioridade | Critério | Ordem |
 |---:|---|---|
-| 1 | Pontuação | Decrescente |
-| 2 | Gols, se houver empate em pontos | Decrescente |
-| — | Pontos e gols iguais | Não há terceiro desempate |
+| 1 | Pontuação | Do maior para o menor valor |
+| 2 | Gols, quando houver empate em pontos | Do maior para o menor valor |
 
-```mermaid
-flowchart LR
-    A[Cadastro] --> B[Tabela inicial]
-    B --> C[Ordenação por pontos]
-    C --> D[Desempate por gols]
-    D --> E[Classificação final]
-```
+Se dois times tiverem pontuação e gols iguais, **não existe um terceiro critério** implementado.
 
-## 📂 Arquitetura
+## 📂 Organização do código
 
 | Arquivo | Responsabilidade |
 |---|---|
-| [main.cpp](main.cpp) | Vetores e sequência principal de chamadas |
-| [bibliotecas.h](bibliotecas.h) | Inclusões e limites de dados |
-| [cadastroTimes.h](cadastroTimes.h) | Entrada de dados e tabela inicial |
-| [ordenacaoPlacar.h](ordenacaoPlacar.h) | Ordenação por pontos |
-| [tabelaOrdenada.h](tabelaOrdenada.h) | Tabela intermediária |
-| [desempate.h](desempate.h) | Reordenação dos times empatados |
-| [tabelaPontuacaoFinal.h](tabelaPontuacaoFinal.h) | Exibição final |
-| [inserir.txt](inserir.txt) | Doze registros de exemplo |
-| [output/](output/README.md) | Artefato `.exe` compilado |
+| [`main.cpp`](main.cpp) | Declara os vetores e determina a sequência das operações. |
+| [`bibliotecas.h`](bibliotecas.h) | Bibliotecas e constantes usadas no projeto. |
+| [`cadastroTimes.h`](cadastroTimes.h) | Lê os dados e apresenta a tabela inicial. |
+| [`ordenacaoPlacar.h`](ordenacaoPlacar.h) | Ordena os times pela pontuação. |
+| [`tabelaOrdenada.h`](tabelaOrdenada.h) | Exibe a classificação intermediária. |
+| [`desempate.h`](desempate.h) | Reorganiza os empates de pontos conforme a quantidade de gols. |
+| [`tabelaPontuacaoFinal.h`](tabelaPontuacaoFinal.h) | Mostra a tabela final. |
+| [`inserir.txt`](inserir.txt) | Fornece os registros utilizados como exemplo. |
+| [`output/`](output/README.md) | Contém um executável Windows já compilado. |
 
-Nome, gols e pontos são armazenados em vetores paralelos. As trocas mantêm os dados do mesmo time associados. Os nomes ocupam vetores de 50 posições, incluindo o terminador da string.
+Os nomes, gols e pontos são armazenados em vetores de posições correspondentes. Durante a ordenação, os valores de um mesmo time são movimentados em conjunto.
 
-## ⚙️ Compilar e executar
+## ⚙️ Compilação e execução
 
-Na raiz do repositório:
-
-```bash
-g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o tabela-times
-./tabela-times
-```
-
-Para usar os registros de exemplo automaticamente:
+Na raiz do repositório, com `g++` instalado:
 
 ```bash
-./tabela-times < CONTEUDO_P2/Exercicio_tabelaPontuacao/inserir.txt
+g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o classificacao
+./classificacao
 ```
 
-No Windows, execute o `.exe` produzido pelo compilador.
+Para fornecer automaticamente os dados de exemplo:
 
-## ⚠️ Portabilidade e limites
+```bash
+./classificacao < CONTEUDO_P2/Exercicio_tabelaPontuacao/inserir.txt
+```
 
-A função de cadastro utiliza `system("pause")` e `system("cls")`, próprios do Windows. Em Linux e macOS esses comandos podem falhar, embora seja possível estudar os algoritmos. Não há um terceiro critério para empates completos nem persistência de registros.
+No Windows, utilize o executável `.exe` correspondente.
+
+## ⚠️ Compatibilidade
+
+O cadastro utiliza `system("pause")` e `system("cls")`, comandos específicos do Windows. Em Linux e macOS, eles podem produzir mensagens de erro. O programa não possui banco de dados nem armazenamento permanente da classificação.
