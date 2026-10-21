@@ -1,48 +1,27 @@
-# Executável compilado · Sistema de ônibus
+# 📦 Artefato compilado — Poltronas de ônibus
 
-[← Guia do sistema](../README.md) · [← Conteúdo P1](../../README.md) · [↑ Índice](../../../README.md)
+[← Guia do programa](../README.md) · [← Conteúdo do período](../../README.md) · [↑ Índice geral](../../../README.md)
 
-## 🎮 Checkpoint de rastreabilidade · Ônibus
+Diretório de **artefatos de compilação**. O executável é uma versão binária armazenada no repositório; o código-fonte pode ser examinado no diretório superior.
 
-> **Objetivo:** Navegue do executável para a implementação, distinguindo artefato e código-fonte. XP são **marcos simbólicos** de aprendizagem e não são calculados pela aplicação.
+## 📂 Arquivos
 
-| Etapa | O que verificar | Evidência | XP |
-|---|---|---|--:|
-| Localizar | Identificar `mainBus.exe` | [Binário](mainBus.exe) | 10 |
-| Rastrear | Abrir `mainBus.cpp` e `funcoes.h` | [Fonte](../mainBus.cpp) | 15 |
-
-**Seu checklist**
-
-- [ ] Consultei o README principal do exercício.
-- [ ] Sei recompilar a partir do código em vez de depender do binário.
-
-<details>
-<summary><strong>🏅 Desafio bônus</strong></summary>
-
-Opcional: registrar versão do compilador e ambiente usado em uma recompilação local.
-
-</details>
-
-**Nota técnica:** A pasta output não contém uma suíte de testes nem um indicador de qualidade do executável.
-
----
-
-
-Pasta destinada ao binário Windows do exercício de **mapa, venda e ocupação de poltronas**.
-
-| Arquivo | Função |
+| Item | Finalidade |
 |---|---|
-| [mainBus.exe](mainBus.exe) | Executável incluído nesta pasta |
-| [../mainBus.cpp](../mainBus.cpp) | Ponto de entrada original |
-| [../funcoes.h](../funcoes.h) | Rotinas de menu, cadastro e assentos |
-| [../README.md](../README.md) | Documentação completa e limitações |
+| [mainBus.exe](mainBus.exe) | Binário para Windows incluído nesta pasta |
+| [../mainBus.cpp](../mainBus.cpp) | Código-fonte do programa |
+| [Documentação do exercício](../README.md) | Comportamento, instruções e limitações |
 
-## Recompilação segura
+## ⚙️ Recompilação
 
-A partir da raiz do repositório:
+Prefira gerar um novo executável com um compilador instalado localmente. Na raiz do repositório:
 
 ```bash
-g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o onibus
+g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o programa-local
 ```
 
-Prefira compilar o código-fonte localmente. A implementação atual não valida completamente a seleção de poltronas e apresenta uma opção de saída sem tratamento no menu. Leia os detalhes no [README do programa](../README.md).
+## 🔎 Contexto
+
+O programa usa uma matriz de assentos e apresenta limitações de validação e de encerramento do menu.
+
+> **Nota:** o binário presente não constitui prova de funcionamento em todo ambiente nem atestado de segurança. O README principal é a referência de estudo.
