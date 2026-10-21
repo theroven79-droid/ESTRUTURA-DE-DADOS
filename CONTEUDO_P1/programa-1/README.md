@@ -4,6 +4,36 @@
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Ver código-fonte](programa-1.cpp)
 
+## 🎮 Checkpoint 01 · Funções encadeadas
+
+> **Missão:** Use os resultados intermediários para demonstrar que você entende passagem de parâmetros e retorno de funções. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+
+| Etapa | Desafio verificável | Evidência original | XP |
+|---|---|---|--:|
+| 1 · Entrada | Ler três números inteiros | [`main`](programa-1.cpp) | 10 |
+| 2 · Cálculo | Confirmar soma, multiplicação e cubo para 1, 2 e 3 | [`soma`, `multiplicacao`, `cubo`](programa-1.cpp) | 20 |
+| 3 · Explicação | Reconstruir a sequência 13 → 48 → 110592 | [Fluxo](#fluxo-do-algoritmo) | 20 |
+
+**Checklist de progresso**
+
+- [ ] Reproduzi as três saídas do exemplo.
+- [ ] Expliquei a origem do +10 e do ×3.
+- [ ] Identifiquei os protótipos das funções no arquivo.
+
+<details>
+<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+
+Desafio bônus (não implementado): comparar o resultado de entradas negativas e investigar possíveis estouros de `int`.
+
+**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
+
+</details>
+
+**Nota de rigor:** A classificação é didática; não há testes automatizados ou sistema de pontos no executável.
+
+---
+
+
 ## Visão geral
 
 Exercício em C, salvo como `.cpp`, para treinar **entrada de dados, protótipos de funções, retorno de valores e encadeamento de operações**. O programa solicita três inteiros e executa as funções `soma`, `multiplicacao` e `cubo` em sequência.
