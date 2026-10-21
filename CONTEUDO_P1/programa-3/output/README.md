@@ -2,6 +2,32 @@
 
 [← Programa 3](../README.md) · [← Conteúdo P1](../../README.md) · [↑ Índice geral](../../../README.md)
 
+## 🎮 Inventário · Artefatos de compilação
+
+> **Objetivo:** Localize o binário e a origem de seu código sem confundir um executável com o arquivo-fonte. XP são **pontos simbólicos de estudo**, não coletados pelo programa.
+
+| Fase | Experimento | Fonte / evidência | XP |
+|---|---|---|--:|
+| Identificar | Distinguir fonte e binário | [`programa-3.exe`](programa-3.exe) | 10 |
+| Rastrear | Abrir o arquivo que contém a implementação | [`../programa-3.cpp`](../programa-3.cpp) | 10 |
+
+**Checkpoints de conclusão**
+
+- [ ] Localizei o arquivo .cpp correspondente.
+- [ ] Li o guia do programa antes da execução.
+
+<details>
+<summary><strong>✨ Desbloquear desafio extra</strong></summary>
+
+Desafio opcional: recompilar localmente e comparar a data e o tamanho do novo artefato, sem presumir igualdade bit a bit.
+
+</details>
+
+**Fidelidade ao código:** A existência de um binário não equivale a uma verificação de segurança ou resultado de testes.
+
+---
+
+
 Esta pasta reúne uma versão executável Windows do exercício de **controle de estoque**. Não contém o código-fonte principal.
 
 | Item | Descrição |
