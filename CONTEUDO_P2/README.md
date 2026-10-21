@@ -2,6 +2,37 @@
 
 [Voltar ao índice do repositório](../README.md)
 
+## 🎮 Arena P2 · Investigar, ordenar e buscar
+
+> **Missão:** Esta fase enfatiza leitura de código e validação de algoritmos sobre dados inseridos no terminal. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+
+| Etapa | Desafio verificável | Evidência original | XP |
+|---|---|---|--:|
+| 01 · Texto | Entender transformação e contagem de caracteres | [Exercício 1](Exercicio_01.cpp) | 20 |
+| 02 · Ordenação | Explicar as trocas do Bubble Sort | [Exercício 2](Exercicio_02.cpp) | 25 |
+| 03 · Busca | Justificar a necessidade de vetor ordenado na busca binária | [Exercício 2](Exercicio_02.cpp) | 25 |
+| 04 · Ranking | Conferir desempate por gols | [Tabela de times](Exercicio_tabelaPontuacao/README.md) | 30 |
+
+**Checklist de progresso**
+
+- [ ] Distingui contagem de caracteres da contagem de palavras descrita pela função.
+- [ ] Entendo por que a busca binária opera sobre dados ordenados.
+- [ ] Usei os registros de exemplo para analisar a tabela de times.
+
+<details>
+<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+
+Desafio opcional (não implementado): elaborar casos de teste para nomes, gols e pontos iguais.
+
+**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
+
+</details>
+
+**Nota de rigor:** No exercício de frases, a concatenação não valida a capacidade do vetor; utilize entradas curtas para estudar o comportamento.
+
+---
+
+
 Esta pasta contém exercícios de transformação de frases, ordenação de números, busca binária e classificação de times.
 
 ## Exercícios disponíveis
