@@ -1,80 +1,41 @@
-# Programa 6 · Reserva e ocupação de poltronas de ônibus
+# 🚌 Programa 6 — Mapa e ocupação de ônibus
 
-![C](https://img.shields.io/badge/Linguagem-C-00599C?logo=c&logoColor=white) ![Tema](https://img.shields.io/badge/Tema-Matrizes-blue)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Código-fonte](mainBus.cpp)
+## 📌 Objetivo
 
-## 🎮 Missão · Auditoria de poltronas
+O [mainBus.cpp](mainBus.cpp) declara a matriz e chama `menuPrincipal`, implementada em [funcoes.h](funcoes.h). Estados: `0` comum disponível, `1` especial disponível, `8` comprado e `-1` posição não cadastrada.
 
-> **Objetivo:** Interprete a matriz do ônibus e investigue a consistência de suas regras de ocupação. XP são **marcos simbólicos** de aprendizagem e não são calculados pela aplicação.
+## ✨ Operações e conceitos
 
-| Etapa | O que verificar | Evidência | XP |
-|---|---|---|--:|
-| 01 · Decodificar | Distinguir estados 0, 1, 8 e -1 | [`funcoes.h`](funcoes.h) | 20 |
-| 02 · Explorar | Acompanhar fluxo do menu até compra | [`mainBus.cpp`](mainBus.cpp) | 20 |
-| 03 · Auditar | Identificar o problema na venda de assentos ocupados | [`funcoes.h`](funcoes.h) | 30 |
-
-**Seu checklist**
-
-- [ ] Consigo explicar a matriz com até 100 linhas e 4 colunas.
-- [ ] Reconheci os estados de disponibilidade e ocupação.
-- [ ] Sei que a opção 0 não encerra o laço na versão atual.
-
-<details>
-<summary><strong>🏅 Desafio bônus</strong></summary>
-
-Em uma branch de estudo, planejar validação para rejeitar estados `8` e `-1` antes de finalizar a compra.
-
-</details>
-
-**Nota técnica:** O desafio de correção não está implementado. Use `Ctrl+C` para interromper o menu existente.
-
----
-
-
-## Visão geral
-
-Simulação em terminal para cadastrar ônibus, representar assentos em uma **matriz de 100 linhas × 4 colunas**, vender passagens e consultar a ocupação. O arquivo `mainBus.cpp` cria a matriz e chama `menuPrincipal`, implementada em `funcoes.h`.
-
-## Estrutura
-
-| Arquivo | Utilização |
+| Etapa / elemento | Funcionamento |
 |---|---|
-| [mainBus.cpp](mainBus.cpp) | Entrada da aplicação, variáveis e chamada ao menu. |
-| [funcoes.h](funcoes.h) | Cadastro, visualização de poltronas, compra e relatório. |
-| [mainBus.exe](mainBus.exe) | Executável Windows presente no projeto. |
-| [output/](output/README.md) | Outro artefato compilado do exercício. |
+| Cadastro | Define propriedades e mapa do ônibus. |
+| Assentos | Representa posições em matriz de 100 linhas × 4 colunas. |
+| Venda | Permite selecionar passagens. |
+| Relatório | Apresenta ocupação, disponibilidade e valores vendidos. |
 
-## Legenda da matriz
+## 📂 Arquivos relevantes
 
-| Valor | Significado |
-|---:|---|
-| `0` | Poltrona comum disponível |
-| `1` | Poltrona especial disponível |
-| `8` | Poltrona vendida |
-| `-1` | Posição não cadastrada como assento |
+| Arquivo | Descrição |
+|---|---|
+| [mainBus.cpp](mainBus.cpp) | Ponto de entrada e implementação principal. |
+| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
+| [output/](output/README.md) | Diretório com binário para Windows. |
 
-```mermaid
-flowchart TD
-    A["Iniciar menu"] --> B["Cadastrar ônibus"]
-    B --> C["Consultar mapa de poltronas"]
-    C --> D["Comprar passagem"]
-    D --> E["Consultar relatório de ocupação"]
-```
 
-## Compilar e executar
+## ⚙️ Compilação
 
-Na raiz do repositório:
+Na raiz do repositório, com `g++` disponível:
 
 ```bash
-g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o onibus
-./onibus
+g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o mainBus
 ```
 
-## Atenção ao comportamento atual
+Se o compilador concluir sem erro, execute o arquivo resultante (`./mainBus` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
 
-- Cadastre o ônibus antes de consultar lugares ou comprar.
-- A implementação permite selecionar assentos já comprados ou posições `-1`; a disponibilidade não é validada completamente.
-- A opção `0 - Sair` aparece no menu, mas o código não possui o caso que encerra o laço; use `Ctrl+C` para interromper.
+## ⚠️ Observações técnicas
 
-É um **protótipo acadêmico**, sem persistência ou regras completas de uma bilheteria real.
+**Limitações conhecidas:** o código pode aceitar seleção de assento já comprado ou posição `-1`. A opção `0 - Sair` é apresentada, mas não possui tratamento que encerre o laço; `Ctrl+C` pode ser necessário para interromper.
+
+**Código para conferência:** [mainBus.cpp](mainBus.cpp).
