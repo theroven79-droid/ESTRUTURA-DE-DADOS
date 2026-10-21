@@ -1,130 +1,67 @@
-# Estrutura de Dados
+# 🧠 Estrutura de Dados — Exercícios e algoritmos
 
-![Linguagem](https://img.shields.io/badge/Linguagem-C%2FC%2B%2B-00599C?logo=cplusplus&logoColor=white) ![Conteúdo](https://img.shields.io/badge/Conte%C3%BAdo-Acad%C3%AAmico-blue)
+Coleção acadêmica de programas de terminal organizados por períodos de estudo **P1 e P2**. Os exercícios foram registrados em arquivos `.cpp` e aplicam conceitos de funções, vetores, matrizes, strings, ordenação e busca.
 
+[![C/C++](https://img.shields.io/badge/C%20%2F%20C%2B%2B-Exerc%C3%ADcios-00599C?logo=cplusplus&logoColor=white)](https://isocpp.org/) [![Editor](https://img.shields.io/badge/VS%20Code-Configura%C3%A7%C3%A3o%20local-007ACC?logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
 
-## 🧭 Modo carreira · Estrutura de Dados
+## 📌 Organização do conteúdo
 
-> **Missão central:** construir domínio progressivo de funções, vetores, matrizes, strings e ordenação. Os XP são uma referência pedagógica **manual e opcional**, não notas nem métricas automáticas.
-
-| Fase | Competência | Missão verificável | Guia | XP |
-|---|---|---|---|--:|
-| I · Iniciação | Funções e laços | Compilar cálculos e tabuadas | [P1 · 1 e 2](CONTEUDO_P1/README.md) | 20 |
-| II · Organização | Vetores e modularização | Executar cadastro de produtos e calculadora | [P1 · 3 a 5](CONTEUDO_P1/README.md) | 25 |
-| III · Estruturas | Matrizes | Inspecionar a matriz de poltronas e suas limitações | [Ônibus](CONTEUDO_P1/programa-6-biblioteca/README.md) | 25 |
-| IV · Algoritmos | Strings, ordenação e busca | Compilar o exercício de busca binária | [P2](CONTEUDO_P2/README.md) | 30 |
-| V · Projeto | Critérios de classificação | Produzir uma tabela de 12 times usando `inserir.txt` | [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | 40 |
-
-**Seu progresso — checklist para uma cópia pessoal do README**
-
-- [ ] Fase I — identificar protótipos, parâmetros e retorno das funções.
-- [ ] Fase II — explicar como vetores paralelos representam produtos.
-- [ ] Fase III — compreender os estados `0`, `1`, `8` e `-1` das poltronas.
-- [ ] Fase IV — diferenciar Bubble Sort de busca binária.
-- [ ] Fase V — provar o desempate por gols usando dados de teste.
-
-<details>
-<summary><strong>🏆 Desafios bônus de engenharia (a implementar, não existentes no projeto)</strong></summary>
-
-| Desafio | Mudança sugerida | Critério de validação |
+| Módulo | Temas | Documentação |
 |---|---|---|
-| Robustez | Proteger divisão por zero na calculadora | Entrada com divisor `0` não deve produzir divisão inválida |
-| Consistência | Impedir compra de assento ocupado | Assento `8` não pode ser vendido novamente |
-| Portabilidade | Substituir `pause` e `cls` por alternativa independente de Windows | A tabela de times continua exibindo os resultados |
-| Rastreabilidade | Documentar um terceiro desempate, se implementado | O critério novo aparece no código e no README |
+| **P1** | Funções, parâmetros, vetores, matrizes, cabeçalhos e aplicações de terminal | [CONTEUDO_P1](CONTEUDO_P1/README.md) |
+| **P2** | Strings, transformação de texto, Bubble Sort, busca binária e classificação de times | [CONTEUDO_P2](CONTEUDO_P2/README.md) |
+| **VS Code** | Tarefas de compilação e depuração | [tasks.json](.vscode/tasks.json) · [launch.json](.vscode/launch.json) |
 
-</details>
-
-**📚 Base de evidências:** [códigos-fonte da P1](CONTEUDO_P1/README.md) · [códigos-fonte da P2](CONTEUDO_P2/README.md). Cada missão exige consulta ao projeto real, não a uma descrição inventada.
-
----
-
-Coleção de exercícios de programação organizados nas pastas **CONTEUDO_P1** e **CONTEUDO_P2**. Os programas são executados no terminal e abordam funções, ponteiros, vetores, matrizes, strings, ordenação e busca.
-
-## Organização do repositório
-
-| Pasta | Conteúdo | Documentação |
-|---|---|---|
-| `CONTEUDO_P1` | Operações aritméticas, tabuadas, cadastro de produtos e controle de poltronas | [Guia do conteúdo P1](CONTEUDO_P1/README.md) |
-| `CONTEUDO_P2` | Manipulação de frases, ordenação de números, busca binária e classificação de times | [Guia do conteúdo P2](CONTEUDO_P2/README.md) |
-| `.vscode` | Configurações de compilação e depuração do VS Code | [Compilação](.vscode/tasks.json) e [depuração](.vscode/launch.json) |
-
-O código dos programas é mantido em arquivos `.cpp`. Nos exemplos organizados em vários arquivos, os cabeçalhos `.h` contêm funções ou declarações utilizadas pelo programa. Cada exercício deve ser compilado separadamente.
-
-## Compilar um exercício
-
-O exemplo abaixo usa `g++` em um terminal Linux. Execute os comandos na raiz do repositório:
-
-```bash
-mkdir -p /tmp/estrutura-de-dados
-g++ CONTEUDO_P1/programa-1/programa-1.cpp -o /tmp/estrutura-de-dados/programa-1
-/tmp/estrutura-de-dados/programa-1
-```
-
-O [programa 1](CONTEUDO_P1/programa-1/programa-1.cpp) lê três números inteiros. Para as entradas `1`, `2` e `3`, apresenta:
-
-| Etapa | Cálculo realizado | Resultado |
-|---|---|---:|
-| 1 | `1 + 2 + 10` | 13 |
-| 2 | `(13 + 3) × 3` | 48 |
-| 3 | `48³` | 110592 |
-
-Os arquivos `.exe` já existentes são executáveis compilados. Para trabalhar com o código disponível, compile o arquivo-fonte correspondente no seu ambiente.
-
-## Percursos de estudo
-
-- **Funções e cabeçalhos:** compare os programas aritméticos descritos no [conteúdo P1](CONTEUDO_P1/README.md).
-- **Vetores e matrizes:** consulte o cadastro de produtos e o exemplo de poltronas no mesmo guia.
-- **Strings, ordenação e busca:** avance para os exercícios descritos no [conteúdo P2](CONTEUDO_P2/README.md).
-
-## Observações sobre os arquivos
-
-- [programa-02.cpp](CONTEUDO_P1/programa-2/programa-02.cpp) está vazio.
-- A versão [programa-3-biblioteca](CONTEUDO_P1/programa-3-biblioteca/programa-3-com-biblioteca.cpp) usa funções antes de suas declarações e apresenta erros de compilação com `g++`.
-- A tabela de times chama `pause` e `cls`, comandos de terminal do Windows. Consulte as orientações no [guia P2](CONTEUDO_P2/README.md).
-- As configurações do VS Code usam caminhos locais do Windows, como `c:\tools\msys64\ucrt64\bin`. Confira esses caminhos antes de usar as tarefas de compilação ou depuração.
-
-Os guias internos descrevem os comportamentos e as limitações dos respectivos exercícios.
-
----
-
-## Mapa de estudos
+## 🗺️ Roteiro de aprendizagem
 
 ```mermaid
-flowchart TD
-    A["Estrutura de Dados"] --> B["P1 · Fundamentos"]
-    A --> C["P2 · Algoritmos"]
-    B --> D["Funções e cabeçalhos"]
-    B --> E["Vetores e matrizes"]
-    E --> F["Cadastro de produtos e poltronas"]
-    C --> G["Strings e caracteres"]
-    C --> H["Bubble Sort e busca binária"]
-    C --> I["Tabela de classificação de times"]
+flowchart LR
+    A[Funções] --> B[Vetores]
+    B --> C[Matrizes]
+    C --> D[Strings]
+    D --> E[Ordenação]
+    E --> F[Busca]
 ```
 
-## Catálogo de exercícios
-
-| Projeto | Conceito central | README detalhado |
+| Projeto | O que demonstra | Guia |
 |---|---|---|
-| Programa 1 | Encadeamento de funções | [Abrir](CONTEUDO_P1/programa-1/README.md) |
-| Programa 2 | Tabuadas e laços | [Abrir](CONTEUDO_P1/programa-2/README.md) |
-| Programa 3 | Estoque com vetores | [Abrir](CONTEUDO_P1/programa-3/README.md) |
-| Programa 3 (biblioteca) | Cabeçalhos e modularização | [Abrir](CONTEUDO_P1/programa-3-biblioteca/README.md) |
-| Programa 4 | Variáveis e funções em headers | [Abrir](CONTEUDO_P1/programa-4-biblioteca/README.md) |
+| Programa 1 | Funções e operações encadeadas | [Abrir](CONTEUDO_P1/programa-1/README.md) |
+| Programa 2 | Tabuadas com laços | [Abrir](CONTEUDO_P1/programa-2/README.md) |
+| Programa 3 | Cadastro e compra com vetores | [Abrir](CONTEUDO_P1/programa-3/README.md) |
+| Programa 3 modular | Organização do código em cabeçalhos | [Abrir](CONTEUDO_P1/programa-3-biblioteca/README.md) |
+| Programa 4 | Variáveis e funções em `.h` | [Abrir](CONTEUDO_P1/programa-4-biblioteca/README.md) |
 | Programa 5 | Calculadora modular | [Abrir](CONTEUDO_P1/programa-5-biblioteca/README.md) |
-| Programa 6 | Matriz de poltronas | [Abrir](CONTEUDO_P1/programa-6-biblioteca/README.md) |
-| Exercício 1 (P2) | Tratamento de strings | [Guia P2](CONTEUDO_P2/README.md) |
-| Exercício 2 (P2) | Ordenação e busca binária | [Guia P2](CONTEUDO_P2/README.md) |
-| Tabela de times | Ordenação com desempate | [Abrir](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) |
+| Programa 6 | Mapa e ocupação de poltronas | [Abrir](CONTEUDO_P1/programa-6-biblioteca/README.md) |
+| Exercícios P2 | Caracteres, Bubble Sort e busca binária | [Abrir](CONTEUDO_P2/README.md) |
+| Tabela de times | Classificação por pontos e gols | [Abrir](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) |
 
-## Ambiente de desenvolvimento
+## ⚙️ Compilar e executar
 
-| Item | Orientação |
+**Requisitos:** compilador `g++` e terminal. Para compilar, por exemplo, o primeiro programa:
+
+```bash
+g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa1
+./programa1
+```
+
+No Windows, execute `programa1.exe`. Compile **cada exercício separadamente**, porque muitos possuem sua própria função `main()`.
+
+O VS Code contém configurações com caminhos de compilador específicos de Windows/MSYS2, como `c:\tools\msys64\ucrt64\bin`. Esses caminhos dependem da instalação local e precisam ser ajustados conforme o computador.
+
+## 🧪 Exemplos e pontos de atenção
+
+| Caso | Comportamento / limitação verificada |
 |---|---|
-| Editor | [Visual Studio Code](https://code.visualstudio.com/) ou editor de preferência |
-| Compilador | GCC/`g++` compatível com seus arquivos |
-| Windows | É possível configurar [MSYS2](https://www.msys2.org/) para obter `g++` |
-| Linux | Use uma instalação de GCC/`g++` disponível no sistema |
-| Execução | Cada programa tem seu `main` e deve ser compilado separadamente |
+| [Programa 1](CONTEUDO_P1/programa-1/README.md) | Para entradas `1`, `2`, `3`: resultados `13`, `48`, `110592`. |
+| [Programa 3 modular](CONTEUDO_P1/programa-3-biblioteca/README.md) | Uso de funções antes de declarações em cabeçalho provoca erros com `g++`. |
+| [Programa 5](CONTEUDO_P1/programa-5-biblioteca/README.md) | Divisão não trata divisor igual a zero. |
+| [Programa 6](CONTEUDO_P1/programa-6-biblioteca/README.md) | Algumas seleções de assento não são validadas; saída do menu é incompleta. |
+| [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | Utiliza `pause` e `cls`, comandos próprios do Windows. |
 
-**Não há testes automatizados ou um sistema de build único configurado.** As pastas `output` e arquivos `.exe` são artefatos e não substituem os códigos-fonte. Para distinguir limitações de implementação e comportamentos esperados, consulte os guias por projeto.
+Os arquivos `.exe` são artefatos previamente incluídos no repositório. Prefira compilar os fontes localmente. **Não há suíte de testes automatizados comum a todos os exercícios.**
+
+## 📚 Material de apoio
+
+- [GCC — documentação oficial](https://gcc.gnu.org/onlinedocs/)
+- [VS Code — documentação C++](https://code.visualstudio.com/docs/languages/cpp)
+- [GitHub — escrita de Markdown](https://docs.github.com/pt/get-started/writing-on-github)
