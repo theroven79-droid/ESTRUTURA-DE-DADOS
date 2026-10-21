@@ -1,38 +1,31 @@
-# 🧩 Programa 3 modular — Estoque com cabeçalho
+# 🧩 Programa 3 — Versão com cabeçalho
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md) · [Comparar com a versão original](../programa-3/README.md)
 
-## 📌 Objetivo
+## 📌 Objetivo do exercício
 
-A função principal inclui [funcoes.h](funcoes.h) e invoca `Menu`, que usa as rotinas do cadastro de produtos. Compare com a [versão anterior](../programa-3/README.md).
+Esta variação reorganiza o programa de controle de estoque para estudar o uso de **arquivos de cabeçalho em C/C++**. O arquivo principal inclui `funcoes.h`, onde estão concentradas as funções e variáveis utilizadas nas operações do estoque.
 
-## ✨ Operações e conceitos
+## 📂 Organização
 
-| Etapa / elemento | Funcionamento |
+| Arquivo | Responsabilidade |
 |---|---|
-| Ponto de entrada | `programa-3-com-biblioteca.cpp` contém a função `main`. |
-| Cabeçalho | `funcoes.h` concentra rotinas e variáveis do exercício. |
-| Propósito | Comparar implementação concentrada e organização em cabeçalho. |
+| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main` e chama o menu principal. |
+| [`funcoes.h`](funcoes.h) | Reúne as rotinas e os dados utilizados no cadastro, na consulta e na compra. |
+| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Binário Windows incluído no repositório. |
 
-## 📂 Arquivos relevantes
+## ⚠️ Estado da compilação
 
-| Arquivo | Descrição |
-|---|---|
-| [programa-3-com-biblioteca.cpp](programa-3-com-biblioteca.cpp) | Ponto de entrada e implementação principal. |
-| Arquivos `.h` nesta pasta, quando existentes | Rotinas e declarações incluídas pelo programa. |
-
-## ⚙️ Compilação
-
-Na raiz do repositório, com `g++` disponível:
+O código atual **apresenta erros de compilação com `g++`**, pois algumas funções são chamadas antes de terem sido declaradas em `funcoes.h`. O comando a seguir permite reproduzir o diagnóstico:
 
 ```bash
-g++ CONTEUDO_P1/programa-3-biblioteca/programa-3-com-biblioteca.cpp -o programa-3
+g++ CONTEUDO_P1/programa-3-biblioteca/programa-3-com-biblioteca.cpp -o estoque-modular
 ```
 
-Se o compilador concluir sem erro, execute o arquivo resultante (`./programa-3` no Linux/macOS; `.exe` no Windows). Cada exercício possui um ponto de entrada próprio.
+Execute-o a partir da raiz do repositório. **Não há garantia de que um executável será gerado** com a implementação atual.
 
-## ⚠️ Observações técnicas
+## 💡 Aprendizado técnico
 
-**Limitação verificada:** o `g++` aponta erros porque algumas funções são chamadas antes de sua declaração no cabeçalho. O comando abaixo serve para **investigar a compilação**, não afirma sucesso.
+A separação em arquivos facilita a organização, mas exige declarar as funções antes de utilizá-las. Uma possível evolução seria colocar protótipos no cabeçalho e implementações em arquivos-fonte. Trata-se de uma **sugestão de melhoria**, não de algo já realizado no projeto.
 
-**Código para conferência:** [programa-3-com-biblioteca.cpp](programa-3-com-biblioteca.cpp).
+O funcionamento pretendido do estoque está descrito no [README da versão original](../programa-3/README.md).
