@@ -4,6 +4,36 @@
 
 [← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
+## 🎮 Checkpoint 02 · Laços aninhados
+
+> **Missão:** Investigue a diferença entre o índice apresentado nos títulos e a conta efetivamente executada. **XP = metas simbólicas de aprendizagem**, sem registro automático.
+
+| Etapa | Desafio verificável | Evidência original | XP |
+|---|---|---|--:|
+| 1 · Menu | Selecionar opções 1 e 2 | [`FUNCAO_OPCAO`](programa-01.cpp) | 10 |
+| 2 · Repetição | Analisar os dois `for` internos | [Tabuadas](programa-01.cpp) | 20 |
+| 3 · Diagnóstico | Explicar por que o cabeçalho pode mostrar 0 | [Código-fonte](programa-01.cpp) | 20 |
+
+**Checklist de progresso**
+
+- [ ] Reconheci o papel de `i` e `j`.
+- [ ] Diferenciei a tabuada comum do cubo dos produtos.
+- [ ] Confirmei que `programa-02.cpp` está vazio.
+
+<details>
+<summary><strong>🏆 Abrir desafio de evolução</strong></summary>
+
+Missão extra (proposta): corrigir a apresentação do cabeçalho numa cópia local mantendo a multiplicação correta.
+
+**Critério de conclusão:** explique o que mudou, vincule o arquivo afetado e demonstre o comportamento com entradas de teste.
+
+</details>
+
+**Nota de rigor:** A opção de menu é escolhida uma vez; não há laço que reapresente o menu automaticamente.
+
+---
+
+
 ## Objetivo
 
 Aplicar **menus, condições, funções e laços `for` aninhados** para produzir tabuadas de 1 a 10. A entrada `1` seleciona a tabuada tradicional; `2` seleciona o cubo de cada produto.
