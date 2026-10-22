@@ -1,20 +1,19 @@
-# 📦 Relatório da subpasta — Executável do sistema de ônibus
+# 📦 Pasta output — Programa 6
 
-[← Programa 6](../README.md) · [← Conteúdo P1](../../README.md) · [↑ Índice geral](../../../README.md)
+[← Relatório do Programa 6](../README.md) · [Conteúdo P1](../../README.md) · [Página inicial](../../../README.md)
 
-## 📌 Resumo
+## 📌 Conteúdo da pasta
 
-A subpasta `output` armazena uma versão **executável para Windows** do programa de controle de poltronas. O código-fonte e a documentação de funcionamento estão no diretório imediatamente superior.
+A subpasta reúne um **executável para Windows** da simulação de poltronas de ônibus. O código-fonte e as funções que implementam o cadastro e a compra de passagens estão localizados no diretório superior.
 
-## 📂 Arquivos relacionados
-
-| Arquivo | Finalidade |
+| Arquivo | Descrição |
 |---|---|
-| [`mainBus.exe`](mainBus.exe) | Executável existente nesta subpasta. |
-| [`../mainBus.cpp`](../mainBus.cpp) | Arquivo de entrada do programa. |
-| [`../funcoes.h`](../funcoes.h) | Rotinas que implementam as operações do sistema. |
-| [`../README.md`](../README.md) | Relatório completo do exercício. |
+| [`mainBus.exe`](mainBus.exe) | Executável armazenado nesta subpasta. |
+| [`../mainBus.cpp`](../mainBus.cpp) | Arquivo que contém a função principal do programa. |
+| [`../funcoes.h`](../funcoes.h) | Cabeçalho com as rotinas e os cálculos do sistema. |
 
-## 🔎 Considerações
+## 🔎 Relação com o exercício
 
-O exercício simula a ocupação de assentos por meio de uma matriz, mas possui limitações de validação e de encerramento do menu. Para compreender essas condições e analisar o algoritmo, consulte [o relatório do Programa 6](../README.md) e os arquivos-fonte, em vez de depender exclusivamente do executável.
+O programa utiliza uma matriz para representar lugares comuns, especiais, ocupados e posições não utilizadas. A implementação apresenta limitações na validação de assentos e não possui uma opção de saída funcional no menu.
+
+A análise do comportamento deve ser feita a partir dos [arquivos-fonte e do relatório do Programa 6](../README.md), sem depender exclusivamente do executável disponível.
