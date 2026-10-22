@@ -1,51 +1,28 @@
-# 🔎 Conteúdo P2 — Strings, ordenação e busca
+# 🔎 Relatório da pasta — Conteúdo P2
 
-[← Página inicial](../README.md) · [← Conteúdo P1](../CONTEUDO_P1/README.md)
+[← Relatório geral](../README.md) · [← Conteúdo P1](../CONTEUDO_P1/README.md)
 
-## 📌 Visão geral
+## 📌 Resumo
 
-Os exercícios da segunda etapa trabalham com **manipulação de textos, ordenação de números, busca binária e classificação de times**. Todos os programas são executados no terminal e podem ser estudados individualmente.
+A pasta `CONTEUDO_P2` reúne exercícios de **manipulação de textos, ordenação, busca e classificação de dados**. O conteúdo avança em relação aos programas da P1, explorando operações sobre vetores e critérios de organização dos elementos.
 
-## 📂 Exercícios disponíveis
+## 📂 Arquivos e subpastas
 
-| Exercício | Conteúdo | Código ou guia |
-|---|---|---|
-| 01 — Manipulação de texto | Leitura e transformação de caracteres. | [`Exercicio_01.cpp`](Exercicio_01.cpp) |
-| 02 — Ordenação e busca | Bubble Sort seguido de busca binária em dez inteiros. | [`Exercicio_02.cpp`](Exercicio_02.cpp) |
-| Tabela de classificação | Cadastro de 12 times e desempate por gols. | [README do projeto](Exercicio_tabelaPontuacao/README.md) |
+| Item | Conteúdo |
+|---|---|
+| [`Exercicio_01.cpp`](Exercicio_01.cpp) | Leitura e transformação de uma frase, com contagens e substituições de caracteres. |
+| [`Exercicio_02.cpp`](Exercicio_02.cpp) | Ordenação de dez números com Bubble Sort e pesquisa por busca binária. |
+| [`Exercicio_tabelaPontuacao/`](Exercicio_tabelaPontuacao/README.md) | Projeto de classificação de 12 times por pontos e gols. |
+| `Exercicio_01.exe` e `Exercicio_02.exe` | Executáveis Windows já compilados dos dois primeiros exercícios. |
 
-## 📝 Exercício 01 — Manipulação de caracteres
+## 🧠 Análise dos exercícios
 
-O programa lê uma frase, converte letras para maiúsculas, realiza contagens, acrescenta ` CHUVANAO`, substitui determinados caracteres e modifica seus códigos numéricos.
+O **Exercício 01** recebe uma frase, converte letras para maiúsculas, conta caracteres, vogais e consoantes, acrescenta o texto ` CHUVANAO` e realiza substituições e alterações nos códigos dos caracteres. A rotina denominada `qtdPalavasTotal` apresenta o rótulo “Quantidade de palavras”, embora conte caracteres. A concatenação também não verifica se há espaço suficiente no vetor de 100 posições.
 
-**Atenção:** a rotina `qtdPalavasTotal` mostra uma mensagem sobre quantidade de palavras, mas sua implementação contabiliza caracteres. Além disso, o vetor possui 100 posições, e a concatenação com `strcat` não verifica o espaço restante. Evite entradas longas ao estudar a versão atual.
+O **Exercício 02** recebe dez inteiros, apresenta os valores na ordem de entrada e depois em ordem crescente. O algoritmo de ordenação é **Bubble Sort**; a busca binária utiliza o vetor já ordenado e, quando encontra o número procurado, informa sua posição a partir de zero.
 
-## 🔢 Exercício 02 — Ordenação e busca binária
+A subpasta [`Exercicio_tabelaPontuacao/`](Exercicio_tabelaPontuacao/README.md) contém a classificação de equipes: a maior pontuação determina a ordem principal e a quantidade de gols resolve empates em pontos.
 
-O usuário informa dez números inteiros. O programa apresenta a sequência digitada, organiza os valores em ordem crescente por **Bubble Sort** e realiza uma busca binária no vetor ordenado. Quando encontra o número, informa um índice iniciado em zero.
+## 🔎 Considerações
 
-Para compilar e executar na raiz do repositório:
-
-```bash
-g++ CONTEUDO_P2/Exercicio_02.cpp -o busca
-./busca
-```
-
-## ⚽ Classificação de times
-
-O terceiro exercício coleta **nome, gols e pontuação** de 12 equipes. A classificação considera primeiro a maior pontuação e, em caso de empate, o maior número de gols.
-
-O código está organizado em arquivos `.h`, descritos no [README da tabela de times](Exercicio_tabelaPontuacao/README.md). Para testar com os registros existentes:
-
-```bash
-g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o classificacao
-./classificacao < CONTEUDO_P2/Exercicio_tabelaPontuacao/inserir.txt
-```
-
-## ⚠️ Observações técnicas
-
-- Não há terceiro critério implementado para times empatados em pontos e gols.
-- A tabela utiliza comandos de terminal específicos do Windows (`pause` e `cls`).
-- Os resultados apresentados dependem das entradas fornecidas; não existe suíte de testes automatizados declarada para os exercícios.
-
-[Voltar à página inicial](../README.md)
+Os exercícios são executados no terminal e não constituem um sistema único. No projeto da tabela de times, os comandos `pause` e `cls` são específicos do Windows. Para analisar os detalhes de cada atividade, consulte os códigos-fonte e o [relatório da tabela de pontuação](Exercicio_tabelaPontuacao/README.md).
