@@ -20,6 +20,6 @@ O programa trabalha com até três produtos, utilizando vetores paralelos para a
 
 ## ⚠️ Problemas identificados
 
-O cabeçalho apresenta chamadas de funções antes de suas declarações, o que causa **erros de compilação em C++**. Também há uma chamada de `scanf` que utiliza a variável de controle sem fornecer seu endereço, situação que pode provocar comportamento indefinido caso esse trecho seja alcançado após outros ajustes.
+O cabeçalho apresenta chamadas de funções antes de suas declarações, o que causa **erros de compilação com `g++`**. A função `main` também depende de variáveis globais definidas no cabeçalho. Dessa forma, a organização adotada serve como exercício de estudo, mas precisa de ajustes antes de uma recompilação confiável.
 
 Portanto, o executável já armazenado na pasta **não comprova que o código atual possa ser recompilado ou executado corretamente**. Esses problemas estão no [código existente](funcoes.h) e não foram corrigidos nesta revisão documental.
