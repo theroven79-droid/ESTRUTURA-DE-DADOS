@@ -1,27 +1,27 @@
-# 🔁 Relatório da pasta — Programa 2
+# 🔁 Programa 2 — Relatório das tabuadas
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-O programa utiliza **funções e laços de repetição aninhados** para apresentar tabuadas. Um menu permite escolher entre os resultados das multiplicações ou o cubo de cada produto.
+Esta pasta apresenta um exercício de **laços de repetição aninhados**. Por meio de um menu, o usuário escolhe entre a exibição das tabuadas de 1 a 10 e o cálculo do cubo de cada produto dessas tabuadas.
 
-## 📂 Inventário
+## 📂 Arquivos encontrados
 
-| Arquivo | Situação e finalidade |
+| Arquivo | Conteúdo |
 |---|---|
-| [`programa-01.cpp`](programa-01.cpp) | Implementa a função principal, o menu e as duas rotinas de tabuadas. |
-| [`programa-02.cpp`](programa-02.cpp) | Arquivo vazio, sem implementação. |
-| [`programa-01.exe`](programa-01.exe) | Executável Windows incluído na pasta. |
+| [`programa-01.cpp`](programa-01.cpp) | Implementa o menu e as funções `TABUADA_COMPLETA` e `TABUADA_AO_CUBO`. |
+| [`programa-02.cpp`](programa-02.cpp) | Está vazio e não contém um segundo exercício. |
+| [`programa-01.exe`](programa-01.exe) | Executável para Windows incluído na pasta. |
 
-## 🧠 Análise do algoritmo
+## 🔎 Análise do funcionamento
 
-A função `FUNCAO_OPCAO` apresenta duas escolhas. A opção **1** chama `TABUADA_COMPLETA`, que calcula multiplicações de 1 a 10. A opção **2** chama `TABUADA_AO_CUBO`, que eleva o resultado de cada multiplicação à terceira potência. Valores diferentes dessas opções geram uma mensagem de escolha inválida.
+A opção **1** apresenta as multiplicações das tabuadas. Na opção **2**, cada produto é elevado ao cubo antes de ser exibido. As duas funções percorrem as tabuadas com um laço externo e utilizam outro laço para calcular os dez elementos de cada uma.
 
-Os dois procedimentos utilizam um laço para percorrer as tabuadas e outro para calcular seus elementos.
+O menu é exibido apenas uma vez. Depois que a opção escolhida é executada, o programa se encerra.
 
-## ⚠️ Observações
+## ⚠️ Observações do código
 
-O número mostrado no cabeçalho de cada tabuada começa em **0**, enquanto o cálculo usa o índice acrescido de 1. Assim, o título pode não corresponder ao número efetivamente multiplicado. O menu é apresentado apenas uma vez, sem repetição automática.
+O título das tabuadas utiliza um índice iniciado em zero, enquanto as contas utilizam esse índice acrescido de um. Por isso, **a numeração mostrada no cabeçalho não corresponde à tabuada calculada**. Na opção 2, a expressão exibida mantém o formato de uma multiplicação comum, embora o resultado informado seja o cubo do produto.
 
-**Fonte da análise:** [`programa-01.cpp`](programa-01.cpp).
+Esses comportamentos podem ser conferidos em [`programa-01.cpp`](programa-01.cpp); nenhum arquivo de código foi alterado.
