@@ -1,29 +1,20 @@
-# 🚌 Executável do sistema de ônibus
+# 📦 Relatório da subpasta — Executável do sistema de ônibus
 
-[← Documentação do exercício](../README.md) · [← Índice do conteúdo](../../README.md) · [↑ Página inicial](../../../README.md)
+[← Programa 6](../README.md) · [← Conteúdo P1](../../README.md) · [↑ Índice geral](../../../README.md)
 
-## 📌 Sobre esta pasta
+## 📌 Resumo
 
-Esta pasta armazena um executável Windows da simulação de cadastro de ônibus e ocupação de poltronas. As funções utilizadas pelo programa estão definidas em `funcoes.h`, na pasta superior.
+A subpasta `output` armazena uma versão **executável para Windows** do programa de controle de poltronas. O código-fonte e a documentação de funcionamento estão no diretório imediatamente superior.
+
+## 📂 Arquivos relacionados
 
 | Arquivo | Finalidade |
 |---|---|
-| [`mainBus.exe`](mainBus.exe) | Executável Windows já existente. |
-| [`../mainBus.cpp`](../mainBus.cpp) | Código-fonte usado como referência. |
-| [`../README.md`](../README.md) | Instruções, recursos e limitações do exercício. |
+| [`mainBus.exe`](mainBus.exe) | Executável existente nesta subpasta. |
+| [`../mainBus.cpp`](../mainBus.cpp) | Arquivo de entrada do programa. |
+| [`../funcoes.h`](../funcoes.h) | Rotinas que implementam as operações do sistema. |
+| [`../README.md`](../README.md) | Relatório completo do exercício. |
 
-## ⚙️ Como recompilar
+## 🔎 Considerações
 
-Com `g++` instalado, execute na **raiz do repositório**:
-
-```bash
-g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o onibus
-```
-
-No Linux/macOS, execute `./onibus`. No Windows, utilize o executável `.exe` gerado pelo compilador.
-
-## ⚠️ Observações
-
-O sistema não valida totalmente as seleções de poltronas, e a opção de saída do menu não está implementada.
-
-O binário incluído não substitui o código-fonte e não comprova, por si só, compatibilidade ou segurança. Para estudar o funcionamento, consulte o [guia do programa](../README.md).
+O exercício simula a ocupação de assentos por meio de uma matriz, mas possui limitações de validação e de encerramento do menu. Para compreender essas condições e analisar o algoritmo, consulte [o relatório do Programa 6](../README.md) e os arquivos-fonte, em vez de depender exclusivamente do executável.
