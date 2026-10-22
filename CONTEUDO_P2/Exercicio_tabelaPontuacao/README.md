@@ -1,53 +1,36 @@
-# ⚽ Classificação de times — Pontuação e desempate
+# ⚽ Relatório da pasta — Classificação de times
 
-[← Conteúdo P2](../README.md) · [↑ Página inicial](../../README.md)
+[← Conteúdo P2](../README.md) · [↑ Índice geral](../../README.md)
 
-## 📌 Sobre o projeto
+## 📌 Resumo
 
-Programa de terminal que cadastra **12 times**, registra seus gols e pontos e exibe uma tabela de classificação. O objetivo é exercitar **vetores paralelos, ordenação e critérios de desempate**.
+Esta pasta reúne um programa de terminal que cadastra **12 times de futebol** e organiza uma tabela de classificação. O exercício demonstra o uso de **vetores paralelos, ordenação e desempate**, mantendo nome, número de gols e pontuação associados à mesma equipe.
 
-## 🏆 Regras da classificação
+## 📂 Organização dos arquivos
 
-| Prioridade | Critério | Ordem |
-|---:|---|---|
-| 1 | Pontuação | Do maior para o menor valor |
-| 2 | Gols, quando houver empate em pontos | Do maior para o menor valor |
-
-Se dois times tiverem pontuação e gols iguais, **não existe um terceiro critério** implementado.
-
-## 📂 Organização do código
-
-| Arquivo | Responsabilidade |
+| Arquivo | Função no projeto |
 |---|---|
-| [`main.cpp`](main.cpp) | Declara os vetores e determina a sequência das operações. |
-| [`bibliotecas.h`](bibliotecas.h) | Bibliotecas e constantes usadas no projeto. |
+| [`main.cpp`](main.cpp) | Declara os vetores e define a sequência de cadastro, ordenação, desempate e exibição. |
+| [`bibliotecas.h`](bibliotecas.h) | Reúne bibliotecas e constantes do programa. |
 | [`cadastroTimes.h`](cadastroTimes.h) | Lê os dados e apresenta a tabela inicial. |
-| [`ordenacaoPlacar.h`](ordenacaoPlacar.h) | Ordena os times pela pontuação. |
-| [`tabelaOrdenada.h`](tabelaOrdenada.h) | Exibe a classificação intermediária. |
-| [`desempate.h`](desempate.h) | Reorganiza os empates de pontos conforme a quantidade de gols. |
-| [`tabelaPontuacaoFinal.h`](tabelaPontuacaoFinal.h) | Mostra a tabela final. |
-| [`inserir.txt`](inserir.txt) | Fornece os registros utilizados como exemplo. |
-| [`output/`](output/README.md) | Contém um executável Windows já compilado. |
+| [`ordenacaoPlacar.h`](ordenacaoPlacar.h) | Ordena as equipes pela pontuação. |
+| [`tabelaOrdenada.h`](tabelaOrdenada.h) | Exibe a tabela após a ordenação por pontos. |
+| [`desempate.h`](desempate.h) | Reorganiza times empatados conforme o número de gols. |
+| [`tabelaPontuacaoFinal.h`](tabelaPontuacaoFinal.h) | Mostra a classificação final. |
+| [`inserir.txt`](inserir.txt) | Contém registros de exemplo para as 12 equipes. |
+| [`output/`](output/README.md) | Armazena o executável compilado e seu relatório. |
 
-Os nomes, gols e pontos são armazenados em vetores de posições correspondentes. Durante a ordenação, os valores de um mesmo time são movimentados em conjunto.
+## 🏆 Critérios de classificação
 
-## ⚙️ Compilação e execução
+| Prioridade | Regra |
+|---:|---|
+| 1 | Maior pontuação ocupa a posição superior. |
+| 2 | Em caso de empate em pontos, prevalece o maior número de gols. |
 
-Na raiz do repositório, com `g++` instalado:
+Não existe um terceiro critério de desempate para equipes com a mesma pontuação e o mesmo número de gols. O programa exibe a tabela antes da classificação, após a ordenação inicial e depois do desempate.
 
-```bash
-g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o classificacao
-./classificacao
-```
+## 🔎 Considerações
 
-Para fornecer automaticamente os dados de exemplo:
+O exercício mantém todos os registros em memória durante sua execução. A rotina de cadastro utiliza `system("pause")` e `system("cls")`, comandos próprios do Windows, que podem não funcionar em outros sistemas.
 
-```bash
-./classificacao < CONTEUDO_P2/Exercicio_tabelaPontuacao/inserir.txt
-```
-
-No Windows, utilize o executável `.exe` correspondente.
-
-## ⚠️ Compatibilidade
-
-O cadastro utiliza `system("pause")` e `system("cls")`, comandos específicos do Windows. Em Linux e macOS, eles podem produzir mensagens de erro. O programa não possui banco de dados nem armazenamento permanente da classificação.
+Os dados de exemplo podem ser consultados em [`inserir.txt`](inserir.txt). Não há integração com campeonato real, serviço externo ou banco de dados.
