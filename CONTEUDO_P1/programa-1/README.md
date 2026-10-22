@@ -1,31 +1,29 @@
-# 🧮 Relatório da pasta — Programa 1
+# 🧮 Programa 1 — Relatório do exercício
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-Esta pasta apresenta um exercício de **cálculos encadeados por funções**, escrito com instruções de entrada e saída no estilo da linguagem C e salvo com extensão `.cpp`. O programa solicita três números inteiros e mostra três resultados calculados em sequência.
+Esta pasta contém um exercício de **funções com retorno de valores**, desenvolvido para demonstrar como o resultado de uma operação pode ser utilizado na seguinte. O programa solicita três números inteiros e apresenta os resultados de uma soma, de uma multiplicação e de um cálculo ao cubo.
 
-## 📂 Arquivo presente
+## 📂 Arquivo da pasta
 
 | Arquivo | Descrição |
 |---|---|
-| [`programa-1.cpp`](programa-1.cpp) | Contém a função principal, os protótipos e as implementações de `soma`, `multiplicacao` e `cubo`. |
+| [`programa-1.cpp`](programa-1.cpp) | Reúne a função `main`, os protótipos e as implementações de `soma`, `multiplicacao` e `cubo`. |
 
-## 🧠 Funcionamento
+## 🔎 Análise do funcionamento
 
-A primeira função soma os dois primeiros números e acrescenta 10. A segunda soma o terceiro número ao resultado anterior e multiplica essa soma por 3. A terceira eleva o resultado obtido ao cubo.
+A execução começa com a leitura dos números `n1`, `n2` e `n3`. O programa soma os dois primeiros valores e acrescenta 10; em seguida, soma o terceiro número ao resultado obtido e multiplica por 3. Por último, calcula o cubo desse segundo resultado.
 
-| Etapa | Cálculo realizado |
+| Etapa | Expressão utilizada |
 |---|---|
-| Soma | `n1 + n2 + 10` |
-| Multiplicação | `(n3 + resultado_da_soma) * 3` |
-| Cubo | `resultado_da_multiplicacao³` |
+| 1 — Soma | `n1 + n2 + 10` |
+| 2 — Multiplicação | `(n3 + resultado_da_soma) * 3` |
+| 3 — Cubo | `resultado_da_multiplicacao³` |
 
-Para as entradas **1, 2 e 3**, os resultados previstos pelo código são **13, 48 e 110592**, respectivamente.
+Com as entradas `1`, `2` e `3`, os resultados são **13, 48 e 110592**, respectivamente.
 
-## 🔎 Considerações
+## 📝 Considerações
 
-O exercício demonstra passagem de parâmetros e retorno de valores entre funções. Utiliza variáveis do tipo `int`, sem validação específica das entradas ou proteção contra estouro aritmético.
-
-**Fonte da análise:** [`programa-1.cpp`](programa-1.cpp).
+O exercício utiliza funções da biblioteca de entrada e saída da linguagem C, embora o arquivo tenha extensão `.cpp`. Não há validação específica para entradas inválidas nem tratamento de estouro de valores inteiros. Todo o conteúdo analisado está no [código-fonte](programa-1.cpp).
