@@ -1,50 +1,31 @@
-# 📘 Conteúdo P1 — Funções, vetores e matrizes
+# 📘 Relatório da pasta — Conteúdo P1
 
-[← Página inicial](../README.md) · [Conteúdo P2 →](../CONTEUDO_P2/README.md)
+[← Relatório geral](../README.md) · [Conteúdo P2 →](../CONTEUDO_P2/README.md)
 
-## 📌 Visão geral
+## 📌 Resumo
 
-O primeiro conjunto de exercícios apresenta fundamentos de programação de forma progressiva: **funções, laços de repetição, vetores, organização em arquivos de cabeçalho e matrizes**. Os exemplos são programas independentes, executados no terminal.
+A pasta `CONTEUDO_P1` reúne exercícios de programação que evoluem de **funções e estruturas de repetição** para **vetores, organização em cabeçalhos e matrizes**. Os programas são independentes e têm caráter acadêmico.
 
-## 📂 Índice de programas
+## 📂 Subpastas e respectivos conteúdos
 
-| Projeto | Tema principal | Documentação |
+| Pasta | Síntese do exercício | Relatório |
 |---|---|---|
-| [Programa 1](programa-1/programa-1.cpp) | Operações matemáticas encadeadas com funções. | [Guia](programa-1/README.md) |
-| [Programa 2](programa-2/programa-01.cpp) | Tabuadas e laços `for` aninhados. | [Guia](programa-2/README.md) |
-| [Programa 3](programa-3/programa-3.cpp) | Cadastro e consulta de até três produtos. | [Guia](programa-3/README.md) |
-| [Programa 3 com cabeçalho](programa-3-biblioteca/programa-3-com-biblioteca.cpp) | Estudo da organização de funções em `.h`. | [Guia](programa-3-biblioteca/README.md) |
-| [Programa 4](programa-4-biblioteca/programa.cpp) | Variáveis e funções separadas em cabeçalhos. | [Guia](programa-4-biblioteca/README.md) |
-| [Programa 5](programa-5-biblioteca/main.cpp) | Calculadora com funções em arquivos `.h`. | [Guia](programa-5-biblioteca/README.md) |
-| [Programa 6](programa-6-biblioteca/mainBus.cpp) | Mapa de poltronas e controle de ocupação. | [Guia](programa-6-biblioteca/README.md) |
+| [`programa-1/`](programa-1/programa-1.cpp) | Lê três inteiros e encadeia operações de soma, multiplicação e cubo. | [Abrir](programa-1/README.md) |
+| [`programa-2/`](programa-2/programa-01.cpp) | Exibe tabuadas e os cubos dos produtos por meio de laços aninhados. | [Abrir](programa-2/README.md) |
+| [`programa-3/`](programa-3/programa-3.cpp) | Simula o cadastro, a consulta e a compra de produtos usando vetores. | [Abrir](programa-3/README.md) |
+| [`programa-3-biblioteca/`](programa-3-biblioteca/programa-3-com-biblioteca.cpp) | Reorganiza o cadastro de produtos para utilizar um cabeçalho. | [Abrir](programa-3-biblioteca/README.md) |
+| [`programa-4-biblioteca/`](programa-4-biblioteca/programa.cpp) | Demonstra variáveis e funções declaradas em arquivos separados. | [Abrir](programa-4-biblioteca/README.md) |
+| [`programa-5-biblioteca/`](programa-5-biblioteca/main.cpp) | Reúne cinco operações aritméticas distribuídas em arquivos `.h`. | [Abrir](programa-5-biblioteca/README.md) |
+| [`programa-6-biblioteca/`](programa-6-biblioteca/mainBus.cpp) | Simula a ocupação e a venda de passagens com uma matriz de poltronas. | [Abrir](programa-6-biblioteca/README.md) |
 
-O arquivo [`programa-02.cpp`](programa-2/programa-02.cpp), na pasta do Programa 2, está vazio e não contém um exercício adicional.
+A pasta [`.vscode/`](.vscode/tasks.json) contém configurações de editor e tarefas de compilação, com referências a caminhos locais do ambiente Windows/MSYS2.
 
-## 🧩 Principais conceitos
+## 🧠 Síntese do aprendizado
 
-**Funções e parâmetros:** o Programa 1 recebe três números e repassa os resultados entre funções. O Programa 2 usa funções para organizar um menu de tabuadas.
+Os primeiros programas demonstram a organização de cálculos em funções. Em seguida, o controle de estoque emprega **vetores paralelos** para relacionar nomes, códigos, valores e quantidades. Os exercícios com cabeçalhos apresentam uma separação inicial das responsabilidades do código. Por fim, o programa de ônibus utiliza uma matriz para representar diferentes estados das poltronas.
 
-**Vetores:** o Programa 3 utiliza conjuntos de vetores paralelos para associar nome, código, preço e estoque dos produtos. A versão com cabeçalho permite estudar uma forma diferente de organizar esse código.
+## ⚠️ Observações
 
-**Matrizes:** o Programa 6 representa poltronas com uma matriz de 100 linhas e quatro colunas. Os estados `0`, `1`, `8` e `-1` identificam disponibilidade, ocupação e posições não cadastradas.
+O arquivo [`programa-02.cpp`](programa-2/programa-02.cpp) está vazio. A versão de estoque com cabeçalho apresenta problemas de compilação com `g++`; a calculadora não trata divisão por zero; e o sistema de ônibus possui limitações na validação dos assentos e no encerramento do menu.
 
-## ⚙️ Exemplo de compilação
-
-Com `g++` instalado, execute na raiz do repositório:
-
-```bash
-g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa1
-./programa1
-```
-
-Cada exercício contém sua própria função `main` e deve ser compilado separadamente. Para os demais comandos, consulte o README de cada programa.
-
-## ⚠️ Pontos de atenção
-
-- A versão [Programa 3 com cabeçalho](programa-3-biblioteca/README.md) apresenta erros de compilação com `g++`; isso está explicado em seu guia.
-- A calculadora do [Programa 5](programa-5-biblioteca/README.md) não verifica divisão por zero.
-- O sistema de ônibus do [Programa 6](programa-6-biblioteca/README.md) apresenta limitações na validação de poltronas e no encerramento do menu.
-- Algumas implementações utilizam `printf` e `scanf`, embora os arquivos tenham extensão `.cpp`.
-- Os arquivos `.exe` são executáveis Windows já incluídos no repositório; é recomendável compilar o código-fonte no seu ambiente.
-
-[Continuar para o Conteúdo P2 →](../CONTEUDO_P2/README.md)
+Os arquivos `.exe` são executáveis Windows já incluídos. Os códigos-fonte, salvos com extensão `.cpp`, são a principal referência para compreender cada exercício.
