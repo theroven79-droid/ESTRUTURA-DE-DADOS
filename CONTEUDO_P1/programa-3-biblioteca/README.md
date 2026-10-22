@@ -1,31 +1,27 @@
-# 🧩 Programa 3 — Versão com cabeçalho
+# 🧩 Relatório da pasta — Programa 3 com cabeçalho
 
-[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md) · [Comparar com a versão original](../programa-3/README.md)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Programa 3 original](../programa-3/README.md)
 
-## 📌 Objetivo do exercício
+## 📌 Resumo
 
-Esta variação reorganiza o programa de controle de estoque para estudar o uso de **arquivos de cabeçalho em C/C++**. O arquivo principal inclui `funcoes.h`, onde estão concentradas as funções e variáveis utilizadas nas operações do estoque.
+Esta pasta apresenta uma **variação do controle de estoque** desenvolvida para estudar a organização do código em arquivos separados. A lógica do programa permanece relacionada ao cadastro, à consulta e à compra de produtos, mas as rotinas são concentradas no cabeçalho `funcoes.h`.
 
-## 📂 Organização
+## 📂 Arquivos encontrados
 
 | Arquivo | Responsabilidade |
 |---|---|
-| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main` e chama o menu principal. |
-| [`funcoes.h`](funcoes.h) | Reúne as rotinas e os dados utilizados no cadastro, na consulta e na compra. |
-| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Binário Windows incluído no repositório. |
+| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main`, inclui o cabeçalho e chama o menu. |
+| [`funcoes.h`](funcoes.h) | Reúne as funções e variáveis empregadas no exercício. |
+| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Executável Windows já existente no diretório. |
 
-## ⚠️ Estado da compilação
+## 🧠 Organização e funcionamento
 
-O código atual **apresenta erros de compilação com `g++`**, pois algumas funções são chamadas antes de terem sido declaradas em `funcoes.h`. O comando a seguir permite reproduzir o diagnóstico:
+O arquivo principal define a localização utilizada para exibir caracteres no terminal e mantém um laço que chama `Menu` enquanto a variável de controle permite a continuidade da aplicação. As operações de estoque estão no cabeçalho.
 
-```bash
-g++ CONTEUDO_P1/programa-3-biblioteca/programa-3-com-biblioteca.cpp -o estoque-modular
-```
+Essa disposição permite analisar a diferença entre concentrar toda a implementação em um arquivo e separar parte dela em um `.h`.
 
-Execute-o a partir da raiz do repositório. **Não há garantia de que um executável será gerado** com a implementação atual.
+## ⚠️ Estado técnico
 
-## 💡 Aprendizado técnico
+A implementação apresenta **erros de compilação com `g++`** relacionados ao uso de funções antes de suas declarações. Por isso, o código-fonte não deve ser descrito como uma versão pronta para compilação sem ajustes.
 
-A separação em arquivos facilita a organização, mas exige declarar as funções antes de utilizá-las. Uma possível evolução seria colocar protótipos no cabeçalho e implementações em arquivos-fonte. Trata-se de uma **sugestão de melhoria**, não de algo já realizado no projeto.
-
-O funcionamento pretendido do estoque está descrito no [README da versão original](../programa-3/README.md).
+O binário existente não comprova que o código atual possa ser recompilado sem problemas. Para comparar as duas organizações, consulte o [Programa 3 original](../programa-3/README.md).
