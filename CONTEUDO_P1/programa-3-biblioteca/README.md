@@ -1,27 +1,25 @@
-# 🧩 Relatório da pasta — Programa 3 com cabeçalho
+# 🧩 Programa 3 — Relatório da versão com cabeçalho
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Programa 3 original](../programa-3/README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md) · [Versão em arquivo único](../programa-3/README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-Esta pasta apresenta uma **variação do controle de estoque** desenvolvida para estudar a organização do código em arquivos separados. A lógica do programa permanece relacionada ao cadastro, à consulta e à compra de produtos, mas as rotinas são concentradas no cabeçalho `funcoes.h`.
+Esta pasta contém uma segunda organização do exercício de estoque. Em vez de reunir toda a implementação no arquivo principal, o projeto concentra as **variáveis e as funções de cadastro, consulta, compra e listagem** em um cabeçalho.
 
 ## 📂 Arquivos encontrados
 
 | Arquivo | Responsabilidade |
 |---|---|
-| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main`, inclui o cabeçalho e chama o menu. |
-| [`funcoes.h`](funcoes.h) | Reúne as funções e variáveis empregadas no exercício. |
-| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Executável Windows já existente no diretório. |
+| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main`, inclui o cabeçalho e controla a abertura do menu. |
+| [`funcoes.h`](funcoes.h) | Define os vetores de produtos e implementa as funções utilizadas pelo menu. |
+| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Executável para Windows incluído no repositório. |
 
-## 🧠 Organização e funcionamento
+## 🔎 Análise técnica
 
-O arquivo principal define a localização utilizada para exibir caracteres no terminal e mantém um laço que chama `Menu` enquanto a variável de controle permite a continuidade da aplicação. As operações de estoque estão no cabeçalho.
+O programa trabalha com até três produtos, utilizando vetores paralelos para armazenar nome, código, preço e estoque. O arquivo principal chama a função `Menu`; as operações são realizadas pelas rotinas do cabeçalho. A proposta permite comparar uma implementação concentrada em um único arquivo com outra que utiliza um `.h`.
 
-Essa disposição permite analisar a diferença entre concentrar toda a implementação em um arquivo e separar parte dela em um `.h`.
+## ⚠️ Problemas identificados
 
-## ⚠️ Estado técnico
+O cabeçalho apresenta chamadas de funções antes de suas declarações, o que causa **erros de compilação em C++**. Também há uma chamada de `scanf` que utiliza a variável de controle sem fornecer seu endereço, situação que pode provocar comportamento indefinido caso esse trecho seja alcançado após outros ajustes.
 
-A implementação apresenta **erros de compilação com `g++`** relacionados ao uso de funções antes de suas declarações. Por isso, o código-fonte não deve ser descrito como uma versão pronta para compilação sem ajustes.
-
-O binário existente não comprova que o código atual possa ser recompilado sem problemas. Para comparar as duas organizações, consulte o [Programa 3 original](../programa-3/README.md).
+Portanto, o executável já armazenado na pasta **não comprova que o código atual possa ser recompilado ou executado corretamente**. Esses problemas estão no [código existente](funcoes.h) e não foram corrigidos nesta revisão documental.
