@@ -1,19 +1,18 @@
-# 📦 Relatório da subpasta — Executável do estoque
+# 📦 Pasta output — Programa 3
 
-[← Programa 3](../README.md) · [← Conteúdo P1](../../README.md) · [↑ Índice geral](../../../README.md)
+[← Relatório do Programa 3](../README.md) · [Conteúdo P1](../../README.md) · [Página inicial](../../../README.md)
 
-## 📌 Resumo
+## 📌 Conteúdo da pasta
 
-A subpasta `output` contém um **artefato compilado para Windows** do exercício de controle de estoque. Não há aqui uma implementação independente: o programa de origem está na pasta superior.
+Este diretório armazena um **executável para Windows** relacionado ao exercício de controle de estoque. A implementação do programa permanece na pasta superior; o arquivo aqui presente é um artefato compilado.
 
-## 📂 Arquivos relacionados
-
-| Arquivo | Papel |
+| Arquivo | Descrição |
 |---|---|
-| [`programa-3.exe`](programa-3.exe) | Executável incluído nesta subpasta. |
-| [`../programa-3.cpp`](../programa-3.cpp) | Código-fonte do controle de estoque. |
-| [`../README.md`](../README.md) | Relatório do programa e de suas operações. |
+| [`programa-3.exe`](programa-3.exe) | Executável armazenado nesta subpasta. |
+| [`../programa-3.cpp`](../programa-3.cpp) | Código-fonte correspondente, localizado na pasta superior. |
 
-## 🔎 Considerações
+## 🔎 Relação com o exercício
 
-O sistema registra até **três produtos** em memória e apresenta funções de cadastro, consulta, compra e listagem. Para analisar o funcionamento, consulte o arquivo `.cpp` e o [relatório do Programa 3](../README.md). O binário armazenado não substitui a leitura do código e não representa uma certificação de compatibilidade ou segurança.
+O Programa 3 simula o cadastro, a consulta e a compra de até três produtos, mantendo os dados em memória. Seu funcionamento, os arquivos existentes e as limitações estão descritos no [relatório principal](../README.md).
+
+O executável não contém documentação do algoritmo; para compreender ou modificar o programa, a referência é o arquivo `.cpp`. Não há, nesta pasta, testes automatizados que comprovem o funcionamento do binário.
