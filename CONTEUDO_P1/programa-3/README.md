@@ -1,36 +1,33 @@
-# 📦 Programa 3 — Cadastro e controle de estoque
+# 📦 Relatório da pasta — Programa 3: controle de estoque
 
-[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md) · [Versão com cabeçalho](../programa-3-biblioteca/README.md)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Versão com cabeçalho](../programa-3-biblioteca/README.md)
 
-## 📌 Sobre o programa
+## 📌 Resumo
 
-Simulação de controle de estoque feita para praticar **vetores, funções e menus no terminal**. Permite cadastrar e consultar produtos, registrar compras e visualizar os itens armazenados.
+A pasta contém uma simulação de **cadastro e movimentação de estoque**, feita para praticar vetores e funções. O sistema funciona no terminal e pode armazenar dados de até **três produtos** durante sua execução.
 
-O sistema utiliza quatro vetores paralelos — nome, código, preço e quantidade — com capacidade para **até três produtos**. O mesmo índice relaciona os dados de cada item.
+## 📂 Arquivos e subpastas
 
-## ✨ Operações disponíveis
+| Item | Conteúdo |
+|---|---|
+| [`programa-3.cpp`](programa-3.cpp) | Código-fonte completo, com menu e rotinas de cadastro, consulta, compra e listagem. |
+| [`programa-3.exe`](programa-3.exe) | Executável Windows presente na pasta principal. |
+| [`output/`](output/README.md) | Subpasta com outro executável compilado e seu relatório. |
 
-| Opção | Ação | Resultado |
-|---:|---|---|
-| 1 | Cadastrar | Registra os dados de um produto. |
-| 2 | Consultar | Procura um produto pelo código informado. |
-| 3 | Comprar | Calcula subtotais e atualiza o estoque. |
-| 4 | Exibir tabela | Apresenta os produtos cadastrados. |
-| 5 | Encerrar | Finaliza a execução. |
+## 🧠 Funcionamento do programa
 
-As funções e o menu estão implementados em [`programa-3.cpp`](programa-3.cpp). A pasta [`output/`](output/README.md) contém outro executável já compilado.
+O código utiliza **vetores paralelos** para armazenar nome, código, preço e quantidade. A posição de cada produto é a mesma em todos os vetores.
 
-## ⚙️ Como executar
+| Operação | Finalidade |
+|---|---|
+| Cadastro | Registrar os dados de um produto. |
+| Consulta | Localizar um item pelo código. |
+| Compra | Selecionar produtos, calcular valores e atualizar quantidades. |
+| Listagem | Exibir os produtos e seus dados. |
+| Encerramento | Finalizar a aplicação pelo menu. |
 
-Na raiz do repositório, com `g++` disponível:
+## 🔎 Considerações
 
-```bash
-g++ CONTEUDO_P1/programa-3/programa-3.cpp -o estoque
-./estoque
-```
+O programa representa um controle de estoque **temporário**, sem arquivos de dados ou banco de dados. Todos os registros se perdem ao final da execução. A [versão com cabeçalho](../programa-3-biblioteca/README.md) permite comparar outra organização do mesmo exercício, mas apresenta problemas próprios de compilação.
 
-O programa é interativo: escolha a operação no menu e digite os dados solicitados. No Windows, utilize o executável correspondente.
-
-## ⚠️ Limitações
-
-Os registros permanecem **somente em memória** e são perdidos ao encerrar a aplicação. A capacidade é fixa, e não existe integração com banco de dados. Para comparar a organização do código, consulte a [versão com cabeçalho](../programa-3-biblioteca/README.md), que apresenta limitações próprias de compilação.
+**Fonte da análise:** [`programa-3.cpp`](programa-3.cpp).
