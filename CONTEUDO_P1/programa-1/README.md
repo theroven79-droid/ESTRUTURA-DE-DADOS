@@ -1,29 +1,17 @@
-# 🧮 Programa 1 — Relatório do exercício
+# 🧮 Programa 1 — Cálculos encadeados com funções
 
-[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
+Este exercício apresenta o uso de **funções com retorno**. A partir de três números inteiros informados no terminal, o programa realiza três cálculos em sequência: cada etapa aproveita o resultado da anterior.
 
-## 📌 Visão geral
+## 🔢 Como funciona
 
-Esta pasta contém um exercício de **funções com retorno de valores**, desenvolvido para demonstrar como o resultado de uma operação pode ser utilizado na seguinte. O programa solicita três números inteiros e apresenta os resultados de uma soma, de uma multiplicação e de um cálculo ao cubo.
-
-## 📂 Arquivo da pasta
-
-| Arquivo | Descrição |
+| Etapa | Cálculo |
 |---|---|
-| [`programa-1.cpp`](programa-1.cpp) | Reúne a função `main`, os protótipos e as implementações de `soma`, `multiplicacao` e `cubo`. |
+| Soma | Soma os dois primeiros números e acrescenta 10. |
+| Multiplicação | Soma o terceiro número ao resultado anterior e multiplica por 3. |
+| Cubo | Eleva o resultado da multiplicação à terceira potência. |
 
-## 🔎 Análise do funcionamento
+O exercício permite acompanhar a passagem de argumentos, o retorno de valores e a utilização de variáveis para guardar resultados intermediários.
 
-A execução começa com a leitura dos números `n1`, `n2` e `n3`. O programa soma os dois primeiros valores e acrescenta 10; em seguida, soma o terceiro número ao resultado obtido e multiplica por 3. Por último, calcula o cubo desse segundo resultado.
+**Código-fonte:** [`programa-1.cpp`](programa-1.cpp), que reúne a função principal e as funções `soma`, `multiplicacao` e `cubo`.
 
-| Etapa | Expressão utilizada |
-|---|---|
-| 1 — Soma | `n1 + n2 + 10` |
-| 2 — Multiplicação | `(n3 + resultado_da_soma) * 3` |
-| 3 — Cubo | `resultado_da_multiplicacao³` |
-
-Com as entradas `1`, `2` e `3`, os resultados são **13, 48 e 110592**, respectivamente.
-
-## 📝 Considerações
-
-O exercício utiliza funções da biblioteca de entrada e saída da linguagem C, embora o arquivo tenha extensão `.cpp`. Não há validação específica para entradas inválidas nem tratamento de estouro de valores inteiros. Todo o conteúdo analisado está no [código-fonte](programa-1.cpp).
+[← Ver os exercícios de P1](../README.md) · [Página inicial](../../README.md)

@@ -1,25 +1,17 @@
-# 🧩 Programa 3 — Relatório da versão com cabeçalho
+# 🧩 Programa 3 — Estoque com arquivo de cabeçalho
 
-[← Conteúdo P1](../README.md) · [Página inicial](../../README.md) · [Versão em arquivo único](../programa-3/README.md)
+Esta pasta apresenta outra organização do exercício de **controle de estoque**: as funções e os vetores utilizados pelo programa ficam reunidos em um arquivo `.h`, enquanto o arquivo principal se concentra na inicialização e na chamada do menu.
 
-## 📌 Visão geral
+## 📂 Como os arquivos se dividem
 
-Esta pasta contém uma segunda organização do exercício de estoque. Em vez de reunir toda a implementação no arquivo principal, o projeto concentra as **variáveis e as funções de cadastro, consulta, compra e listagem** em um cabeçalho.
-
-## 📂 Arquivos encontrados
-
-| Arquivo | Responsabilidade |
+| Arquivo | Papel no exercício |
 |---|---|
-| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main`, inclui o cabeçalho e controla a abertura do menu. |
-| [`funcoes.h`](funcoes.h) | Define os vetores de produtos e implementa as funções utilizadas pelo menu. |
-| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Executável para Windows incluído no repositório. |
+| [`programa-3-com-biblioteca.cpp`](programa-3-com-biblioteca.cpp) | Contém a função `main` e utiliza as rotinas do cabeçalho. |
+| [`funcoes.h`](funcoes.h) | Reúne dados dos produtos e funções de cadastro, consulta, compra e listagem. |
+| [`programa-3-com-biblioteca.exe`](programa-3-com-biblioteca.exe) | Executável presente na pasta. |
 
-## 🔎 Análise técnica
+## 📌 Proposta
 
-O programa trabalha com até três produtos, utilizando vetores paralelos para armazenar nome, código, preço e estoque. O arquivo principal chama a função `Menu`; as operações são realizadas pelas rotinas do cabeçalho. A proposta permite comparar uma implementação concentrada em um único arquivo com outra que utiliza um `.h`.
+Assim como a [versão em arquivo único](../programa-3/README.md), o programa representa até três produtos por meio de vetores de nomes, códigos, preços e quantidades. A diferença está na **distribuição das responsabilidades entre os arquivos**, assunto central deste exercício.
 
-## ⚠️ Problemas identificados
-
-O cabeçalho apresenta chamadas de funções antes de suas declarações, o que causa **erros de compilação com `g++`**. A função `main` também depende de variáveis globais definidas no cabeçalho. Dessa forma, a organização adotada serve como exercício de estudo, mas precisa de ajustes antes de uma recompilação confiável.
-
-Portanto, o executável já armazenado na pasta **não comprova que o código atual possa ser recompilado ou executado corretamente**. Esses problemas estão no [código existente](funcoes.h) e não foram corrigidos nesta revisão documental.
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
