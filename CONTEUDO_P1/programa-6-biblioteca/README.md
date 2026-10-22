@@ -1,48 +1,35 @@
-# 🚌 Programa 6 — Controle de poltronas de ônibus
+# 🚌 Relatório da pasta — Programa 6: poltronas de ônibus
 
-[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
-## 📌 Sobre o projeto
+## 📌 Resumo
 
-Simulação acadêmica de cadastro de ônibus e venda de passagens, desenvolvida para praticar o uso de **matrizes e funções**. O programa apresenta um mapa de poltronas, registra seleções e calcula informações de ocupação e venda.
+Esta pasta contém uma **simulação acadêmica de controle de poltronas e venda de passagens**, desenvolvida para exercitar matrizes e funções. O programa permite cadastrar características de um ônibus, visualizar lugares, selecionar passagens e consultar dados de ocupação.
 
-O arquivo [`mainBus.cpp`](mainBus.cpp) define a matriz e inicia o menu. As rotinas de funcionamento estão concentradas em [`funcoes.h`](funcoes.h).
+## 📂 Arquivos e subpastas
 
-## 💺 Representação dos assentos
-
-A matriz possui capacidade de **100 linhas por 4 colunas**. Os valores utilizados pelo programa indicam:
-
-| Valor | Significado |
-|---:|---|
-| `0` | Poltrona comum disponível |
-| `1` | Poltrona especial disponível |
-| `8` | Poltrona registrada como comprada |
-| `-1` | Posição sem poltrona cadastrada |
-
-## ✨ Operações descritas no código
-
-| Recurso | Finalidade |
+| Item | Conteúdo |
 |---|---|
-| Cadastro | Definir características do ônibus e dos assentos. |
-| Visualização | Consultar a representação das poltronas. |
-| Compra | Selecionar poltronas para a simulação de venda. |
-| Relatório | Apresentar ocupação, lugares disponíveis e valores registrados. |
+| [`mainBus.cpp`](mainBus.cpp) | Declara as variáveis e a matriz de assentos e chama o menu principal. |
+| [`funcoes.h`](funcoes.h) | Implementa as rotinas de cadastro, visualização, compra e relatório. |
+| [`mainBus.exe`](mainBus.exe) | Executável Windows incluído no diretório principal. |
+| [`output/`](output/README.md) | Subpasta com outro executável e seu relatório. |
 
-## ⚙️ Compilação e execução
+## 💺 Organização dos assentos
 
-Na raiz do repositório:
+O código declara uma matriz com **100 linhas e quatro colunas**. Os valores armazenados indicam o estado das posições:
 
-```bash
-g++ CONTEUDO_P1/programa-6-biblioteca/mainBus.cpp -o onibus
-./onibus
-```
+| Valor | Interpretação |
+|---:|---|
+| `0` | Poltrona comum disponível. |
+| `1` | Poltrona especial disponível. |
+| `8` | Poltrona marcada como comprada. |
+| `-1` | Posição não cadastrada como poltrona. |
 
-Tenha `g++` instalado. No Windows, execute o binário `.exe` gerado. A pasta [`output/`](output/README.md) também contém um executável incluído anteriormente.
+O relatório do programa apresenta informações de ocupação, disponibilidade e valores registrados nas vendas.
 
-## ⚠️ Limitações da implementação
+## ⚠️ Limitações identificadas
 
-- A seleção de poltronas **não impede completamente** a escolha de assentos já ocupados ou de posições com valor `-1`.
-- O menu apresenta a opção `0 - Sair`, mas não há tratamento correspondente para encerrar o laço. Use `Ctrl+C` caso precise interromper a execução.
-- O programa é uma atividade de estudo, não um sistema pronto para venda real de passagens.
+A seleção de lugares não impede completamente a escolha de poltronas já compradas ou de posições com o valor `-1`. Além disso, o menu mostra a opção **`0 - Sair`**, mas não contém um tratamento que finalize o laço principal.
 
-Para compreender essas limitações, consulte as rotinas em [`funcoes.h`](funcoes.h).
+Essas limitações pertencem à implementação atual. O exercício é útil para estudar matrizes, mas não corresponde a um sistema de bilhetagem pronto para utilização real.
