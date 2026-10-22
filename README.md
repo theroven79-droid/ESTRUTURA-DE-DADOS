@@ -1,41 +1,43 @@
-# 🧠 Relatório geral — Estrutura de Dados
+# 🧠 Estrutura de Dados — Relatório do repositório
 
-## 📌 Apresentação do repositório
+## 📌 Apresentação
 
-Este repositório reúne **exercícios acadêmicos de programação**, distribuídos entre os conteúdos P1 e P2. Os arquivos demonstram conceitos de funções, laços, vetores, matrizes, strings, ordenação e busca. A maior parte das implementações é formada por programas independentes executados no terminal.
+Este repositório reúne **exercícios acadêmicos de programação** organizados em dois conjuntos, identificados como P1 e P2. O material aborda funções, laços de repetição, vetores, matrizes, manipulação de caracteres, ordenação e busca. São atividades independentes, desenvolvidas principalmente para execução no terminal.
 
-## 📂 Organização das pastas
+A documentação está organizada de forma hierárquica: este relatório apresenta uma visão geral, e cada pasta com `README.md` contém a análise dos arquivos correspondentes.
 
-| Pasta | Síntese do conteúdo | Relatório |
+## 📂 Estrutura do conteúdo
+
+| Diretório | O que reúne | Documentação |
 |---|---|---|
-| [`CONTEUDO_P1/`](CONTEUDO_P1/README.md) | Cálculos em funções, tabuadas, cadastro de produtos, operações em cabeçalhos e poltronas de ônibus. | [P1](CONTEUDO_P1/README.md) |
-| [`CONTEUDO_P2/`](CONTEUDO_P2/README.md) | Transformação de texto, Bubble Sort, busca binária e classificação de equipes. | [P2](CONTEUDO_P2/README.md) |
-| [`.vscode/`](.vscode/tasks.json) | Configurações do editor, tarefas de compilação e depuração. | [Tarefas](.vscode/tasks.json) · [Depuração](.vscode/launch.json) |
+| [`CONTEUDO_P1/`](CONTEUDO_P1/README.md) | Sete exercícios sobre funções, repetição, vetores, cabeçalhos e matrizes. | [Relatório P1](CONTEUDO_P1/README.md) |
+| [`CONTEUDO_P2/`](CONTEUDO_P2/README.md) | Exercícios de texto, ordenação, busca binária e classificação de times. | [Relatório P2](CONTEUDO_P2/README.md) |
+| [`.vscode/`](.vscode/tasks.json) | Configurações locais do VS Code para compilação e depuração. | [Tarefas](.vscode/tasks.json) · [Depuração](.vscode/launch.json) |
 
-## 📚 Resumo dos programas
+## 📚 Principais trabalhos
 
-| Projeto | Conteúdo estudado |
+| Atividade | Síntese |
 |---|---|
-| [Programa 1](CONTEUDO_P1/programa-1/README.md) | Operações aritméticas encadeadas com funções. |
-| [Programa 2](CONTEUDO_P1/programa-2/README.md) | Tabuadas e repetição com laços aninhados. |
-| [Programa 3](CONTEUDO_P1/programa-3/README.md) | Cadastro, consulta e compra de produtos armazenados em vetores. |
-| [Programa 3 com cabeçalho](CONTEUDO_P1/programa-3-biblioteca/README.md) | Estudo da organização de funções em `.h`. |
-| [Programa 4](CONTEUDO_P1/programa-4-biblioteca/README.md) | Variáveis e funções distribuídas em arquivos de cabeçalho. |
-| [Programa 5](CONTEUDO_P1/programa-5-biblioteca/README.md) | Operações matemáticas implementadas em módulos. |
-| [Programa 6](CONTEUDO_P1/programa-6-biblioteca/README.md) | Matriz de poltronas e simulação de venda de passagens. |
-| [Exercícios P2](CONTEUDO_P2/README.md) | Manipulação de caracteres, ordenação e busca binária. |
-| [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | Classificação por pontos e desempate por gols. |
+| [Cálculos com funções](CONTEUDO_P1/programa-1/README.md) | Três operações matemáticas realizadas em sequência. |
+| [Tabuadas](CONTEUDO_P1/programa-2/README.md) | Repetição com `for` e cubo dos resultados de multiplicações. |
+| [Controle de estoque](CONTEUDO_P1/programa-3/README.md) | Cadastro, consulta e compra de produtos representados por vetores. |
+| [Estoque com cabeçalho](CONTEUDO_P1/programa-3-biblioteca/README.md) | Organização alternativa das rotinas do estoque. |
+| [Variáveis e funções em cabeçalhos](CONTEUDO_P1/programa-4-biblioteca/README.md) | Leitura de valores e uso de funções em arquivos `.h`. |
+| [Operações aritméticas](CONTEUDO_P1/programa-5-biblioteca/README.md) | Calculadora com funções distribuídas em cabeçalhos. |
+| [Controle de poltronas](CONTEUDO_P1/programa-6-biblioteca/README.md) | Representação de assentos e simulação de compra de passagens. |
+| [Exercícios de texto, ordenação e busca](CONTEUDO_P2/README.md) | Manipulação de caracteres, Bubble Sort e busca binária. |
+| [Classificação de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | Ordenação de 12 equipes por pontos, com desempate por gols. |
 
-## 🧠 Características técnicas
+## 🔎 Características dos arquivos
 
-Os exercícios utilizam arquivos com extensão `.cpp`. Vários empregam funções como `printf` e `scanf`, comuns à linguagem C, e podem ser estudados com um compilador C++ compatível. Algumas pastas possuem cabeçalhos `.h` para organizar funções, enquanto outras contêm toda a implementação em um único arquivo.
+Os códigos utilizam a extensão `.cpp` e, em vários casos, funções como `printf` e `scanf`. Há programas em arquivo único e outros com implementações distribuídas em cabeçalhos `.h`. Algumas pastas incluem executáveis `.exe`, além de subpastas `output` destinadas aos artefatos compilados.
 
-## ⚠️ Considerações gerais
+O projeto registra também configurações de compilação do VS Code com **caminhos específicos de Windows e MSYS2**; essas configurações podem exigir adaptação em outros ambientes.
 
-O repositório inclui executáveis `.exe` já compilados. Os códigos-fonte são a referência adequada para compreender os algoritmos. Há limitações conhecidas: a versão modular do estoque apresenta erros de compilação com `g++`; a calculadora não verifica divisão por zero; o sistema de ônibus não valida todos os estados dos assentos; e a tabela de times utiliza comandos específicos do Windows.
+## 📝 Considerações finais
 
-As configurações do VS Code contêm caminhos locais que podem precisar de adaptação em outros computadores. Os exercícios não compartilham uma suíte única de testes automatizados.
+Os exercícios documentam etapas de aprendizagem, **não aplicações prontas para produção**. Entre as limitações verificadas estão erros de compilação na versão do estoque com cabeçalho, ausência de proteção contra divisão por zero na calculadora, validações incompletas no sistema de ônibus e comandos específicos do Windows no ranking de times.
 
-## 🔗 Referências de apoio
+Para compreender cada atividade, consulte os relatórios das respectivas pastas e os códigos-fonte vinculados. As descrições foram elaboradas com base nos arquivos presentes, sem presumir funcionalidades inexistentes.
 
-[GCC](https://gcc.gnu.org/onlinedocs/) · [VS Code — C++](https://code.visualstudio.com/docs/languages/cpp) · [GitHub — Markdown](https://docs.github.com/pt/get-started/writing-on-github)
+**Referências de apoio:** [Documentação do GCC](https://gcc.gnu.org/onlinedocs/) · [VS Code — C++](https://code.visualstudio.com/docs/languages/cpp) · [Markdown no GitHub](https://docs.github.com/pt/get-started/writing-on-github).
