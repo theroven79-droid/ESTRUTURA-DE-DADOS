@@ -1,33 +1,25 @@
-# 📦 Relatório da pasta — Programa 3: controle de estoque
+# 📦 Programa 3 — Relatório do controle de estoque
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md) · [Versão com cabeçalho](../programa-3-biblioteca/README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md) · [Versão com cabeçalho](../programa-3-biblioteca/README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-A pasta contém uma simulação de **cadastro e movimentação de estoque**, feita para praticar vetores e funções. O sistema funciona no terminal e pode armazenar dados de até **três produtos** durante sua execução.
+O programa simula o **cadastro e a movimentação de um pequeno estoque**, utilizando vetores e funções. A capacidade é de três produtos, cujos nomes, códigos, preços e quantidades ficam associados por meio da mesma posição em vetores paralelos.
 
-## 📂 Arquivos e subpastas
+## 📂 Organização da pasta
 
-| Item | Conteúdo |
+| Item | Finalidade |
 |---|---|
-| [`programa-3.cpp`](programa-3.cpp) | Código-fonte completo, com menu e rotinas de cadastro, consulta, compra e listagem. |
-| [`programa-3.exe`](programa-3.exe) | Executável Windows presente na pasta principal. |
-| [`output/`](output/README.md) | Subpasta com outro executável compilado e seu relatório. |
+| [`programa-3.cpp`](programa-3.cpp) | Implementação do menu e das rotinas de cadastro, consulta, compra e exibição. |
+| [`programa-3.exe`](programa-3.exe) | Executável para Windows localizado na pasta do programa. |
+| [`output/`](output/README.md) | Subpasta com outro executável e um relatório específico. |
 
-## 🧠 Funcionamento do programa
+## 🔎 Funcionamento identificado
 
-O código utiliza **vetores paralelos** para armazenar nome, código, preço e quantidade. A posição de cada produto é a mesma em todos os vetores.
+O menu oferece opções para cadastrar produtos, consultar o estoque por código, realizar compras, apresentar a tabela de itens e encerrar a execução. O cadastro verifica informações como **códigos positivos e não repetidos, preços maiores que zero e quantidades não negativas**. Na compra, a quantidade solicitada é comparada com o estoque disponível, e o valor total é calculado a partir dos itens selecionados.
 
-| Operação | Finalidade |
-|---|---|
-| Cadastro | Registrar os dados de um produto. |
-| Consulta | Localizar um item pelo código. |
-| Compra | Selecionar produtos, calcular valores e atualizar quantidades. |
-| Listagem | Exibir os produtos e seus dados. |
-| Encerramento | Finalizar a aplicação pelo menu. |
+## 📝 Considerações
 
-## 🔎 Considerações
+Os dados ficam apenas na memória e são perdidos quando a aplicação termina. Não há banco de dados nem arquivos destinados ao armazenamento permanente de produtos. A [variação com cabeçalho](../programa-3-biblioteca/README.md) utiliza uma organização diferente, mas apresenta problemas técnicos próprios.
 
-O programa representa um controle de estoque **temporário**, sem arquivos de dados ou banco de dados. Todos os registros se perdem ao final da execução. A [versão com cabeçalho](../programa-3-biblioteca/README.md) permite comparar outra organização do mesmo exercício, mas apresenta problemas próprios de compilação.
-
-**Fonte da análise:** [`programa-3.cpp`](programa-3.cpp).
+**Código de referência:** [`programa-3.cpp`](programa-3.cpp).
