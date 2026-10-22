@@ -1,35 +1,35 @@
-# 🚌 Relatório da pasta — Programa 6: poltronas de ônibus
+# 🚌 Programa 6 — Relatório do sistema de poltronas
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-Esta pasta contém uma **simulação acadêmica de controle de poltronas e venda de passagens**, desenvolvida para exercitar matrizes e funções. O programa permite cadastrar características de um ônibus, visualizar lugares, selecionar passagens e consultar dados de ocupação.
+O exercício simula o **cadastro de um ônibus e a venda de passagens**. Sua finalidade é aplicar matrizes e funções à representação de poltronas, distinguindo assentos comuns, especiais e ocupados. O programa também apresenta informações sobre a quantidade de lugares e os valores associados às vendas.
 
-## 📂 Arquivos e subpastas
+## 📂 Organização da pasta
 
-| Item | Conteúdo |
+| Arquivo ou pasta | Conteúdo |
 |---|---|
-| [`mainBus.cpp`](mainBus.cpp) | Declara as variáveis e a matriz de assentos e chama o menu principal. |
-| [`funcoes.h`](funcoes.h) | Implementa as rotinas de cadastro, visualização, compra e relatório. |
-| [`mainBus.exe`](mainBus.exe) | Executável Windows incluído no diretório principal. |
+| [`mainBus.cpp`](mainBus.cpp) | Declara os dados do ônibus, cria a matriz e inicia o menu. |
+| [`funcoes.h`](funcoes.h) | Implementa o cadastro, a montagem do mapa, a exibição e a compra de poltronas. |
+| [`mainBus.exe`](mainBus.exe) | Executável para Windows incluído na pasta principal. |
 | [`output/`](output/README.md) | Subpasta com outro executável e seu relatório. |
 
-## 💺 Organização dos assentos
+## 💺 Representação dos assentos
 
-O código declara uma matriz com **100 linhas e quatro colunas**. Os valores armazenados indicam o estado das posições:
+A matriz possui **capacidade para 100 fileiras de quatro posições**, conforme as constantes do código. O número de fileiras efetivamente utilizadas é calculado a partir da quantidade de lugares informada no cadastro.
 
-| Valor | Interpretação |
+| Valor | Significado |
 |---:|---|
-| `0` | Poltrona comum disponível. |
-| `1` | Poltrona especial disponível. |
-| `8` | Poltrona marcada como comprada. |
-| `-1` | Posição não cadastrada como poltrona. |
+| `0` | Assento comum disponível. |
+| `1` | Assento especial disponível. |
+| `8` | Assento registrado como ocupado. |
+| `-1` | Posição não utilizada no mapa. |
 
-O relatório do programa apresenta informações de ocupação, disponibilidade e valores registrados nas vendas.
+O menu permite cadastrar o ônibus, consultar o mapa de poltronas e simular compras. Depois da seleção, o programa atualiza o mapa e calcula a quantidade de lugares ocupados, a disponibilidade e um valor total de vendas.
 
-## ⚠️ Limitações identificadas
+## ⚠️ Limitações observadas
 
-A seleção de lugares não impede completamente a escolha de poltronas já compradas ou de posições com o valor `-1`. Além disso, o menu mostra a opção **`0 - Sair`**, mas não contém um tratamento que finalize o laço principal.
+A compra verifica o número da fileira e da poltrona, mas **não confere se a posição já está ocupada ou corresponde a `-1`** antes de marcá-la com `8`. O menu também anuncia a opção `0 - Sair`, sem implementar o encerramento correspondente. Além disso, não há uma verificação completa dos limites informados no cadastro.
 
-Essas limitações pertencem à implementação atual. O exercício é útil para estudar matrizes, mas não corresponde a um sistema de bilhetagem pronto para utilização real.
+Trata-se de uma simulação de estudo, não de um sistema comercial de emissão de passagens. As situações descritas podem ser conferidas em [`funcoes.h`](funcoes.h).
