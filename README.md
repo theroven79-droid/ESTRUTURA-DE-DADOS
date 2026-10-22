@@ -1,56 +1,41 @@
-# 🧠 Estrutura de Dados — Exercícios de programação
+# 🧠 Relatório geral — Estrutura de Dados
 
-Coleção acadêmica de programas desenvolvidos para estudar **funções, vetores, matrizes, manipulação de strings, ordenação e busca**. O material está dividido em dois conjuntos de exercícios, identificados como P1 e P2.
+## 📌 Apresentação do repositório
 
-## 📚 Organização do repositório
+Este repositório reúne **exercícios acadêmicos de programação**, distribuídos entre os conteúdos P1 e P2. Os arquivos demonstram conceitos de funções, laços, vetores, matrizes, strings, ordenação e busca. A maior parte das implementações é formada por programas independentes executados no terminal.
 
-| Conjunto | Assuntos principais | Acesso |
+## 📂 Organização das pastas
+
+| Pasta | Síntese do conteúdo | Relatório |
 |---|---|---|
-| **P1** | Funções, laços, vetores, arquivos de cabeçalho e matrizes. | [Conteúdo P1](CONTEUDO_P1/README.md) |
-| **P2** | Strings, Bubble Sort, busca binária e classificação de times. | [Conteúdo P2](CONTEUDO_P2/README.md) |
-| **VS Code** | Configurações locais de compilação e depuração. | [Tarefas](.vscode/tasks.json) · [Depuração](.vscode/launch.json) |
+| [`CONTEUDO_P1/`](CONTEUDO_P1/README.md) | Cálculos em funções, tabuadas, cadastro de produtos, operações em cabeçalhos e poltronas de ônibus. | [P1](CONTEUDO_P1/README.md) |
+| [`CONTEUDO_P2/`](CONTEUDO_P2/README.md) | Transformação de texto, Bubble Sort, busca binária e classificação de equipes. | [P2](CONTEUDO_P2/README.md) |
+| [`.vscode/`](.vscode/tasks.json) | Configurações do editor, tarefas de compilação e depuração. | [Tarefas](.vscode/tasks.json) · [Depuração](.vscode/launch.json) |
 
-## 📂 Guia dos projetos
+## 📚 Resumo dos programas
 
-| Projeto | Descrição | Documentação |
-|---|---|---|
-| Programa 1 | Cálculos encadeados com funções. | [Abrir](CONTEUDO_P1/programa-1/README.md) |
-| Programa 2 | Tabuadas com laços aninhados. | [Abrir](CONTEUDO_P1/programa-2/README.md) |
-| Programa 3 | Cadastro e consulta de produtos com vetores. | [Abrir](CONTEUDO_P1/programa-3/README.md) |
-| Programa 3 com cabeçalho | Versão reorganizada para estudar funções em `.h`. | [Abrir](CONTEUDO_P1/programa-3-biblioteca/README.md) |
-| Programa 4 | Separação de variáveis e funções em cabeçalhos. | [Abrir](CONTEUDO_P1/programa-4-biblioteca/README.md) |
-| Programa 5 | Calculadora com funções distribuídas em arquivos `.h`. | [Abrir](CONTEUDO_P1/programa-5-biblioteca/README.md) |
-| Programa 6 | Mapa de poltronas e simulação de vendas. | [Abrir](CONTEUDO_P1/programa-6-biblioteca/README.md) |
-| Tabela de times | Classificação por pontuação e desempate por gols. | [Abrir](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) |
-
-Os exercícios de manipulação de strings e de busca binária estão descritos no [guia P2](CONTEUDO_P2/README.md).
-
-## ⚙️ Como compilar um exercício
-
-Os arquivos utilizam a extensão `.cpp` e podem ser compilados individualmente com `g++`, desde que o compilador esteja instalado.
-
-Exemplo, executado na raiz do repositório:
-
-```bash
-g++ CONTEUDO_P1/programa-1/programa-1.cpp -o programa1
-./programa1
-```
-
-No Windows, execute o arquivo `.exe` correspondente. Alguns programas empregam `printf` e `scanf`, típicos da linguagem C, embora o código esteja salvo como `.cpp`.
-
-## ⚠️ Estado e limitações conhecidos
-
-| Exercício | Observação |
+| Projeto | Conteúdo estudado |
 |---|---|
-| [Programa 3 com cabeçalho](CONTEUDO_P1/programa-3-biblioteca/README.md) | Apresenta erros de compilação com `g++` devido à ordem das declarações de funções. |
-| [Programa 5](CONTEUDO_P1/programa-5-biblioteca/README.md) | Não trata explicitamente divisão por zero. |
-| [Programa 6](CONTEUDO_P1/programa-6-biblioteca/README.md) | Não valida completamente as seleções de poltronas nem a opção de saída do menu. |
-| [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | Utiliza comandos `pause` e `cls`, próprios do Windows. |
+| [Programa 1](CONTEUDO_P1/programa-1/README.md) | Operações aritméticas encadeadas com funções. |
+| [Programa 2](CONTEUDO_P1/programa-2/README.md) | Tabuadas e repetição com laços aninhados. |
+| [Programa 3](CONTEUDO_P1/programa-3/README.md) | Cadastro, consulta e compra de produtos armazenados em vetores. |
+| [Programa 3 com cabeçalho](CONTEUDO_P1/programa-3-biblioteca/README.md) | Estudo da organização de funções em `.h`. |
+| [Programa 4](CONTEUDO_P1/programa-4-biblioteca/README.md) | Variáveis e funções distribuídas em arquivos de cabeçalho. |
+| [Programa 5](CONTEUDO_P1/programa-5-biblioteca/README.md) | Operações matemáticas implementadas em módulos. |
+| [Programa 6](CONTEUDO_P1/programa-6-biblioteca/README.md) | Matriz de poltronas e simulação de venda de passagens. |
+| [Exercícios P2](CONTEUDO_P2/README.md) | Manipulação de caracteres, ordenação e busca binária. |
+| [Tabela de times](CONTEUDO_P2/Exercicio_tabelaPontuacao/README.md) | Classificação por pontos e desempate por gols. |
 
-O repositório também contém executáveis `.exe` previamente compilados. Para estudar e reproduzir os exercícios, **prefira os arquivos-fonte**. As configurações do VS Code incluem caminhos locais de Windows/MSYS2 que podem precisar de ajustes em outro computador.
+## 🧠 Características técnicas
 
-## 🔗 Referências
+Os exercícios utilizam arquivos com extensão `.cpp`. Vários empregam funções como `printf` e `scanf`, comuns à linguagem C, e podem ser estudados com um compilador C++ compatível. Algumas pastas possuem cabeçalhos `.h` para organizar funções, enquanto outras contêm toda a implementação em um único arquivo.
 
-- [GCC — documentação oficial](https://gcc.gnu.org/onlinedocs/)
-- [VS Code — programação em C++](https://code.visualstudio.com/docs/languages/cpp)
-- [GitHub — Markdown](https://docs.github.com/pt/get-started/writing-on-github)
+## ⚠️ Considerações gerais
+
+O repositório inclui executáveis `.exe` já compilados. Os códigos-fonte são a referência adequada para compreender os algoritmos. Há limitações conhecidas: a versão modular do estoque apresenta erros de compilação com `g++`; a calculadora não verifica divisão por zero; o sistema de ônibus não valida todos os estados dos assentos; e a tabela de times utiliza comandos específicos do Windows.
+
+As configurações do VS Code contêm caminhos locais que podem precisar de adaptação em outros computadores. Os exercícios não compartilham uma suíte única de testes automatizados.
+
+## 🔗 Referências de apoio
+
+[GCC](https://gcc.gnu.org/onlinedocs/) · [VS Code — C++](https://code.visualstudio.com/docs/languages/cpp) · [GitHub — Markdown](https://docs.github.com/pt/get-started/writing-on-github)
