@@ -1,28 +1,30 @@
-# 🔎 Relatório da pasta — Conteúdo P2
+# 🔎 Conteúdo P2 — Relatório dos exercícios
 
-[← Relatório geral](../README.md) · [← Conteúdo P1](../CONTEUDO_P1/README.md)
+[← Página inicial](../README.md) · [Conteúdo P1](../CONTEUDO_P1/README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-A pasta `CONTEUDO_P2` reúne exercícios de **manipulação de textos, ordenação, busca e classificação de dados**. O conteúdo avança em relação aos programas da P1, explorando operações sobre vetores e critérios de organização dos elementos.
+A pasta `CONTEUDO_P2` reúne atividades sobre **manipulação de caracteres, ordenação de vetores, busca binária e classificação de equipes**. Os exercícios são independentes, mas compartilham o objetivo de estudar como organizar e consultar informações por meio de algoritmos.
 
 ## 📂 Arquivos e subpastas
 
-| Item | Conteúdo |
+| Item | Descrição |
 |---|---|
-| [`Exercicio_01.cpp`](Exercicio_01.cpp) | Leitura e transformação de uma frase, com contagens e substituições de caracteres. |
-| [`Exercicio_02.cpp`](Exercicio_02.cpp) | Ordenação de dez números com Bubble Sort e pesquisa por busca binária. |
-| [`Exercicio_tabelaPontuacao/`](Exercicio_tabelaPontuacao/README.md) | Projeto de classificação de 12 times por pontos e gols. |
-| `Exercicio_01.exe` e `Exercicio_02.exe` | Executáveis Windows já compilados dos dois primeiros exercícios. |
+| [`Exercicio_01.cpp`](Exercicio_01.cpp) | Processa uma frase: converte letras, realiza contagens, substituições e uma transformação de caracteres. |
+| [`Exercicio_02.cpp`](Exercicio_02.cpp) | Ordena dez números inteiros com Bubble Sort e faz uma pesquisa utilizando busca binária. |
+| [`Exercicio_01.exe`](Exercicio_01.exe) e [`Exercicio_02.exe`](Exercicio_02.exe) | Executáveis para Windows dos dois exercícios. |
+| [`Exercicio_tabelaPontuacao/`](Exercicio_tabelaPontuacao/README.md) | Projeto de cadastro e classificação de 12 times, dividido em arquivos de cabeçalho. |
 
-## 🧠 Análise dos exercícios
+## 🧠 Síntese do conteúdo
 
-O **Exercício 01** recebe uma frase, converte letras para maiúsculas, conta caracteres, vogais e consoantes, acrescenta o texto ` CHUVANAO` e realiza substituições e alterações nos códigos dos caracteres. A rotina denominada `qtdPalavasTotal` apresenta o rótulo “Quantidade de palavras”, embora conte caracteres. A concatenação também não verifica se há espaço suficiente no vetor de 100 posições.
+**Exercício 01 — Tratamento de texto.** O código lê uma frase com até 99 caracteres, converte letras para maiúsculas, conta caracteres, vogais e consoantes e acrescenta a expressão ` CHUVANAO`. Depois, substitui determinadas vogais e altera os valores numéricos dos caracteres. Apesar de apresentar a mensagem “Quantidade de palavras”, a função `qtdPalavasTotal` **conta caracteres, não palavras**.
 
-O **Exercício 02** recebe dez inteiros, apresenta os valores na ordem de entrada e depois em ordem crescente. O algoritmo de ordenação é **Bubble Sort**; a busca binária utiliza o vetor já ordenado e, quando encontra o número procurado, informa sua posição a partir de zero.
+**Exercício 02 — Ordenação e busca.** O programa recebe dez inteiros, apresenta a sequência original, organiza os valores em ordem crescente pelo método Bubble Sort e procura um número por busca binária. Quando o elemento é encontrado, mostra sua posição no vetor, contando a partir de zero.
 
-A subpasta [`Exercicio_tabelaPontuacao/`](Exercicio_tabelaPontuacao/README.md) contém a classificação de equipes: a maior pontuação determina a ordem principal e a quantidade de gols resolve empates em pontos.
+**Classificação de times.** A subpasta contém um algoritmo que organiza 12 equipes por pontuação decrescente e utiliza os gols como critério de desempate. O funcionamento está detalhado no [relatório específico](Exercicio_tabelaPontuacao/README.md).
 
-## 🔎 Considerações
+## ⚠️ Observações
 
-Os exercícios são executados no terminal e não constituem um sistema único. No projeto da tabela de times, os comandos `pause` e `cls` são específicos do Windows. Para analisar os detalhes de cada atividade, consulte os códigos-fonte e o [relatório da tabela de pontuação](Exercicio_tabelaPontuacao/README.md).
+No primeiro exercício, a concatenação por `strcat` não verifica se há espaço restante no vetor; a entrada máxima de `fgets` não garante capacidade para acrescentar a expressão. Já a classificação de times utiliza os comandos `pause` e `cls`, específicos do Windows.
+
+Os arquivos `.cpp` são a referência para verificar os comportamentos descritos; os executáveis compilados não substituem essa análise.
