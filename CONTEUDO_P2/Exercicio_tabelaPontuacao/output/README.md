@@ -1,29 +1,20 @@
-# ⚽ Executável da classificação de times
+# 📦 Relatório da subpasta — Executável da classificação
 
-[← Documentação do exercício](../README.md) · [← Índice do conteúdo](../../README.md) · [↑ Página inicial](../../../README.md)
+[← Classificação de times](../README.md) · [← Conteúdo P2](../../README.md) · [↑ Índice geral](../../../README.md)
 
-## 📌 Sobre esta pasta
+## 📌 Resumo
 
-O binário desta pasta pertence ao exercício de classificação de 12 times, que ordena os registros por pontuação e utiliza a quantidade de gols como critério de desempate.
+A subpasta `output` contém um **executável para Windows** relacionado ao projeto de classificação de times. O código-fonte e as regras do algoritmo estão disponíveis na pasta superior.
 
-| Arquivo | Finalidade |
+## 📂 Arquivos relacionados
+
+| Arquivo | Conteúdo |
 |---|---|
-| [`main.exe`](main.exe) | Executável Windows já existente. |
-| [`../main.cpp`](../main.cpp) | Código-fonte usado como referência. |
-| [`../README.md`](../README.md) | Instruções, recursos e limitações do exercício. |
+| [`main.exe`](main.exe) | Executável compilado existente nesta subpasta. |
+| [`../main.cpp`](../main.cpp) | Código-fonte principal do projeto. |
+| [`../inserir.txt`](../inserir.txt) | Registros de exemplo de nomes, gols e pontos. |
+| [`../README.md`](../README.md) | Relatório do funcionamento e dos critérios de classificação. |
 
-## ⚙️ Como recompilar
+## 🔎 Considerações
 
-Com `g++` instalado, execute na **raiz do repositório**:
-
-```bash
-g++ CONTEUDO_P2/Exercicio_tabelaPontuacao/main.cpp -o classificacao
-```
-
-No Linux/macOS, execute `./classificacao`. No Windows, utilize o executável `.exe` gerado pelo compilador.
-
-## ⚠️ Observações
-
-O código utiliza `pause` e `cls`, comandos específicos do Windows, e não define um terceiro critério de desempate.
-
-O binário incluído não substitui o código-fonte e não comprova, por si só, compatibilidade ou segurança. Para estudar o funcionamento, consulte o [guia do programa](../README.md).
+O programa organiza 12 equipes por pontuação, utilizando a quantidade de gols como desempate. A versão do código utiliza comandos específicos do terminal Windows e não mantém os resultados em um banco de dados. Para estudar o algoritmo, consulte os arquivos de origem e o [relatório principal](../README.md).
