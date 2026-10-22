@@ -1,38 +1,27 @@
-# 🔁 Programa 2 — Tabuadas com laços de repetição
+# 🔁 Relatório da pasta — Programa 2
 
-[← Conteúdo P1](../README.md) · [↑ Página inicial](../../README.md)
+[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
 
-## 📌 Sobre o exercício
+## 📌 Resumo
 
-O programa apresenta um menu com duas opções. Ambas percorrem as tabuadas de 1 a 10 utilizando laços `for` aninhados. A diferença está no valor exibido em cada multiplicação.
+O programa utiliza **funções e laços de repetição aninhados** para apresentar tabuadas. Um menu permite escolher entre os resultados das multiplicações ou o cubo de cada produto.
 
-| Opção | Função | Comportamento |
-|---|---|---|
-| `1` | `TABUADA_COMPLETA` | Exibe o produto das multiplicações. |
-| `2` | `TABUADA_AO_CUBO` | Exibe o cubo de cada produto. |
-| Outro valor | `FUNCAO_OPCAO` | Informa que a opção não é aceita. |
+## 📂 Inventário
 
-O menu é apresentado **uma única vez**: depois da opção escolhida, o programa termina.
-
-## 📂 Arquivos
-
-| Arquivo | Descrição |
+| Arquivo | Situação e finalidade |
 |---|---|
-| [`programa-01.cpp`](programa-01.cpp) | Implementação do menu, das tabuadas e da função `main`. |
-| [`programa-02.cpp`](programa-02.cpp) | Arquivo vazio, sem um segundo programa implementado. |
-| [`programa-01.exe`](programa-01.exe) | Executável Windows existente no repositório. |
+| [`programa-01.cpp`](programa-01.cpp) | Implementa a função principal, o menu e as duas rotinas de tabuadas. |
+| [`programa-02.cpp`](programa-02.cpp) | Arquivo vazio, sem implementação. |
+| [`programa-01.exe`](programa-01.exe) | Executável Windows incluído na pasta. |
 
-## ⚙️ Compilação e execução
+## 🧠 Análise do algoritmo
 
-Na raiz do repositório, com `g++` instalado:
+A função `FUNCAO_OPCAO` apresenta duas escolhas. A opção **1** chama `TABUADA_COMPLETA`, que calcula multiplicações de 1 a 10. A opção **2** chama `TABUADA_AO_CUBO`, que eleva o resultado de cada multiplicação à terceira potência. Valores diferentes dessas opções geram uma mensagem de escolha inválida.
 
-```bash
-g++ CONTEUDO_P1/programa-2/programa-01.cpp -o tabuada
-./tabuada
-```
+Os dois procedimentos utilizam um laço para percorrer as tabuadas e outro para calcular seus elementos.
 
-Em sistemas Windows, execute o arquivo `.exe` gerado.
+## ⚠️ Observações
 
-## ⚠️ Observação sobre a saída
+O número mostrado no cabeçalho de cada tabuada começa em **0**, enquanto o cálculo usa o índice acrescido de 1. Assim, o título pode não corresponder ao número efetivamente multiplicado. O menu é apresentado apenas uma vez, sem repetição automática.
 
-O título de cada tabuada utiliza o índice `i`, que começa em zero. Entretanto, as multiplicações utilizam `i + 1`. Por isso, **o número apresentado no cabeçalho pode não corresponder à tabuada calculada**. Essa diferença está no código original e não foi corrigida nesta documentação.
+**Fonte da análise:** [`programa-01.cpp`](programa-01.cpp).
