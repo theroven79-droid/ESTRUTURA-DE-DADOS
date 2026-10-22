@@ -1,26 +1,26 @@
-# 🛠️ Relatório da pasta — Programa 4 com cabeçalhos
+# 🛠️ Programa 4 — Relatório da organização em cabeçalhos
 
-[← Conteúdo P1](../README.md) · [↑ Índice geral](../../README.md)
+[← Conteúdo P1](../README.md) · [Página inicial](../../README.md)
 
-## 📌 Resumo
+## 📌 Visão geral
 
-O exercício demonstra a utilização de **arquivos de cabeçalho** para organizar variáveis e funções. O programa solicita dois valores inteiros, exibe os números informados e realiza uma soma com argumentos fixos.
+O exercício mostra como utilizar **arquivos de cabeçalho para compartilhar variáveis e funções** com um programa principal. Seu funcionamento consiste em receber dois valores inteiros, exibi-los e apresentar o resultado de uma soma com argumentos definidos no código.
 
-## 📂 Inventário dos arquivos
+## 📂 Arquivos da pasta
 
 | Arquivo | Conteúdo |
 |---|---|
-| [`programa.cpp`](programa.cpp) | Contém a função `main`, a entrada dos valores e a apresentação dos resultados. |
+| [`programa.cpp`](programa.cpp) | Contém a função `main`, a leitura dos valores e a saída no terminal. |
 | [`variaveis.h`](variaveis.h) | Define as variáveis inteiras `codigo` e `valor`. |
-| [`funcoes.h`](funcoes.h) | Contém a função `soma` e a rotina `Limparbuffer`. |
-| [`programa.exe`](programa.exe) | Executável Windows incluído no diretório. |
+| [`funcoes.h`](funcoes.h) | Implementa a função `soma` e a rotina `Limparbuffer`. |
+| [`programa.exe`](programa.exe) | Executável para Windows presente no diretório. |
 
-## 🧠 Funcionamento observado
+## 🔎 Análise do funcionamento
 
-O usuário digita um código e um valor, que são armazenados nas variáveis definidas no cabeçalho. Em seguida, o programa apresenta ambos e chama `soma(10, 10)`.
+O programa solicita um código e um valor inteiro, guarda as entradas nas variáveis do cabeçalho e mostra os dados informados. Depois, chama `soma(10, 10)` e apresenta **20**.
 
-**O resultado da soma é sempre 20**: os dois argumentos estão fixos no código e não dependem dos valores digitados. Essa característica distingue o exercício de uma calculadora que opera sobre as entradas do usuário.
+Esse resultado **não depende dos números digitados**, pois a função recebe dois argumentos fixos. A rotina `Limparbuffer` está definida em `funcoes.h`, mas não é chamada pelo fluxo principal apresentado.
 
-## 🔎 Considerações
+## 📝 Considerações
 
-O material exemplifica organização inicial de código em arquivos `.h`, mas não possui persistência de dados. As funções e declarações podem ser conferidas em [`programa.cpp`](programa.cpp), [`variaveis.h`](variaveis.h) e [`funcoes.h`](funcoes.h).
+O foco da atividade é a organização inicial do código, não a implementação de uma calculadora completa. A pasta não contém arquivos para salvar os valores informados. As responsabilidades podem ser conferidas diretamente nos [arquivos-fonte](programa.cpp).
