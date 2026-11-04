@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <iostream>
 
 struct ficha
 {
@@ -28,10 +29,12 @@ void Exibe(endmem primeiro)
 
   while (aux != NULL)
   {
-    printf("nome cliente: %s\n", aux->nome);
-    printf("codigo cliente: %d\n", aux->codigo_ficha);
-    printf("cpf do cliente: %s\n", aux->cpf);
+    
+    printf("Nome do cliente: %s\n", aux->nome);
+    printf("Codigo do cliente: %d\n", aux->codigo_ficha);
+    printf("CPF do cliente: %s\n", aux->cpf);
     printf("RG do cliente: %s\n", aux->rg);
+    printf("------------------------------------\n\n");
     aux = aux->proximo;
   }
 }
@@ -52,16 +55,22 @@ main()
   while (resp == 'S')
   {
     printf("\nInforme o nome do cliente: ");
-    scanf(" %50s", cliente);
+    fgets(cliente, sizeof(cliente), stdin);
+    cliente[strcspn(cliente, "\n")] = '\0';
 
     printf("\nInforme o codigo do cliente: ");
     scanf("%d", &cod_ficha);
 
+    fflush(stdin);
+
     printf("\nInforme cpf: ");
-    scanf(" %15s", rg_cliente);
+    fgets(cpf_cliente, sizeof(cpf_cliente), stdin);
+    cpf_cliente[strcspn(cpf_cliente, "\n")] = '\0';
 
     printf("\nInforme rg: ");
-    scanf(" %15s", cpf_cliente);
+   
+    fgets(rg_cliente, sizeof(rg_cliente), stdin);
+    rg_cliente[strcspn(rg_cliente, "\n")] = '\0';
 
     auxiliarFicha = new ficha;
 
@@ -84,9 +93,10 @@ main()
 
     fichaAnterior = auxiliarFicha;
 
-    printf("Informe S para continuar \n ");
+    printf("\nInforme S para continuar, E para encerrar: ");
     scanf("%s", &resp);
   }
 
+  printf("\n");
   Exibe(inicioFila);
 }
