@@ -94,25 +94,22 @@ int main()
         strcpy(aux->cidade, fgets(cidade_, sizeof(cidade_), stdin));
 
         aux->ant = NULL;
-
         if (ult != NULL)
         {
             aux->ant = ult;
         }
         ult = aux;
 
-        aux->proximo = NULL;
 
+        aux->proximo = NULL;
         if (inicioFila == NULL)
         {
             inicioFila = aux;
         }
-
         else
         {
             fichaAnterior->proximo = aux;
         }
-
         fichaAnterior = aux;
 
         printf("\nInforme S para add, ou N para encerrar: ");
