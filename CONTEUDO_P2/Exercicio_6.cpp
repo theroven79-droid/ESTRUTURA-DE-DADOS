@@ -86,5 +86,5 @@ int main()
     }
     aux = ult;
     exibe(ult);
-    system("pause");
+   
 }
