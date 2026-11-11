@@ -4,11 +4,11 @@
 #include <string.h>
 struct registro
 {
-    char id[10];
-    char nome[40];
-    char rg[15];
-    char cpf[15];
-    char cidade[50];
+    char id[20];
+    char nome[200];
+    char rg[20];
+    char cpf[20];
+    char cidade[200];
     // id, rg, cpf e cidade.
     registro *ant;
     // armazenara o endereco de memoria onde esta a
@@ -39,10 +39,10 @@ int main()
 {
     ponteiro ult, aux;
     char nomeb_[200];
-    char id_[10];
-    char rg_[15];
-    char cpf_[15];
-    char cidade_[50];
+    char id_[20];
+    char rg_[20];
+    char cpf_[20];
+    char cidade_[200];
     int c;
 
     char resp = 'S';
@@ -53,29 +53,25 @@ int main()
 
     while (toupper(resp) == 'S')
     {
+
+        // crio uma novo registro com todos os atributos
+        // eh como se tivesse criado uma linha na tabela
         aux = new registro;
         printf("\nInforme o ID do cliente: ");
         strcpy(aux->id, fgets(id_, sizeof(id_), stdin));
-       
+
         printf("Informe o NOME do cliente: ");
         strcpy(aux->nome, fgets(nomeb_, sizeof(nomeb_), stdin));
-        
+
         printf("Informe o RG do cliente: ");
         strcpy(aux->rg, fgets(rg_, sizeof(rg_), stdin));
-    
+
         printf("Informe o CPF do cliente: ");
         strcpy(aux->cpf, fgets(cpf_, sizeof(cpf_), stdin));
 
         printf("Informe a CIDADE do cliente: ");
         strcpy(aux->cidade, fgets(cidade_, sizeof(cidade_), stdin));
 
-        // crio uma novo registro com todos os atributos
-        // eh como se tivesse criado uma linha na tabela
-        strcpy(aux->nome, nomeb_);
-        strcpy(aux->id, id_);
-        strcpy(aux->rg, rg_);
-        strcpy(aux->cpf, cpf_);
-        strcpy(aux->cidade, cidade_);
         aux->ant = NULL;
         if (ult != NULL)
         {
@@ -86,6 +82,7 @@ int main()
         scanf("%c", &resp);
         while ((c = getchar()) != '\n' && c != EOF)
             ;
+        printf("\n");
     }
     aux = ult;
     exibe(ult);
