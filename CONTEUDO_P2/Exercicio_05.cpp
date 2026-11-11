@@ -3,6 +3,16 @@
 #include <string.h>
 #include <iostream>
 
+void Limparbuffer(void)
+{
+  int c;
+
+  while ((c = getchar()) != '\n' &&
+         c != EOF)
+  {
+  }
+}
+
 struct ficha
 {
   int codigo_ficha;
@@ -29,7 +39,7 @@ void Exibe(endmem primeiro)
 
   while (aux != NULL)
   {
-    
+
     printf("Nome do cliente: %s\n", aux->nome);
     printf("Codigo do cliente: %d\n", aux->codigo_ficha);
     printf("CPF do cliente: %s\n", aux->cpf);
@@ -58,28 +68,27 @@ main()
     fgets(cliente, sizeof(cliente), stdin);
     cliente[strcspn(cliente, "\n")] = '\0';
 
-    printf("\nInforme o codigo do cliente: ");
+    printf("Informe o codigo do cliente: ");
     scanf("%d", &cod_ficha);
 
-    fflush(stdin);
+    Limparbuffer();
 
-    printf("\nInforme cpf: ");
+    printf("Informe cpf: ");
     fgets(cpf_cliente, sizeof(cpf_cliente), stdin);
     cpf_cliente[strcspn(cpf_cliente, "\n")] = '\0';
 
-    printf("\nInforme rg: ");
-   
+    printf("Informe rg: ");
     fgets(rg_cliente, sizeof(rg_cliente), stdin);
     rg_cliente[strcspn(rg_cliente, "\n")] = '\0';
 
-    auxiliarFicha = new ficha;
 
+    auxiliarFicha = new ficha;
     strcpy(auxiliarFicha->nome, cliente);
     strcpy(auxiliarFicha->rg, rg_cliente);
     strcpy(auxiliarFicha->cpf, cpf_cliente);
     auxiliarFicha->codigo_ficha = cod_ficha;
-
     auxiliarFicha->proximo = NULL;
+
 
     if (inicioFila == NULL)
     {
@@ -93,7 +102,7 @@ main()
 
     fichaAnterior = auxiliarFicha;
 
-    printf("\nInforme S para continuar, E para encerrar: ");
+    printf("\nInforme S para cadastrar mais, E para encerrar: ");
     scanf("%s", &resp);
   }
 
