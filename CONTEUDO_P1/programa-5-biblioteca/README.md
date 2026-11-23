@@ -1,6 +1,6 @@
 # 🧮 Programa 5 — Calculadora com funções separadas
 
-Esta calculadora de terminal recebe dois números inteiros e apresenta **cinco operações aritméticas**. Cada operação está definida em seu próprio arquivo de cabeçalho, permitindo estudar uma organização de código baseada em funções menores.
+Esta calculadora de terminal recebe dois números inteiros e apresenta **cinco operações aritméticas**. Cada operação está definida em um arquivo de cabeçalho próprio, permitindo estudar uma organização de código baseada em funções menores.
 
 ## 🔢 Operações disponíveis
 
