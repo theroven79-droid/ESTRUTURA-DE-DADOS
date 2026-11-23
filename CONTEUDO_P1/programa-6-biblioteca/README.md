@@ -1,6 +1,6 @@
 # 🚌 Programa 6 — Mapa de poltronas de ônibus
 
-Uma simulação de terminal para estudar **matrizes e funções** por meio do cadastro de um ônibus e da seleção de poltronas. Os assentos são organizados em fileiras de quatro posições e exibidos em um mapa textual.
+Este exercício apresenta uma simulação de terminal para estudar **matrizes e funções** por meio do cadastro de um ônibus e da seleção de poltronas. Os assentos são organizados em fileiras de quatro posições e exibidos em um mapa textual.
 
 ## 💺 O que é apresentado
 
