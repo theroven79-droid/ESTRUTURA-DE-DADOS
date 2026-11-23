@@ -6,7 +6,7 @@ Os exercícios deste conjunto exploram como **transformar informações, organiz
 
 | Arquivo ou projeto | O que é estudado |
 |---|---|
-| [`Exercicio_01.cpp`](Exercicio_01.cpp) | Leitura de frases, conversão de letras, contagem de caracteres, vogais e consoantes e alterações no texto. |
+| [`Exercicio_01.cpp`](Exercicio_01.cpp) | Leitura de frases, conversão de letras, contagem de caracteres, vogais e consoantes, além de alterações no texto. |
 | [`Exercicio_02.cpp`](Exercicio_02.cpp) | Ordenação de dez números com **Bubble Sort** e pesquisa por **busca binária**. |
 | [Classificação de times](Exercicio_tabelaPontuacao/README.md) | Cadastro de 12 equipes, organização por pontos e desempate pelo número de gols. |
 
