@@ -1,6 +1,6 @@
 # 🛠️ Programa 4 — Variáveis e funções em cabeçalhos
 
-Um exemplo curto de organização de código. O programa solicita **dois valores inteiros**, guarda essas informações em variáveis declaradas em um cabeçalho e utiliza uma função de soma definida em outro arquivo.
+Este exercício apresenta um exemplo simples de organização de código. O programa solicita **dois valores inteiros**, guarda essas informações em variáveis declaradas em um cabeçalho e utiliza uma função de soma definida em outro arquivo.
 
 ## 📂 Arquivos do exercício
 
