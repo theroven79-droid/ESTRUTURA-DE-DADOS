@@ -16,7 +16,7 @@ Nesta parte dos estudos, os exercícios começam com operações simples e avan�
 
 ## 🧩 O que esse conjunto permite estudar
 
-Os primeiros programas mostram como passar valores para funções, receber resultados e repetir operações. Nos exercícios de estoque, os **vetores paralelos** mantêm nome, código, preço e quantidade de cada produto associados à mesma posição. Já a simulação do ônibus utiliza uma **matriz** para representar fileiras e poltronas.
+Os primeiros programas demonstram como passar valores para funções, receber resultados e repetir operações. Nos exercícios de estoque, os **vetores paralelos** mantêm as informações de nome, código, preço e quantidade de cada produto associadas à mesma posição. Já a simulação do ônibus utiliza uma **matriz** para representar fileiras e poltronas.
 
 As versões com cabeçalhos ajudam a observar como um programa pode ser dividido em arquivos menores, mantendo a função principal separada de outras rotinas.
 
