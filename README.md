@@ -1,6 +1,6 @@
 # 🧠 Estrutura de Dados
 
-Um espaço para reunir exercícios e projetos desenvolvidos durante os estudos de **Estrutura de Dados**. Os códigos acompanham a prática de funções, vetores, matrizes, manipulação de textos e algoritmos de ordenação e busca, com exemplos que vão de operações matemáticas a pequenos sistemas de terminal.
+Este repositório reúne exercícios e projetos desenvolvidos durante os estudos de **Estrutura de Dados**. Os códigos acompanham a prática de funções, vetores, matrizes, manipulação de textos e algoritmos de ordenação e busca, com exemplos que vão de operações matemáticas a pequenos sistemas de terminal.
 
 ## 📚 Organização dos estudos
 
@@ -18,7 +18,7 @@ Um espaço para reunir exercícios e projetos desenvolvidos durante os estudos d
 
 ## 🛠️ Tecnologias e organização do código
 
-Os arquivos-fonte usam **C++ (`.cpp`)**, em grande parte com recursos e funções tradicionais da linguagem C, como `printf` e `scanf`. Alguns exercícios concentram tudo em um único arquivo; outros dividem as funções em cabeçalhos `.h`, para explorar formas diferentes de organização.
+Os arquivos-fonte utilizam **C++ (`.cpp`)**, em grande parte com recursos e funções tradicionais da linguagem C, como `printf` e `scanf`. Alguns exercícios concentram tudo em um único arquivo; outros dividem as funções em cabeçalhos `.h`, para explorar formas diferentes de organização.
 
 Também há executáveis `.exe` associados às atividades e arquivos de configuração do **Visual Studio Code** em [`.vscode/`](.vscode/tasks.json).
 
