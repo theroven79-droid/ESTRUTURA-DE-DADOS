@@ -1,6 +1,6 @@
 # ⚽ Classificação de times — Pontos e gols
 
-Um programa de terminal que recebe os dados de **12 equipes** e organiza uma tabela de classificação. Cada time possui um nome, uma quantidade de gols e uma pontuação; essas informações são mantidas em vetores relacionados durante a ordenação.
+Este programa de terminal recebe os dados de **12 equipes** e organiza uma tabela de classificação. Cada time possui um nome, uma quantidade de gols e uma pontuação; essas informações são mantidas em vetores relacionados durante a ordenação.
 
 ## 🏆 Como a classificação é construída
 
