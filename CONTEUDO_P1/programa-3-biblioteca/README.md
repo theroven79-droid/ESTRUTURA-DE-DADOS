@@ -1,6 +1,6 @@
 # 🧩 Programa 3 — Estoque com arquivo de cabeçalho
 
-Esta pasta apresenta outra organização do exercício de **controle de estoque**: as funções e os vetores utilizados pelo programa ficam reunidos em um arquivo `.h`, enquanto o arquivo principal se concentra na inicialização e na chamada do menu.
+Esta pasta apresenta uma alternativa de organização para o exercício de **controle de estoque**: as funções e os vetores utilizados pelo programa ficam reunidos em um arquivo `.h`, enquanto o arquivo principal se concentra na inicialização e na chamada do menu.
 
 ## 📂 Como os arquivos se dividem
 
