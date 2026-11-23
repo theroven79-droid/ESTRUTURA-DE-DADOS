@@ -1,6 +1,6 @@
 # 🔁 Programa 2 — Tabuadas e repetição
 
-Dois modos de calcular a tabuada em um mesmo exercício. Pelo menu do terminal, é possível escolher entre **exibir as multiplicações de 1 a 10** e **calcular o cubo dos resultados** dessas multiplicações.
+Este exercício apresenta duas formas de calcular a tabuada. Pelo menu do terminal, é possível escolher entre **exibir as multiplicações de 1 a 10** e **calcular o cubo dos resultados** dessas multiplicações.
 
 ## ✨ O que o programa apresenta
 
