@@ -1,6 +1,6 @@
 # 📦 Programa 3 — Controle de estoque
 
-Um exercício de terminal que reúne **cadastro de produtos, consulta de estoque e simulação de compras**. O programa trabalha com até três produtos e utiliza vetores para relacionar as informações de cada um.
+Este exercício de terminal reúne **cadastro de produtos, consulta de estoque e simulação de compras**. O programa trabalha com até três produtos e utiliza vetores para relacionar as informações de cada um.
 
 ## 🛒 Recursos do exercício
 
