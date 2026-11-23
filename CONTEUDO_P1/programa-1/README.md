@@ -10,7 +10,7 @@ Este exercício apresenta o uso de **funções com retorno**. A partir de três 
 | Multiplicação | Soma o terceiro número ao resultado anterior e multiplica por 3. |
 | Cubo | Eleva o resultado da multiplicação à terceira potência. |
 
-O exercício permite acompanhar a passagem de argumentos, o retorno de valores e a utilização de variáveis para guardar resultados intermediários.
+O exercício permite acompanhar a passagem de argumentos, o retorno de valores e o uso de variáveis para armazenar resultados intermediários.
 
 **Código-fonte:** [`programa-1.cpp`](programa-1.cpp), que reúne a função principal e as funções `soma`, `multiplicacao` e `cubo`.
 
